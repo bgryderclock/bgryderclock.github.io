@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase no-indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+
+	<title>ASP.NET – C# Web Forms connected to SQL queries – bgryderclock</title>
+
+	<link rel="dns-prefetch" href="https://s2.wp.com/">
+<link rel="dns-prefetch" href="https://platform.twitter.com/">
+<link rel="dns-prefetch" href="https://s0.wp.com/">
+<link rel="dns-prefetch" href="https://s1.wp.com/">
+<link rel="alternate" type="application/rss+xml" title="bgryderclock » Feed" href="https://bgryderclock.wordpress.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="bgryderclock » Comments Feed" href="https://bgryderclock.wordpress.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="bgryderclock » ASP.NET – C# Web Forms connected to SQL&nbsp;queries Comments Feed" href="https://bgryderclock.wordpress.com/article/asp-net-c-web-forms-connected-to-sql-c5281w3qfiqf-3/feed/">
+	<script defer="defer" src="Asp.NetC%23WebFormsConnectedToSQLqueries_files/beacon.js"></script><script type="text/javascript" src="Asp.NetC%23WebFormsConnectedToSQLqueries_files/showad.js" async=""></script><script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+			<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s1.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1473172720h&ver=4.6.1-RC1-38499"}};
+			!function(a,b,c){function d(a){var c,d,e,f,g,h=b.createElement("canvas"),i=h.getContext&&h.getContext("2d"),j=String.fromCharCode;if(!i||!i.fillText)return!1;switch(i.textBaseline="top",i.font="600 32px Arial",a){case"flag":return i.fillText(j(55356,56806,55356,56826),0,0),!(h.toDataURL().length<3e3)&&(i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,65039,8205,55356,57096),0,0),c=h.toDataURL(),i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,55356,57096),0,0),d=h.toDataURL(),c!==d);case"diversity":return i.fillText(j(55356,57221),0,0),e=i.getImageData(16,16,1,1).data,f=e[0]+","+e[1]+","+e[2]+","+e[3],i.fillText(j(55356,57221,55356,57343),0,0),e=i.getImageData(16,16,1,1).data,g=e[0]+","+e[1]+","+e[2]+","+e[3],f!==g;case"simple":return i.fillText(j(55357,56835),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode8":return i.fillText(j(55356,57135),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode9":return i.fillText(j(55358,56631),0,0),0!==i.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity","unicode9"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="Asp.NetC%23WebFormsConnectedToSQLqueries_files/wp-emoji-release.js" type="text/javascript"></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="all-css-0-1" href="Asp.NetC%23WebFormsConnectedToSQLqueries_files/a_002.css" type="text/css" media="all">
+<link rel="stylesheet" id="screenprint-css-1-1" href="Asp.NetC%23WebFormsConnectedToSQLqueries_files/main.css" type="text/css" media="screen, print">
+<link rel="stylesheet" id="all-css-2-1" href="Asp.NetC%23WebFormsConnectedToSQLqueries_files/a.css" type="text/css" media="all">
+	<!--[if lte IE 8]>
+	<style type="text/css" media="screen">
+		.featured-posts .control-panel .previous,
+		.featured-posts .control-panel .next,
+		.widget-recent-posts .nav .ui-tabs-selected,
+		.widget-recent-posts .panel {
+			behavior: url(https://s0.wp.com/wp-content/themes/vip/partner-annotum-base/assets/main/js/libs/css3pie/PIE.php);
+		}
+	</style>
+	<![endif]-->
+<script type="text/javascript">
+/* <![CDATA[ */
+var ANNO_DICTIONARY = {"previous":"Previous","next":"Next","xofy":"%1$s of %2$s"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="Asp.NetC%23WebFormsConnectedToSQLqueries_files/a_002"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://bgryderclock.wordpress.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s1.wp.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Javascript, Server-Side JS, and&nbsp;SQL" href="https://bgryderclock.wordpress.com/article/javascript-server-side-js-and-sql-c5281w3qfiqf-2/">
+<link rel="next" title="Mumps Programming 101" href="https://bgryderclock.wordpress.com/article/mumps-programming-101-c5281w3qfiqf-4/">
+<meta name="generator" content="WordPress.com">
+<link rel="canonical" href="https://bgryderclock.wordpress.com/article/asp-net-c-web-forms-connected-to-sql-c5281w3qfiqf-3/">
+<link rel="shortlink" href="http://wp.me/p2g6Ie-3">
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/1.0/?format=json&amp;url=https%3A%2F%2Fbgryderclock.wordpress.com%2Farticle%2Fasp-net-c-web-forms-connected-to-sql-c5281w3qfiqf-3%2F&amp;for=wpcom-auto-discovery"><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/1.0/?format=xml&amp;url=https%3A%2F%2Fbgryderclock.wordpress.com%2Farticle%2Fasp-net-c-web-forms-connected-to-sql-c5281w3qfiqf-3%2F&amp;for=wpcom-auto-discovery">
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="ASP.NET – C# Web Forms connected to SQL queries">
+<meta property="og:url" content="https://bgryderclock.wordpress.com/article/asp-net-c-web-forms-connected-to-sql-c5281w3qfiqf-3/">
+<meta property="og:description" content="This is a example of an ASPX file that displays a table populated with data from a MS SQL query via SqlDataAdapter. The SQL where cause is passed through the URL and displayed in a Textbox. It incl…">
+<meta property="article:published_time" content="2011-03-28T10:17:05+00:00">
+<meta property="article:modified_time" content="2011-03-28T10:17:05+00:00">
+<meta property="og:site_name" content="bgryderclock">
+<meta property="og:image" content="https://s0.wp.com/i/blank.jpg">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:site" content="@wordpressdotcom">
+<meta name="twitter:card" content="summary">
+<meta property="fb:app_id" content="249643311490">
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom">
+<link rel="shortcut icon" type="image/x-icon" href="https://s2.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48">
+<link rel="icon" type="image/x-icon" href="https://s2.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48">
+<link rel="apple-touch-icon-precomposed" href="https://s0.wp.com/i/webclip.png">
+<link rel="openid.server" href="https://bgryderclock.wordpress.com/?openidserver=1">
+<link rel="openid.delegate" href="https://bgryderclock.wordpress.com/">
+<link rel="search" type="application/opensearchdescription+xml" href="https://bgryderclock.wordpress.com/osd.xml" title="bgryderclock">
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com">
+<link rel="pingback" href="https://bgryderclock.wordpress.com/xmlrpc.php">
+	<link rel="archives" title="March 2012" href="https://bgryderclock.wordpress.com/2012/03/">
+<meta name="application-name" content="bgryderclock"><meta name="msapplication-window" content="width=device-width;height=device-height"><meta name="msapplication-tooltip" content="Just another WordPress.com site"><meta name="msapplication-task" content="name=Subscribe;action-uri=https://bgryderclock.wordpress.com/feed/;icon-uri=https://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=https://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=https://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=https://s2.wp.com/i/favicon.ico"><meta name="title" content="ASP.NET – C# Web Forms connected to SQL&nbsp;queries | bgryderclock on WordPress.com">
+<meta name="description" content="This is a example of an ASPX file that displays a table populated with data from a MS SQL query via SqlDataAdapter. The SQL where cause is passed through the URL and displayed in a Textbox. It includes custom functions called MessageBox(mystring), LoadData(), and debug(mystring).">
+		<script type="text/javascript" src="Asp.NetC%23WebFormsConnectedToSQLqueries_files/amzn_ads.js"></script>
+		<script type="text/javascript">
+		try { amznads.getAds("3033"); } catch(e) { /* ignore */ }
+		</script><script type="text/javascript" src="Asp.NetC%23WebFormsConnectedToSQLqueries_files/bid_002"></script>
+		<script type="text/javascript">
+		try {
+			var a9_p = amznads.getKeys(),
+			_ipw_custom = {
+				wordAds: '0',
+				adSafe: '0',
+				domain: 'bgryderclock.wordpress.com',
+				pageURL: 'https://bgryderclock.wordpress.com/article/asp-net-c-web-forms-connected-to-sql-c5281w3qfiqf-3/'
+			};
+			if("undefined"!=typeof a9_p&&""!=a9_p&&null!==a9_p&&"[object Array]"===Object.prototype.toString.call(a9_p)){var a="",b=0,c=a9_p.length;a9_p.sort();for(var d=0;d<c;d++){a9_p[d-b]=a9_p[d-b].replace(/a1x6p/,"a160x600p");var e=a9_p[d-b].split("p");e[0]==a&&(a9_p.splice(d-b,1),b++);a=e[0]}_ipw_custom.amznPay=a9_p};document.close();
+		} catch(e) {}
+		</script>
+		<script type="text/javascript" src="Asp.NetC%23WebFormsConnectedToSQLqueries_files/publishertag.js"></script>
+ 		<script type="text/javascript" src="Asp.NetC%23WebFormsConnectedToSQLqueries_files/head.js"></script><script type="text/javascript" src="Asp.NetC%23WebFormsConnectedToSQLqueries_files/yieldbot.js"></script><script type="text/javascript">    try {        __ATA.registerAdapterResult("YB", yieldbot.getPageCriteria());    } catch (err) {}</script>
+<script type="text/javascript" src="Asp.NetC%23WebFormsConnectedToSQLqueries_files/amzn_ads.js"></script><script type="text/javascript">try { amznads.getAds("3033"); } catch (err) {}</script><script type="text/javascript" src="Asp.NetC%23WebFormsConnectedToSQLqueries_files/bid"></script><script type="text/javascript">    try {        __ATA.registerAdapterResult("A9", amznads.getKeys());    } catch (err) {}</script><style type="text/css" id="syntaxhighlighteranchor"></style>
+<script type="text/javascript">
+	window.google_analytics_uacct = "UA-52447-2";
+</script>
+
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-52447-2']);
+	_gaq.push(['_setDomainName', 'wordpress.com']);
+	_gaq.push(['_initData']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+	})();
+</script><script type="text/javascript" async="" src="Asp.NetC%23WebFormsConnectedToSQLqueries_files/ga.js"></script>
+	<style type="text/css" media="screen">
+
+ 
+	/* Color 1 */
+	
+		/* Background Color */
+		#header .header-body,
+		#header .navigation,
+		#masthead,
+		.featured-posts .control-panel a,
+		.widget .tab-active,
+		#reply button,
+		.tools-nav nav li a,
+		.widget-recent-posts .nav .ui-tabs-selected {
+			background-color: #006b94;
+		}
+
+		/* Border Color */
+		#site-nav li,
+		.callout-item,
+		.widget-recent-posts .nav li { 
+			border-color: #006b94;
+		}
+	
+		/* Text Color */
+		.featured-posts .control-panel,
+		.article-excerpt .header .meta a:hover,
+		.article-full .header .meta a:hover {
+			color: #006b94;
+		}
+
+
+	/* Color 2 */
+	
+		/* Background Color */
+		#site-nav,
+		#site-nav li,
+		#site-nav li ul,
+		.featured-posts .carousel-item,
+		#masthead .teaser {
+			background-color: #66a6bf;
+		}
+
+	/* Link Color */
+	a {
+		color: #0867ab;
+	}
+</style>
+<script type="text/javascript" async="" src="Asp.NetC%23WebFormsConnectedToSQLqueries_files/a.js"></script><link rel="stylesheet" type="text/css" id="gravatar-card-css" href="Asp.NetC%23WebFormsConnectedToSQLqueries_files/hovercard.css"><link rel="stylesheet" type="text/css" id="gravatar-card-services-css" href="Asp.NetC%23WebFormsConnectedToSQLqueries_files/services.css"><script type="text/javascript" async="" src="Asp.NetC%23WebFormsConnectedToSQLqueries_files/a_002.js"></script></head>
+
+<body class="single single-article postid-3 mp6 customizer-styles-applied highlander-enabled highlander-light">
+	<header id="header" class="act">
+		<div class="header-body">
+			<div class="in">
+									<h1 id="site-name"><a href="https://bgryderclock.wordpress.com/" title="Home" rel="home">bgryderclock</a></h1>
+								<nav id="secondary-nav" class="clearfix">
+				<ul class="nav"><li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://bgryderclock.wordpress.com/wp-login.php">Log in</a></li></ul>				</nav>
+			</div>
+		</div>
+		<div class="navigation">
+			<div class="in">
+				<nav id="site-nav" class="clearfix">
+				<ul class="nav"><li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://bgryderclock.wordpress.com/">Home</a></li></ul>
+<form class="search" method="get" action="https://bgryderclock.wordpress.com">
+	<input name="s" placeholder="Search" class="type-text" type="text">
+	<button class="type-submit imr" type="submit">Search</button>
+</form>				</nav>
+			</div>
+		</div>
+			</header>
+<div id="main" class="act">
+	<div class="in"><div id="main-body" class="clearfix">
+	
+<article class="article-full post-3 article type-article status-publish hentry">
+	<header class="header">
+		<div class="entry-title">
+			<h1 class="title"><a rel="bookmark" href="https://bgryderclock.wordpress.com/article/asp-net-c-web-forms-connected-to-sql-c5281w3qfiqf-3/">ASP.NET – C# Web Forms connected to SQL&nbsp;queries</a></h1>
+					</div>
+		<div class="meta">
+			<time class="published" pubdate="" datetime="2011-03-28T10:17:05+00:00">March 28, 2011</time>
+					</div>
+		<div class="tools-bar supplement clearfix">
+	<div class="cell print">
+		<a href="#" onclick="window.print(); return false;">Print Article</a>
+	</div>
+	<div class="cell citation">
+		<a>Citation</a>
+		<div class="citation-container">
+			<textarea class="entry-summary" readonly="readonly">Gryder Brian, 
+Gryder Brian. ASP.NET – C# Web Forms connected to SQL&nbsp;queries 
+[Internet]. Version 1. bgryderclock. 2011 Mar 28. Available from: 
+https://bgryderclock.wordpress.com/article/asp-net-c-web-forms-connected-to-sql-c5281w3qfiqf-3/.</textarea>
+		</div><!--/.citation-container -->
+	</div>
+	<div class="cell download">
+		, <a href="https://bgryderclock.wordpress.com/article/asp-net-c-web-forms-connected-to-sql-c5281w3qfiqf-3/xml/">XML</a> 
+	</div>
+	<div class="cell share clearfix">
+		<div class="social-nav">
+			<ul class="nav">
+				<li><a href="mailto:?subject=ASP.NET%20%E2%80%93%20C#%20Web%20Forms%E2%80%A6&amp;body=This%20is%20a%20example%20of%20an%20ASPX%20file%20that%20displays%E2%80%A6%0A%0A%20https%3A%2F%2Fbgryderclock.wordpress.com%2Farticle%2Fasp-net-c-web-forms-connected-to-sql-c5281w3qfiqf-3%2F" class="email imr">Email</a></li>
+				<li><a href="http://twitter.com/share?url=https%3A%2F%2Fbgryderclock.wordpress.com%2Farticle%2Fasp-net-c-web-forms-connected-to-sql-c5281w3qfiqf-3%2F&amp;text=ASP.NET%20%E2%80%93%20C#%20Web%20Forms%E2%80%A6" class="twitter-share-button" data-count="none">Tweet</a></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+</div><!-- .action-bar -->
+		<div class="sec sec-authors">
+			<span class="title"><span>Authors</span></span>
+			<ul class="authors nav">
+				
+	<li>
+		<div class="author vcard">
+			<span class="name"><span class="given-name">Gryder</span> <span class="family-name">Brian</span></span>
+		</div>
+	</li>
+	<li>
+		<div class="author vcard">
+			<span class="name"><span class="given-name">Gryder</span> <span class="family-name">Brian</span></span>
+		</div>
+	</li>			</ul>
+		</div>
+	</header>
+	<div class="main">
+		<div class="content entry-content">
+							<section class="sec">
+					<h1><span>Abstract</span></h1>
+					<p>This is a example of an ASPX file that displays a table 
+populated with data from a MS SQL query via SqlDataAdapter. The SQL 
+where cause is passed through the URL and displayed in a Textbox. It 
+includes custom functions called MessageBox(mystring),  LoadData(), and 
+debug(mystring).</p>
+				</section>
+									<div>
+<div dir="ltr">
+<div>&nbsp;</div>
+<h2>Select – populate a table:</h2>
+<div>&nbsp;</div>
+<div><font face="courier new,monospace">—-c# start <span class="skimlinks-unlinked">table.aspx</span> —–<br>&nbsp;&nbsp; <br>&lt;%@ Page Language=”C#” %&gt;<br>&nbsp;&nbsp;&nbsp; &lt;%@ Import Namespace=”System.Data” %&gt;<br>&nbsp;&nbsp;&nbsp; &lt;%@ Import Namespace=”System.Data.SqlClient” %&gt;<br>&nbsp;&nbsp;&nbsp; &lt;%@ Import Namespace=”System.Configuration” %&gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp; &lt;!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN” “</font><a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><font face="courier new,monospace">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</font></a><font face="courier new,monospace">“&gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp; &lt;script runat=”server”&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; protected void Page_Load(object sender, System.EventArgs e)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //Loads the Data<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LoadData();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }//end page_load fuction</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //Displays a “alert(‘Your text here’) style MessageBox.”<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; private void MessageBox(string message)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (!string.IsNullOrEmpty(message))<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="skimlinks-unlinked">Response.Write(“&lt;“+”script</span>pe=”text/javascript” language=”javascript”&gt;”);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="skimlinks-unlinked">Response.Write(“alert</span>(‘” + message + “‘);”);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="skimlinks-unlinked">Response.Write(“&lt;“+”/script</span>;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp; //Fill the &lt;asp:GridView&gt; element with data<br>&nbsp;&nbsp;&nbsp;&nbsp; private void LoadData()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (!Page.IsPostBack) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SqlConnection MyConnection;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SqlCommand MyCommand;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SqlDataAdapter MyAdapter;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DataTable MyTable;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //show the passed query string.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ this.TextBox1.Text = Request.QueryString[“Name”];</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MyConnection = new SqlConnection();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ MyConnection.ConnectionString = “Data Source=my-sql-server;”+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ “Initial Catalog=db_myDB;User Id=myID;Password=mypassword;”;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MyCommand = new SqlCommand();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ MyCommand.CommandText = “SELECT [UID],[Name],[Picture],[Price],”+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ “[TopBidder],[BidTimeDate] FROM [tbl_Items]” + TextBox1.Text;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MyCommand.CommandType = <span class="skimlinks-unlinked">CommandType.Text</span>;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MyCommand.Connection = MyConnection;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MyTable = new DataTable();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MyAdapter = new SqlDataAdapter();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MyAdapter.SelectCommand = MyCommand;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="skimlinks-unlinked">MyAdapter.Fill(MyTable</span>);</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; foreach (DataRow row in <span class="skimlinks-unlinked">MyTable.Rows</span>) // Loop over the rows.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ foreach (object item in row.ItemArray)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ if (item is int)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ debug(item.ToString());<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ //item = item.ToString();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ debug(item.ToString());<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ 
+}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ else if (item is string)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ debug(item.ToString());<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ }<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ else if (item is DateTime)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ debug(item.ToString());<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ }<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ }//end foreach</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }//end foreach</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; debug(“debug strings here”);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; debug(“more here…”);</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GridView1.DataSource = MyTable.DefaultView;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GridView1.DataBind();</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MyAdapter.Dispose();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MyCommand.Dispose();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MyConnection.Dispose();</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }//end if not Page.IsPostBack… ???<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //post text into the div element called ‘debug’<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; private void debug(string mystring)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ mydebug.InnerHtml = mydebug.InnerHtml + mystring + “&lt;br /&gt;”;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }//end function</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp; &lt;/script&gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp; &lt;html xmlns=”</font><a href="http://www.w3.org/1999/xhtml"><font face="courier new,monospace">http://www.w3.org/1999/xhtml</font></a><font face="courier new,monospace">“&gt;<br>&nbsp;&nbsp;&nbsp; &lt;head id=”Head1″ runat=”server”&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;title&gt;DataAdapter example: how to use DataAdapter in asp.net&lt;/title&gt;<br>&nbsp;&nbsp;&nbsp; &lt;/head&gt;<br>&nbsp;&nbsp;&nbsp; &lt;body&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;form id=”form1″ runat=”server”&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &lt;asp:TextBox ID=”TextBox1″ 
+runat=”server”&gt;&lt;/asp:TextBox&gt;&lt;br /&gt;&lt;br /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &lt;asp:GridView ID=”GridView1″ runat=”server”&gt;&lt;/asp:GridView&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;br /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;br /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div id=”mydebug” runat=”server” &gt;&lt;/div&gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/form&gt;<br>&nbsp;&nbsp;&nbsp; &lt;/body&gt;<br>&nbsp;&nbsp;&nbsp; &lt;/html&gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp; —c# end <span class="skimlinks-unlinked">table.aspx</span> —-<br></font></div>
+<h2>Insert to SQL and (email user with MS exchange server)</h2>
+<div>&nbsp;</div>
+<div><font face="courier new,monospace">&lt;%@ Page Language=”C#” Debug=”true” %&gt;</font></div>
+<div><font face="courier new,monospace">&lt;%@ Import Namespace=”System.Data” %&gt;</font></div>
+<div><font face="courier new,monospace">&lt;%@ Import Namespace=”System.Data.SqlClient” %&gt;</font></div>
+<div><font face="courier new,monospace">&lt;%@ Import Namespace=”System.Web.UI.WebControls”&nbsp; %&gt;</font></div>
+<div><font face="courier new,monospace">&lt;%@ Import Namespace=”System.Net.Mail”&nbsp;&nbsp; %&gt;</font></div>
+<div><font face="courier new,monospace">&lt;html&gt;</font></div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div><font face="courier new,monospace">&lt;head runat=”server”&gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;&lt;title&gt;New Record&lt;/title&gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;&lt;script runat=”server”&gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;long UID;</font></div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div><font face="courier new,monospace">public static bool IsDate(Object obj)</font></div>
+<div><font face="courier new,monospace">{</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp; string strDate = obj.ToString();</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp; try </font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DateTime dt = <span class="skimlinks-unlinked">DateTime.Parse(strDate</span>);</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ if(dt != DateTime.MinValue&nbsp; &amp;&amp; dt != DateTime.MaxValue){</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return true;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return false;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; catch</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return false;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</font></div>
+<div><font face="courier new,monospace">}//end bool IsDate</font></div>
+<div>&nbsp;</div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div><font face="courier new,monospace">bool validate(){</font></div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div><font face="courier new,monospace">String errormesage = “Please enter a valid “;</font></div>
+<div>&nbsp;</div>
+<div><font face="courier new,monospace">&nbsp;//MessageBox(“OverNightMailDate valid =” +IsDate(<span class="skimlinks-unlinked">OverNightMailDate.Text).ToString</span>());</font></div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div>&nbsp;</div>
+<div><font face="courier new,monospace">&nbsp;if (<span class="skimlinks-unlinked">MedicareClaimReferenceNumber.Text</span> == <span class="skimlinks-unlinked">String.Empty</span> ){</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;MessageBox(errormesage + ” Claim Reference Number.”);</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;return false;</font></div>
+<div><font face="courier new,monospace">&nbsp;}//end if</font></div>
+<div><font face="courier new,monospace">&nbsp;else{</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;//MessageBox(“Due Date is good”);</font></div>
+<div><font face="courier new,monospace">&nbsp;}</font></div>
+<div>&nbsp;</div>
+<div><font face="courier new,monospace">&nbsp;if (<span class="skimlinks-unlinked">RequestNumber.Text</span> == <span class="skimlinks-unlinked">String.Empty</span> ){</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;MessageBox(errormesage + ” Request Number.”);</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;return false;</font></div>
+<div><font face="courier new,monospace">&nbsp;}//end if</font></div>
+<div><font face="courier new,monospace">&nbsp;else{</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;//MessageBox(“Due Date is good”);</font></div>
+<div><font face="courier new,monospace">&nbsp;}</font></div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;if (IsDate(<span class="skimlinks-unlinked">DueDate.Text</span>) == false &amp;&amp; <span class="skimlinks-unlinked">DueDate.Text</span> != <span class="skimlinks-unlinked">String.Empty</span> ){</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;MessageBox(errormesage + ” Due Date.”);</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;return false;</font></div>
+<div><font face="courier new,monospace">&nbsp;}//end if</font></div>
+<div><font face="courier new,monospace">&nbsp;else{</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;//MessageBox(“Due Date is good”);</font></div>
+<div><font face="courier new,monospace">&nbsp;}</font></div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;if(<span class="skimlinks-unlinked">DueDate.Text.Length</span> &lt; 7 ){</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;MessageBox(errormesage + ” Due Date.”);</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;return false;</font></div>
+<div><font face="courier new,monospace">&nbsp;}//end if</font></div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div>&nbsp;</div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;//all is well!</font></div>
+<div><font face="courier new,monospace">&nbsp;return true;</font></div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div><font face="courier new,monospace">}//end function</font></div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;protected void Page_Load(object sender, System.EventArgs e) </font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp; {</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;button1.Text = “Submit”;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;/* &nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;if (!Page.IsPostBack) {</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;MessageBox(“PostBack”);</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;return;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;}</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;*/</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp; }//end page_load fuction</font></div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;void mysubmit(object sender, EventArgs e)</font></div>
+<div><font face="courier new,monospace">&nbsp;{</font></div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;if (validate()){</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;//MessageBox(“All fields are valid”);</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;}</font></div>
+<div><font face="courier new,monospace">&nbsp;else{</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;//MessageBox(“All fields are NOOOT valid”);</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;return; //end </font></div>
+<div><font face="courier new,monospace">&nbsp;}//end if validate</font></div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div>&nbsp;</div>
+<div><font face="courier new,monospace">&nbsp;string login = Request.ServerVariables[“LOGON_”];</font></div>
+<div><font face="courier new,monospace">&nbsp;login = login.Replace(“MYDOMAIN\”,””);</font></div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;string sqlstring;</font></div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;//UID = 0;</font></div>
+<div><font face="courier new,monospace">&nbsp;//MessageBox(UID.ToString());</font></div>
+<div>&nbsp;</div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;sqlstring = “insert into [tblMyItems] ” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp; “([ProviderNumber]” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “,[DueDate]” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “,[RequestNumber]” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “,[MedicareClaimReferenceNumber]” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “,[AccountNumber]” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “,[RefundAmount]” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “,[CaseID]” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “,[AmountOfLetter]” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “,[LastName]” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “,[LocationName]” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “,[DemandLetterYN]” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “,[N469orN432YN]” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “,[CurrentDepartment]” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “,[Note]” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “,[LastChangeTimeStamp]” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “,[LastChangeID]” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “,[Status]” + </font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “,[VerifiedCorrectRefund]) values (‘” + </font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="skimlinks-unlinked">ProviderNumber.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;”‘,'” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;<span class="skimlinks-unlinked">DueDate.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;”‘,'” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;<span class="skimlinks-unlinked">RequestNumber.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;”‘,'” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;<span class="skimlinks-unlinked">MedicareClaimReferenceNumber.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;”‘,'” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;<span class="skimlinks-unlinked">AccountNumber.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;”‘,'” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;<span class="skimlinks-unlinked">RefundAmount.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;”‘,'” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;<span class="skimlinks-unlinked">CaseID.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;”‘,'” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;<span class="skimlinks-unlinked">AmountOfLetter.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;”‘,'” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;<span class="skimlinks-unlinked">LastName.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;”‘,'” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;<span class="skimlinks-unlinked">LocationName.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;”‘,'” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;DemandLetterYN.Checked +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;”‘,'” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;N469orN432YN.Checked +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;”‘,'” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;<span class="skimlinks-unlinked">CurrentDepartment.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;”‘,'” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;<span class="skimlinks-unlinked">Note.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;”‘,'” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;<span class="skimlinks-unlinked">DateTime.Now.ToString</span>() +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;”‘,'” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;login +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;”‘,'” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;”Open” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;”‘,”+</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;”‘False'” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;”);”;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;<span class="skimlinks-unlinked">Response.Write(sqlstring</span>);</font></div>
+<div>&nbsp;</div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;SqlConnection myConnection = new SqlConnection(“Data Source=My-Sql-ser-ver;”+</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;”Initial Catalog=db_mydatabase;”+</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;” Id=myID;Password=mypassword;”);</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;SqlCommand myCommand = new SqlCommand(sqlstring, myConnection);</font></div>
+<div><font face="courier new,monospace"><span class="skimlinks-unlinked">myConnection.Open</span>();</font></div>
+<div><font face="courier new,monospace"><span class="skimlinks-unlinked">Response.Write(sqlstring</span>);</font></div>
+<div><font face="courier new,monospace">myCommand.ExecuteNonQuery();</font></div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;//MessageBox(“1!”);</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;</font></div>
+<div>&nbsp;</div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;//get UID </font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;sqlstring = “Select [UID] from [tblMyItems] where [MedicareClaimReferenceNumber]='” + <span class="skimlinks-unlinked">MedicareClaimReferenceNumber.Text.Replace</span>(“‘”, “””)+&nbsp; “‘”;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;SqlDataReader myReader = null;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;<span class="skimlinks-unlinked">Response.Write(sqlstring</span>);</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;myCommand = new SqlCommand(sqlstring, myConnection);</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;myReader = myCommand.ExecuteReader();</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;if (<span class="skimlinks-unlinked">myReader.Read</span>()) {</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;if(!myReader.IsDBNull(0)) {</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;//MessageBox(Convert.ToString(myReader.GetInt64(0))); </font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;UID = myReader.GetInt64(0);</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;//MessageBox(UID.ToString());</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp; } </font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;}//end if</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;<span class="skimlinks-unlinked">myReader.Close</span>();</font></div>
+<div>&nbsp;</div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;sqlstring = “insert into [tblTransactions]” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp; “([UID]” + </font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp; “,[ProviderNumber]” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “,[DueDate]” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “,[RequestNumber]” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “,[MedicareClaimReferenceNumber]” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “,[AccountNumber]” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “,[RefundAmount]” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “,[CaseID]” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “,[AmountOfLetter]” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “,[LastName]” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “,[LocationName]” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “,[DemandLetterYN]” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “,[N469orN432YN]” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “,[CurrentDepartment]” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “,[Note]” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “,[LastChangeTimeStamp]” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “,[LastChangeID]” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “,[Status]” + </font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “,[VerifiedCorrectRefund]) values (” + </font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;UID.ToString() +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;”,'” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="skimlinks-unlinked">ProviderNumber.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;”‘,'” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;<span class="skimlinks-unlinked">DueDate.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;”‘,'” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;<span class="skimlinks-unlinked">RequestNumber.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;”‘,'” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;<span class="skimlinks-unlinked">MedicareClaimReferenceNumber.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;”‘,'” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;<span class="skimlinks-unlinked">AccountNumber.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;”‘,'” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;<span class="skimlinks-unlinked">RefundAmount.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;”‘,'” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;<span class="skimlinks-unlinked">CaseID.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;”‘,'” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;<span class="skimlinks-unlinked">AmountOfLetter.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;”‘,'” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;<span class="skimlinks-unlinked">LastName.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;”‘,'” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;<span class="skimlinks-unlinked">LocationName.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;”‘,'” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;DemandLetterYN.Checked +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;”‘,'” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;N469orN432YN.Checked +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;”‘,'” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;<span class="skimlinks-unlinked">CurrentDepartment.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;”‘,'” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;<span class="skimlinks-unlinked">Note.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;”‘,'” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;<span class="skimlinks-unlinked">DateTime.Now.ToString</span>() +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;”‘,'” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;login +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;”‘,'” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;”Open” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;”‘,”+</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;”‘false'” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;”);”;</font></div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div><font face="courier new,monospace">myCommand = new SqlCommand(sqlstring, myConnection);</font></div>
+<div>&nbsp;</div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;myCommand.ExecuteNonQuery();</font></div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;MessageBox(“fin!”);</font></div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div><font face="courier new,monospace">//do emails</font></div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;string Tolist = “”;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;string Fromlist = “”;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;</font></div>
+<div>&nbsp;</div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;//select EmailList</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;sqlstring = “SELECT[EmailList]FROM[db_mydatabase].[dbo].[tblEmailLists]” + </font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;” where [Department]='” + <span class="skimlinks-unlinked">CurrentDepartment.Text</span> + “‘”;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;SqlConnection MyConnection = new SqlConnection();</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;MyConnection.ConnectionString = “Data Source=My-Sql-ser-ver;”+</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;”Initial Catalog=db_mydatabase;”+</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;” Id=myID;Password=mypassword;”;;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;//SqlDataReader myReader = null;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;<span class="skimlinks-unlinked">MyConnection.Open</span>();</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;myCommand = new SqlCommand(sqlstring, MyConnection);</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;myReader = myCommand.ExecuteReader();</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;if (<span class="skimlinks-unlinked">myReader.Read</span>()) {</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;//store as string</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;Tolist = myReader.GetString(0);</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;MessageBox(Tolist);</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;}// end if</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;<span class="skimlinks-unlinked">myReader.Close</span>();</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp; </font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;sqlstring = “SELECT[EmailList]FROM[db_mydatabase].[dbo].[tblEmailLists]” + </font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;” where [Department]='” + <span class="skimlinks-unlinked">CurrentDepartment.Text</span> + “‘”;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp; </font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;//select my Address</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp; </font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;sqlstring = “SELECT [EmailAddress] FROM [db_mydatabase].[dbo].[tbls] where [ID] = ‘” + login + “‘”;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;MessageBox(sqlstring);</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;myCommand = new SqlCommand(sqlstring, MyConnection);</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;myReader = myCommand.ExecuteReader();</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp; </font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;MessageBox(“start read”);</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;if (<span class="skimlinks-unlinked">myReader.Read</span>()) {;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;//MessageBox(Convert.ToString(myReader.GetString(0))); </font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;Fromlist = myReader.GetString(0);</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;}// end if</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;MailAddress from = new MailAddress(Fromlist);</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;MailAddress to = new MailAddress(Tolist);</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;MailMessage message = new MailMessage();</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;//<span class="skimlinks-unlinked">MailMessage.From</span> = from;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;<span class="skimlinks-unlinked">message.From</span> = new MailAddress(Fromlist);</font></div>
+<div>&nbsp;</div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;string[] EmailArray = <span class="skimlinks-unlinked">Tolist.Split</span>(‘,’); </font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;for(int i = 0; i &lt;= EmailArray.Length-1; i++ ){</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;//MessageBox(EmailArray[i]);</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;<span class="skimlinks-unlinked">message.To.Add(new</span> MailAddress(EmailArray[i]));</font></div>
+<div>&nbsp;</div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;}//end for</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;message.Subject = “refund Database -&nbsp; Claim # ” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="skimlinks-unlinked">MedicareClaimReferenceNumber.Text</span> + </font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ” has been routed to ” + </font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="skimlinks-unlinked">CurrentDepartment.Text</span>;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;<span class="skimlinks-unlinked">message.Body</span> = “Click here to view the details:rnhttp://My-Web-ser-ver/user/Refund/<span class="skimlinks-unlinked">EditRecord.aspx?q</span>=” + UID.ToString();</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;SmtpClient client = new SmtpClient(“<span class="skimlinks-unlinked">MY-EXCHANGE-SERVER.MYDOMAIN.org</span>”);</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;<span class="skimlinks-unlinked">client.Send(message</span>);</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;//MessageBox(Fromlist);</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;//MessageBox(Tolist);</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;<span class="skimlinks-unlinked">Response.Write(“DONE</span>!”);</font></div>
+<div>&nbsp;</div>
+<div><font face="courier new,monospace">&nbsp;Response.Redirect(“<span class="skimlinks-unlinked">newrecord.aspx</span>”);</font></div>
+<div>&nbsp;</div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;}//end function</font></div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;private void MessageBox(string message)</font></div>
+<div><font face="courier new,monospace">&nbsp;{</font></div>
+<div><font face="courier new,monospace">&nbsp;if (!string.IsNullOrEmpty(message))</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;{</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;<span class="skimlinks-unlinked">Response.Write(“&lt;“+”script</span>pe=”text/javascript” language=”javascript”&gt;”);</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;<span class="skimlinks-unlinked">Response.Write(“alert</span>(‘” + message + “‘);”);</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;<span class="skimlinks-unlinked">Response.Write(“&lt;“+”/script</span>;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;}</font></div>
+<div><font face="courier new,monospace">&nbsp;}//end function&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&lt;/script&gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;&lt;style&gt;</font></div>
+<div><font face="courier new,monospace">body {</font></div>
+<div><font face="courier new,monospace">&nbsp;margin:15px 0px; padding:0px;</font></div>
+<div><font face="courier new,monospace">&nbsp;text-align:center;</font></div>
+<div><font face="courier new,monospace">&nbsp;}</font></div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div><font face="courier new,monospace">#Content {</font></div>
+<div><font face="courier new,monospace">&nbsp;width:600px;</font></div>
+<div><font face="courier new,monospace">&nbsp;margin:0px auto;</font></div>
+<div><font face="courier new,monospace">&nbsp;text-align:right;</font></div>
+<div><font face="courier new,monospace">&nbsp;padding:10px;</font></div>
+<div><font face="courier new,monospace">&nbsp;background-color:#eee;</font></div>
+<div><font face="courier new,monospace">&nbsp;}</font></div>
+<div>&nbsp;</div>
+<div><font face="courier new,monospace">&lt;/style&gt;</font></div>
+<div><font face="courier new,monospace">&lt;/head&gt;</font></div>
+<div><font face="courier new,monospace">&lt;body&gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;&lt;form runat=”server”&gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;&lt;div width=”500″ Id=”Content”&nbsp; &gt; </font></div>
+<div><font face="courier new,monospace">&nbsp;&lt;br /&gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;Provider Number: &lt;asp:TextBox id=”ProviderNumber” Text=”” runat=”server”&nbsp; width=”250″ /&gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;&lt;br /&gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;Due Date: &lt;asp:TextBox id=”DueDate” Text=”” runat=”server”&nbsp; width=”250″ /&gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;&lt;br /&gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;Request Number: &lt;asp:TextBox id=”RequestNumber” Text=”” runat=”server”&nbsp; width=”250″ /&gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;&lt;br /&gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;Medicare Claim Reference 
+Number: &lt;asp:TextBox id=”MedicareClaimReferenceNumber” Text=”” 
+runat=”server”&nbsp; width=”250″ /&gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;&lt;br /&gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;Account Number: &lt;asp:TextBox id=”AccountNumber” Text=”” runat=”server”&nbsp; width=”250″ /&gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;&lt;br /&gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;Refund Amount&lt;asp:TextBox id=”RefundAmount” Text=”” runat=”server”&nbsp; width=”250″ /&gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;&lt;br /&gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;Case ID: &lt;asp:TextBox id=”CaseID” Text=”” runat=”server”&nbsp; width=”250″ /&gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;&lt;br /&gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;Amount Of Letter: &lt;asp:TextBox id=”AmountOfLetter” Text=”” runat=”server”&nbsp; width=”250″ /&gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;&lt;br /&gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;Last Name: &lt;asp:TextBox id=”LastName” Text=”” runat=”server”&nbsp; width=”250″ /&gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;&lt;br /&gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;Location Name: &lt;asp:TextBox id=”LocationName” Text=”” runat=”server”&nbsp; width=”250″ /&gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;&lt;br /&gt;</font></div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div><font face="courier new,monospace">&nbsp;Demand Letter Y/N 
+&lt;asp:CheckBox id=”DemandLetterYN” Text=”” Checked=”false” 
+runat=”server”&nbsp; onclick=”checkBoxOnClick(this);”&nbsp; /&gt;&lt;br 
+/&gt;</font></div>
+<div>&nbsp;</div>
+<div><font face="courier new,monospace">&nbsp;N469/N432 Y/N 
+&lt;asp:CheckBox id=”N469orN432YN” Checked=”false” runat=”server”&nbsp; 
+onclick=”checkBoxOnClick(this);”&nbsp; /&gt;&lt;br /&gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;&lt;br /&gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;CurrentDepartment:</font></div>
+<div><font face="courier new,monospace">&nbsp;&lt;asp:DropDownList id=”CurrentDepartment” runat=”server”&nbsp; width=”250″ AutoPostBack=”True” &gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&lt;asp:ListItem Value=”Correspondence” &gt;Correspondence&lt;/asp:ListItem&gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&lt;asp:ListItem Value=”Billing” &gt;Billing&lt;/asp:ListItem&gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;&lt;/asp:DropDownList&gt;&lt;br /&gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div>&nbsp;</div>
+<div><font face="courier new,monospace">&nbsp;&lt;asp:textbox id=”Note” width=”600″ Height=”120px” TextMode=”MultiLine” runat=”server”/&gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;&lt;br /&gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&lt;asp:Button id=”button1″ Text=”” runat=”server” OnClick=”mysubmit”&nbsp; /&gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;&lt;/div&gt;</font></div>
+<div><font face="courier new,monospace">&nbsp;&lt;/form&gt;</font></div>
+<div><font face="courier new,monospace">&lt;/body&gt;</font></div>
+<div><font face="courier new,monospace">&lt;/html&gt;</font></div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<h2>&nbsp;Update – function </h2>
+<div>&nbsp;</div>
+<div><font face="courier new,monospace">void myupdate(object sender, System.EventArgs e){</font></div>
+<div>&nbsp;</div>
+<div><font face="courier new,monospace">&nbsp;if (validate()){</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;//MessageBox(“All fields are valid”);</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;}</font></div>
+<div><font face="courier new,monospace">&nbsp;else{</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;//MessageBox(“All fields are NOT valid”);</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;return; //end </font></div>
+<div><font face="courier new,monospace">&nbsp;}//end if validate</font></div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div><font face="courier new,monospace">&nbsp;string sqlstring = “UPDATE [db_mydatabase].[dbo].[tbIitems]” +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp; “SET ” + </font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp; &nbsp;”[MedicareClaimReferenceNumber] = ‘” +&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="skimlinks-unlinked">MedicareClaimReferenceNumber.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “‘,[AccountNumber] = ‘” + <span class="skimlinks-unlinked">AccountNumber.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “‘,[RefundAmount] = ‘” + <span class="skimlinks-unlinked">RefundAmount.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “‘,[CaseID] = ‘” + <span class="skimlinks-unlinked">CaseID.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “‘,[AmountOfLetter] = ‘” + <span class="skimlinks-unlinked">AmountOfLetter.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “‘,[LastName] = ‘” + <span class="skimlinks-unlinked">LastName.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “‘,[LocationName] = ‘” + <span class="skimlinks-unlinked">LocationName.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “‘,[DemandLetterYN] = ‘” + DemandLetterYN.Checked +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “‘,[N469orN432YN] = ‘” + N469orN432YN.Checked +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “‘,[CurrentDepartment] = ‘” + <span class="skimlinks-unlinked">CurrentDepartment.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “‘,[Note] = ‘” + <span class="skimlinks-unlinked">Note.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “‘,[LastChangeTimeStamp] = ‘” + <span class="skimlinks-unlinked">DateTime.Now.ToString</span>() +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “‘,[LastChangeUserID] = ‘” + login +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “‘,[Status] = ‘” + <span class="skimlinks-unlinked">Status.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “‘,[DueDate] = ‘” + <span class="skimlinks-unlinked">DueDate.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “‘,[ProviderNumber] = ‘” + <span class="skimlinks-unlinked">ProviderNumber.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “‘,[VerifiedCorrectRefund] = ‘” + VerifiedCorrectRefund.Checked +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “‘,[OverNightMailDate] = ‘” + <span class="skimlinks-unlinked">OverNightMailDate.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “‘,[UpsTrackingNumber] = ‘” + <span class="skimlinks-unlinked">UpsTrackingNumber.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “‘,[DeliveryDate] = ‘” + <span class="skimlinks-unlinked">DeliveryDate.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “‘,[RefundCheckCashedDate] = ‘” + <span class="skimlinks-unlinked">RefundCheckCashedDate.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “‘,[RequestNumber] = ‘” + <span class="skimlinks-unlinked">RequestNumber.Text.Replace</span>(“‘”, “””) +</font></div>
+<div><font face="courier new,monospace">&nbsp;”‘ WHERE UID = ” + <span class="skimlinks-unlinked">UID.Text</span>;</font></div>
+<div><font face="courier new,monospace">&nbsp;</font></div>
+<div><font face="courier new,monospace">SqlConnection MyConnection = new SqlConnection();</font></div>
+<div><font face="courier new,monospace">MyConnection.ConnectionString = “Data Source=my-sql-serv-er;”+</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;”Initial Catalog=db_mydatabase;”+</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;”User Id=myID;Password=mypassord;”;;</font></div>
+<div>&nbsp;</div>
+<div><font face="courier new,monospace">SqlCommand myCommand = new SqlCommand(sqlstring, MyConnection);</font></div>
+<div>&nbsp;</div>
+<div><font face="courier new,monospace"><span class="skimlinks-unlinked">MyConnection.Open</span>();</font></div>
+<div>&nbsp;</div>
+<div><font face="courier new,monospace">myCommand.ExecuteNonQuery();</font></div>
+<div><font face="courier new,monospace">}// end function</font></div>
+<h2>&nbsp;</h2>
+<h2>format data as you populate a Literal</h2>
+<div>&nbsp;</div>
+<div><font face="courier new,monospace">MyTable = new DataTable();</font></div>
+<div><font face="courier new,monospace">&nbsp;MyAdapter = new SqlDataAdapter();</font></div>
+<div><font face="courier new,monospace">&nbsp;MyAdapter.SelectCommand = MyCommand;</font></div>
+<div><font face="courier new,monospace"><span class="skimlinks-unlinked">MyAdapter.Fill(MyTable</span>);</font></div>
+<div>&nbsp;</div>
+<div><font face="courier new,monospace">for (int y=0; y &lt; <span class="skimlinks-unlinked">MyTable.Rows.Count</span>; y++) // Loop over the rows.</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;{</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<span class="skimlinks-unlinked">myliteral.Text</span> += “&lt;tr&gt;”;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;for (int x=0; x &lt; <span class="skimlinks-unlinked">MyTable.Columns.Count</span>; x++)</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</font></div>
+<div>&nbsp;</div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(<span class="skimlinks-unlinked">MyTable.Rows</span>[y][x].GetType() == <span class="skimlinks-unlinked">System.Type.GetType(“System.Decimal</span>”)){</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="skimlinks-unlinked">myliteral.Text</span> += “&lt;td&gt;” + </font></div>
+<div><font face="courier new,monospace">string.Format(“{0:C}”,<span class="skimlinks-unlinked">MyTable.Rows</span>[y][x]) + “&lt;/td&gt;”; </font></div>
+<div>&nbsp;</div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else{</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="skimlinks-unlinked">myliteral.Text</span> += “&lt;td&gt;” + <span class="skimlinks-unlinked">MyTable.Rows</span>[y][x] + “&lt;/td&gt;”;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<span class="skimlinks-unlinked">myliteral.Text</span> += “&lt;/tr&gt;r”;</font></div>
+<div><font face="courier new,monospace">&nbsp;&nbsp;&nbsp;}//end foreach</font></div>
+</div>
+</div>
+											</div><!--/.content-->
+	</div><!--/.main-->
+	<footer class="footer">
+			</footer><!-- .footer -->
+</article> 
+</div><!-- #main-content -->
+<div id="main-sidebar" class="clearfix">
+	</div><!-- #main-sidebar -->
+		</div><!-- .in -->
+	</div><!-- #main -->
+	<footer id="footer" class="act clearfix">
+		<div class="in">
+			<ul class="nav"><li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://www.annotum.org/">About Annotum</a></li></ul>			
+			 <a href="https://wordpress.com/?ref=footer_blog">Blog at WordPress.com.</a>
+		</div>
+	</footer>
+<!--  -->
+<script type="text/javascript" src="Asp.NetC%23WebFormsConnectedToSQLqueries_files/gprofiles.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="Asp.NetC%23WebFormsConnectedToSQLqueries_files/wpgroho.js"></script>
+
+	<script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+
+			if (typeof Gravatar === "undefined"){
+				return;
+			}
+
+			if ( typeof Gravatar.init !== "function" ) {
+				return;
+			}			
+
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script>
+
+		<div style="display:none">
+	</div>
+<script type="text/javascript" src="Asp.NetC%23WebFormsConnectedToSQLqueries_files/a"></script>
+<script type="text/javascript" src="Asp.NetC%23WebFormsConnectedToSQLqueries_files/widgets.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var actionbardata = {"siteID":"33391726","siteName":"bgryderclock","siteURL":"http:\/\/bgryderclock.wordpress.com","icon":"<img alt='' src='https:\/\/s1.wp.com\/i\/logo\/wpcom-gray-white.png' class='avatar avatar-50' height='50' width='50' \/>","canManageOptions":"","canCustomizeSite":"","isFollowing":"","themeSlug":"vip\/partner-annotum-base","signupURL":"https:\/\/wordpress.com\/start\/","loginURL":"https:\/\/bgryderclock.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fbgryderclock.wordpress.com%2Farticle%2Fasp-net-c-web-forms-connected-to-sql-c5281w3qfiqf-3%2F","themeURL":"","xhrURL":"https:\/\/bgryderclock.wordpress.com\/wp-admin\/admin-ajax.php","nonce":"ca2aea102a","isSingular":"1","isFolded":"","isLoggedIn":"","isMobile":"","subscribeNonce":"<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"d5ef66436e\" \/>","referer":"https:\/\/bgryderclock.wordpress.com\/article\/asp-net-c-web-forms-connected-to-sql-c5281w3qfiqf-3\/","canFollow":"1","statusMessage":"","customizeLink":"https:\/\/bgryderclock.wordpress.com\/wp-admin\/customize.php?url=https%3A%2F%2Fbgryderclock.wordpress.com%2Farticle%2Fasp-net-c-web-forms-connected-to-sql-c5281w3qfiqf-3%2F","postID":"3","shortlink":"http:\/\/wp.me\/p2g6Ie-3","canEditPost":"","editLink":"https:\/\/bgryderclock.wordpress.com\/wp-admin\/post.php?post=3&action=edit","statsLink":"https:\/\/wordpress.com\/stats\/post\/3\/bgryderclock.wordpress.com","i18n":{"view":"View site","follow":"Follow","following":"Following","edit":"Edit","login":"Log in","signup":"Sign up","customize":"Customize","report":"Report this content","themeInfo":"Get theme: Annotum Base","shortlink":"Copy shortlink","copied":"Copied","followedText":"New posts from this site will now appear in your <a href=\"https:\/\/wordpress.com\/\">Reader<\/a>","foldBar":"Collapse this bar","unfoldBar":"Expand this bar","editSubs":"Manage subscriptions","viewReader":"View site in the Reader","subscribe":"Sign me up","enterEmail":"Enter your email address","followers":"","alreadyUser":"Already have a WordPress.com account? <a href=\"https:\/\/bgryderclock.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fbgryderclock.wordpress.com%2Farticle%2Fasp-net-c-web-forms-connected-to-sql-c5281w3qfiqf-3%2F\">Log in now.<\/a>","stats":"Stats"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="Asp.NetC%23WebFormsConnectedToSQLqueries_files/a_003"></script><div id="actionbar" class="actnbr-vip-partner-annotum-base actnbr-has-follow"><ul><li class="actnbr-btn actnbr-hidden"> 			    	<a class="actnbr-action actnbr-actn-follow" href=""><svg class="gridicon gridicon__follow" height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M23 16v2h-3v3h-2v-3h-3v-2h3v-3h2v3h3zM20 2v9h-4v3h-3v4H4c-1.1 0-2-.9-2-2V2h18zM8 13v-1H4v1h4zm3-3H4v1h7v-1zm0-2H4v1h7V8zm7-4H4v2h14V4z"></path></g></svg><span>Follow</span></a> 			    	<div class="actnbr-popover tip tip-top-left actnbr-notice"> 			    		<div class="tip-arrow"></div> 			    		<div class="tip-inner actnbr-follow-bubble"></div> 			    	</div> 			    </li><li class="actnbr-ellipsis actnbr-hidden"> 			  <svg class="gridicon gridicon__ellipsis" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><circle cx="5" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle><circle cx="12" cy="12" r="2"></circle></g></svg> 			  <div class="actnbr-popover tip tip-top-left actnbr-more"> 			  	<div class="tip-arrow"></div> 			  	<div class="tip-inner"> 				  <ul> 				    <li class="actnbr-sitename actnbr-hidden"><a href="http://bgryderclock.wordpress.com/"><img alt="" src="Asp.NetC%23WebFormsConnectedToSQLqueries_files/wpcom-gray-white.png" class="avatar avatar-50" width="50" height="50"> bgryderclock</a></li> 				   	<li class="actnbr-folded-customize actnbr-hidden"><a href="https://bgryderclock.wordpress.com/wp-admin/customize.php?url=https%3A%2F%2Fbgryderclock.wordpress.com%2Farticle%2Fasp-net-c-web-forms-connected-to-sql-c5281w3qfiqf-3%2F"><svg class="gridicon gridicon__customize" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M2 6c0-1.505.78-3.08 2-4 0 .845.69 2 2 2 1.657 0 3 1.343 3 3 0 .386-.08.752-.212 1.09.74.594 1.476 1.19 2.19 1.81L8.9 11.98c-.62-.716-1.214-1.454-1.807-2.192C6.753 9.92 6.387 10 6 10c-2.21 0-4-1.79-4-4zm12.152 6.848l1.34-1.34c.607.304 1.283.492 2.008.492 2.485 0 4.5-2.015 4.5-4.5 0-.725-.188-1.4-.493-2.007L18 9l-2-2 3.507-3.507C18.9 3.188 18.225 3 17.5 3 15.015 3 13 5.015 13 7.5c0 .725.188 1.4.493 2.007L3 20l2 2 6.848-6.848c1.885 1.928 3.874 3.753 5.977 5.45l1.425 1.148 1.5-1.5-1.15-1.425c-1.695-2.103-3.52-4.092-5.448-5.977z" data-reactid=".2.1.1:0.1b.0"></path></g></svg><span>Customize<span></span></span></a></li> 				    <li class="actnbr-folded-follow actnbr-hidden"><a class="actnbr-action actnbr-actn-follow" href=""><svg class="gridicon gridicon__follow" height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M23 16v2h-3v3h-2v-3h-3v-2h3v-3h2v3h3zM20 2v9h-4v3h-3v4H4c-1.1 0-2-.9-2-2V2h18zM8 13v-1H4v1h4zm3-3H4v1h7v-1zm0-2H4v1h7V8zm7-4H4v2h14V4z"></path></g></svg><span>Follow</span></a></li> 						<li class="actnbr-signup actnbr-hidden"><a href="https://wordpress.com/start/">Sign up</a></li> 				    <li class="actnbr-login actnbr-hidden"><a href="https://bgryderclock.wordpress.com/wp-login.php?redirect_to=https%3A%2F%2Fbgryderclock.wordpress.com%2Farticle%2Fasp-net-c-web-forms-connected-to-sql-c5281w3qfiqf-3%2F">Log in</a></li> 				     				    <li class="actnbr-shortlink actnbr-hidden"><a href="http://wp.me/p2g6Ie-3">Copy shortlink</a></li> 				    <li class="flb-report actnbr-hidden"><a href="http://en.wordpress.com/abuse/">Report this content</a></li> 				     				     				    <li class="actnbr-subs actnbr-hidden"><a href="https://subscribe.wordpress.com/">Manage subscriptions</a></li> 				    <li class="actnbr-fold actnbr-hidden"><a href="">Collapse this bar</a></li> 			      </ul> 			    </div> 		      </div> 		    </li> 	      </ul></div>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script>	<script type="text/javascript">
+	var skimlinks_pub_id = "725X584219"
+	var skimlinks_sitename = "bgryderclock.wordpress.com";
+	</script>
+	<script type="text/javascript" defer="defer" src="Asp.NetC%23WebFormsConnectedToSQLqueries_files/725X1342.js"></script>		<script>
+			var _comscore = _comscore || [];
+			_comscore.push({
+				c1: "2",
+				c2: "7518284"
+			});
+			(function() {
+				var s = document.createElement("script"),
+					el = document.getElementsByTagName("script")[0];
+				s.defer = true;
+				s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+				el.parentNode.insertBefore(s, el);
+			})();
+		</script>
+		<noscript>
+			<p class="robots-nocontent"><img src="https://sb.scorecardresearch.com/p?c1=2&c2=7518284&c3=&c4=&c5=&c6=&c15=&cv=2.0&cj=1" alt="" style="display:none;" width="1" height="1" /></p>
+		</noscript><script src="Asp.NetC%23WebFormsConnectedToSQLqueries_files/w.js" type="text/javascript" async="" defer="defer"></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'33391726','blog_tz':'0','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'33391726','v':'wpcom','tz':'0','user_id':'0','post':'3','subd':'bgryderclock'}]);
+_stq.push(['extra', {'crypt':'UE5XaGUuOTlwaD85flAmcm1mcmZsaDhkV11YdTdvUG14Q2VDQTR4LlUsLi82dU1mai9BMkM9QjRQOXBLb118enZ5UGUzS1M9b01BRV8/dkIuRixxSjkvclV3MlZwWnQvcUt4NllRMDhaR292U19pL182eVNBOWR8cGRhOURZPTg9PXZfLnl2LmExX2olLV0wTnNrL2tCNjVqV0VCNnRndGVKVEozMHFTb0k0UVJXQjZGMVJYYURML3FEM3VhdSxQUDNUTnhWX3I1VENdVEhzSnl+OH5QNUxPOTJFLnl6NXRPNjFRazEyaDd+LU8vYl1TUlhoOHV6K0ZaKy5fJlNmM1FdREktZlRwVVQ0OU9KdA=='}]);
+_stq.push([ 'clickTrackerInit', '33391726', '3' ]);
+	</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+<img src="Asp.NetC%23WebFormsConnectedToSQLqueries_files/g.gif" alt=":)" id="wpstats"></body></html>

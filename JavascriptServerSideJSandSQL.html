@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase no-indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+
+	<title>Javascript, Server-Side JS,  and SQL – bgryderclock</title>
+
+	<link rel="dns-prefetch" href="https://s2.wp.com/">
+<link rel="dns-prefetch" href="https://platform.twitter.com/">
+<link rel="dns-prefetch" href="https://s0.wp.com/">
+<link rel="dns-prefetch" href="https://s1.wp.com/">
+<link rel="alternate" type="application/rss+xml" title="bgryderclock » Feed" href="https://bgryderclock.wordpress.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="bgryderclock » Comments Feed" href="https://bgryderclock.wordpress.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="bgryderclock » Javascript, Server-Side JS, and&nbsp;SQL Comments Feed" href="https://bgryderclock.wordpress.com/article/javascript-server-side-js-and-sql-c5281w3qfiqf-2/feed/">
+	<script defer="defer" src="JavascriptServerSideJSandSQL_files/beacon.js"></script><script type="text/javascript" src="JavascriptServerSideJSandSQL_files/showad.js" async=""></script><script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+			<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s1.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1473172720h&ver=4.6.1-RC1-38499"}};
+			!function(a,b,c){function d(a){var c,d,e,f,g,h=b.createElement("canvas"),i=h.getContext&&h.getContext("2d"),j=String.fromCharCode;if(!i||!i.fillText)return!1;switch(i.textBaseline="top",i.font="600 32px Arial",a){case"flag":return i.fillText(j(55356,56806,55356,56826),0,0),!(h.toDataURL().length<3e3)&&(i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,65039,8205,55356,57096),0,0),c=h.toDataURL(),i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,55356,57096),0,0),d=h.toDataURL(),c!==d);case"diversity":return i.fillText(j(55356,57221),0,0),e=i.getImageData(16,16,1,1).data,f=e[0]+","+e[1]+","+e[2]+","+e[3],i.fillText(j(55356,57221,55356,57343),0,0),e=i.getImageData(16,16,1,1).data,g=e[0]+","+e[1]+","+e[2]+","+e[3],f!==g;case"simple":return i.fillText(j(55357,56835),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode8":return i.fillText(j(55356,57135),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode9":return i.fillText(j(55358,56631),0,0),0!==i.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity","unicode9"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="JavascriptServerSideJSandSQL_files/wp-emoji-release.js" type="text/javascript"></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="all-css-0-1" href="JavascriptServerSideJSandSQL_files/a_002.css" type="text/css" media="all">
+<link rel="stylesheet" id="screenprint-css-1-1" href="JavascriptServerSideJSandSQL_files/main.css" type="text/css" media="screen, print">
+<link rel="stylesheet" id="all-css-2-1" href="JavascriptServerSideJSandSQL_files/a.css" type="text/css" media="all">
+	<!--[if lte IE 8]>
+	<style type="text/css" media="screen">
+		.featured-posts .control-panel .previous,
+		.featured-posts .control-panel .next,
+		.widget-recent-posts .nav .ui-tabs-selected,
+		.widget-recent-posts .panel {
+			behavior: url(https://s0.wp.com/wp-content/themes/vip/partner-annotum-base/assets/main/js/libs/css3pie/PIE.php);
+		}
+	</style>
+	<![endif]-->
+<script type="text/javascript">
+/* <![CDATA[ */
+var ANNO_DICTIONARY = {"previous":"Previous","next":"Next","xofy":"%1$s of %2$s"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="JavascriptServerSideJSandSQL_files/a_003"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://bgryderclock.wordpress.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s1.wp.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="VBA code" href="https://bgryderclock.wordpress.com/article/vba-code-3hhu1b5imyz72-2/">
+<link rel="next" title="ASP.NET – C# Web Forms connected to SQL&nbsp;queries" href="https://bgryderclock.wordpress.com/article/asp-net-c-web-forms-connected-to-sql-c5281w3qfiqf-3/">
+<meta name="generator" content="WordPress.com">
+<link rel="canonical" href="https://bgryderclock.wordpress.com/article/javascript-server-side-js-and-sql-c5281w3qfiqf-2/">
+<link rel="shortlink" href="http://wp.me/p2g6Ie-4">
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/1.0/?format=json&amp;url=https%3A%2F%2Fbgryderclock.wordpress.com%2Farticle%2Fjavascript-server-side-js-and-sql-c5281w3qfiqf-2%2F&amp;for=wpcom-auto-discovery"><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/1.0/?format=xml&amp;url=https%3A%2F%2Fbgryderclock.wordpress.com%2Farticle%2Fjavascript-server-side-js-and-sql-c5281w3qfiqf-2%2F&amp;for=wpcom-auto-discovery">
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Javascript, Server-Side JS,  and SQL">
+<meta property="og:url" content="https://bgryderclock.wordpress.com/article/javascript-server-side-js-and-sql-c5281w3qfiqf-2/">
+<meta property="og:description" content="Here is some JS code samples that I use with server-side Javascript  in .ASP files">
+<meta property="article:published_time" content="2011-03-28T08:41:59+00:00">
+<meta property="article:modified_time" content="2011-03-28T08:41:59+00:00">
+<meta property="og:site_name" content="bgryderclock">
+<meta property="og:image" content="https://s0.wp.com/i/blank.jpg">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:site" content="@wordpressdotcom">
+<meta name="twitter:card" content="summary">
+<meta property="fb:app_id" content="249643311490">
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom">
+<link rel="shortcut icon" type="image/x-icon" href="https://s2.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48">
+<link rel="icon" type="image/x-icon" href="https://s2.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48">
+<link rel="apple-touch-icon-precomposed" href="https://s0.wp.com/i/webclip.png">
+<link rel="openid.server" href="https://bgryderclock.wordpress.com/?openidserver=1">
+<link rel="openid.delegate" href="https://bgryderclock.wordpress.com/">
+<link rel="search" type="application/opensearchdescription+xml" href="https://bgryderclock.wordpress.com/osd.xml" title="bgryderclock">
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com">
+<link rel="pingback" href="https://bgryderclock.wordpress.com/xmlrpc.php">
+	<link rel="archives" title="March 2012" href="https://bgryderclock.wordpress.com/2012/03/">
+<meta name="application-name" content="bgryderclock"><meta name="msapplication-window" content="width=device-width;height=device-height"><meta name="msapplication-tooltip" content="Just another WordPress.com site"><meta name="msapplication-task" content="name=Subscribe;action-uri=https://bgryderclock.wordpress.com/feed/;icon-uri=https://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=https://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=https://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=https://s2.wp.com/i/favicon.ico"><meta name="title" content="Javascript, Server-Side JS, and&nbsp;SQL | bgryderclock on WordPress.com">
+<meta name="description" content="Here is some JS code samples that I use with server-side Javascript in .ASP files">
+		<script type="text/javascript" src="JavascriptServerSideJSandSQL_files/amzn_ads.js"></script>
+		<script type="text/javascript">
+		try { amznads.getAds("3033"); } catch(e) { /* ignore */ }
+		</script><script type="text/javascript" src="JavascriptServerSideJSandSQL_files/bid_002"></script>
+		<script type="text/javascript">
+		try {
+			var a9_p = amznads.getKeys(),
+			_ipw_custom = {
+				wordAds: '0',
+				adSafe: '0',
+				domain: 'bgryderclock.wordpress.com',
+				pageURL: 'https://bgryderclock.wordpress.com/article/javascript-server-side-js-and-sql-c5281w3qfiqf-2/'
+			};
+			if("undefined"!=typeof a9_p&&""!=a9_p&&null!==a9_p&&"[object Array]"===Object.prototype.toString.call(a9_p)){var a="",b=0,c=a9_p.length;a9_p.sort();for(var d=0;d<c;d++){a9_p[d-b]=a9_p[d-b].replace(/a1x6p/,"a160x600p");var e=a9_p[d-b].split("p");e[0]==a&&(a9_p.splice(d-b,1),b++);a=e[0]}_ipw_custom.amznPay=a9_p};document.close();
+		} catch(e) {}
+		</script>
+		<script type="text/javascript" src="JavascriptServerSideJSandSQL_files/publishertag.js"></script>
+ 		<script type="text/javascript" src="JavascriptServerSideJSandSQL_files/head.js"></script><script type="text/javascript" src="JavascriptServerSideJSandSQL_files/yieldbot.js"></script><script type="text/javascript">    try {        __ATA.registerAdapterResult("YB", yieldbot.getPageCriteria());    } catch (err) {}</script>
+<script type="text/javascript" src="JavascriptServerSideJSandSQL_files/amzn_ads.js"></script><script type="text/javascript">try { amznads.getAds("3033"); } catch (err) {}</script><script type="text/javascript" src="JavascriptServerSideJSandSQL_files/bid"></script><script type="text/javascript">    try {        __ATA.registerAdapterResult("A9", amznads.getKeys());    } catch (err) {}</script><style type="text/css" id="syntaxhighlighteranchor"></style>
+<script type="text/javascript">
+	window.google_analytics_uacct = "UA-52447-2";
+</script>
+
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-52447-2']);
+	_gaq.push(['_setDomainName', 'wordpress.com']);
+	_gaq.push(['_initData']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+	})();
+</script><script type="text/javascript" async="" src="JavascriptServerSideJSandSQL_files/ga.js"></script>
+	<style type="text/css" media="screen">
+
+ 
+	/* Color 1 */
+	
+		/* Background Color */
+		#header .header-body,
+		#header .navigation,
+		#masthead,
+		.featured-posts .control-panel a,
+		.widget .tab-active,
+		#reply button,
+		.tools-nav nav li a,
+		.widget-recent-posts .nav .ui-tabs-selected {
+			background-color: #006b94;
+		}
+
+		/* Border Color */
+		#site-nav li,
+		.callout-item,
+		.widget-recent-posts .nav li { 
+			border-color: #006b94;
+		}
+	
+		/* Text Color */
+		.featured-posts .control-panel,
+		.article-excerpt .header .meta a:hover,
+		.article-full .header .meta a:hover {
+			color: #006b94;
+		}
+
+
+	/* Color 2 */
+	
+		/* Background Color */
+		#site-nav,
+		#site-nav li,
+		#site-nav li ul,
+		.featured-posts .carousel-item,
+		#masthead .teaser {
+			background-color: #66a6bf;
+		}
+
+	/* Link Color */
+	a {
+		color: #0867ab;
+	}
+</style>
+<script type="text/javascript" async="" src="JavascriptServerSideJSandSQL_files/a_002.js"></script><link rel="stylesheet" type="text/css" id="gravatar-card-css" href="JavascriptServerSideJSandSQL_files/hovercard.css"><link rel="stylesheet" type="text/css" id="gravatar-card-services-css" href="JavascriptServerSideJSandSQL_files/services.css"><script type="text/javascript" async="" src="JavascriptServerSideJSandSQL_files/a.js"></script></head>
+
+<body class="single single-article postid-4 mp6 customizer-styles-applied highlander-enabled highlander-light">
+	<header id="header" class="act">
+		<div class="header-body">
+			<div class="in">
+									<h1 id="site-name"><a href="https://bgryderclock.wordpress.com/" title="Home" rel="home">bgryderclock</a></h1>
+								<nav id="secondary-nav" class="clearfix">
+				<ul class="nav"><li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://bgryderclock.wordpress.com/wp-login.php">Log in</a></li></ul>				</nav>
+			</div>
+		</div>
+		<div class="navigation">
+			<div class="in">
+				<nav id="site-nav" class="clearfix">
+				<ul class="nav"><li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://bgryderclock.wordpress.com/">Home</a></li></ul>
+<form class="search" method="get" action="https://bgryderclock.wordpress.com">
+	<input name="s" placeholder="Search" class="type-text" type="text">
+	<button class="type-submit imr" type="submit">Search</button>
+</form>				</nav>
+			</div>
+		</div>
+			</header>
+<div id="main" class="act">
+	<div class="in"><div id="main-body" class="clearfix">
+	
+<article class="article-full post-4 article type-article status-publish hentry">
+	<header class="header">
+		<div class="entry-title">
+			<h1 class="title"><a rel="bookmark" href="https://bgryderclock.wordpress.com/article/javascript-server-side-js-and-sql-c5281w3qfiqf-2/">Javascript, Server-Side JS, and&nbsp;SQL</a></h1>
+					</div>
+		<div class="meta">
+			<time class="published" pubdate="" datetime="2011-03-28T08:41:59+00:00">March 28, 2011</time>
+					</div>
+		<div class="tools-bar supplement clearfix">
+	<div class="cell print">
+		<a href="#" onclick="window.print(); return false;">Print Article</a>
+	</div>
+	<div class="cell citation">
+		<a>Citation</a>
+		<div class="citation-container">
+			<textarea class="entry-summary" readonly="readonly">Gryder Brian, 
+Gryder Brian. Javascript, Server-Side JS, and&nbsp;SQL [Internet]. 
+Version 1. bgryderclock. 2011 Mar 28. Available from: 
+https://bgryderclock.wordpress.com/article/javascript-server-side-js-and-sql-c5281w3qfiqf-2/.</textarea>
+		</div><!--/.citation-container -->
+	</div>
+	<div class="cell download">
+		, <a href="https://bgryderclock.wordpress.com/article/javascript-server-side-js-and-sql-c5281w3qfiqf-2/xml/">XML</a> 
+	</div>
+	<div class="cell share clearfix">
+		<div class="social-nav">
+			<ul class="nav">
+				<li><a href="mailto:?subject=Javascript,%20Server-Side%20JS,%20and%C2%A0SQL&amp;body=Here%20is%20some%20JS%20code%20samples%20that%20I%20use%20with%E2%80%A6%0A%0A%20https%3A%2F%2Fbgryderclock.wordpress.com%2Farticle%2Fjavascript-server-side-js-and-sql-c5281w3qfiqf-2%2F" class="email imr">Email</a></li>
+				<li><a href="http://twitter.com/share?url=https%3A%2F%2Fbgryderclock.wordpress.com%2Farticle%2Fjavascript-server-side-js-and-sql-c5281w3qfiqf-2%2F&amp;text=Javascript,%20Server-Side%20JS,%20and%C2%A0SQL" class="twitter-share-button" data-count="none">Tweet</a></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+</div><!-- .action-bar -->
+		<div class="sec sec-authors">
+			<span class="title"><span>Authors</span></span>
+			<ul class="authors nav">
+				
+	<li>
+		<div class="author vcard">
+			<span class="name"><span class="given-name">Gryder</span> <span class="family-name">Brian</span></span>
+		</div>
+	</li>
+	<li>
+		<div class="author vcard">
+			<span class="name"><span class="given-name">Gryder</span> <span class="family-name">Brian</span></span>
+		</div>
+	</li>			</ul>
+		</div>
+	</header>
+	<div class="main">
+		<div class="content entry-content">
+							<section class="sec">
+					<h1><span>Abstract</span></h1>
+					<p>Here is some JS code samples that I use with server-side Javascript  in .ASP files</p>
+				</section>
+									<div>
+<div dir="ltr">
+<h2>Import a CSV file to a SQL table with the &lt;file&gt; element and clientside JS:</h2>
+<div><font color="#783f04">&nbsp;<font face="courier new,monospace">—-html———</font></font></div>
+<div><font size="2" color="#783f04" face="courier new,monospace">
+<p>&lt;html&gt;<br>&lt;head&gt;<br><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>&lt;script type=’text/javascript’ src=’jquery-1.4.2.min.js’&gt;&lt;/script&gt;<br><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>&lt;script type=’text/javascript’ src=’import.js’&gt;&lt;/script&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br><span>&nbsp;&nbsp;<font color="#cc0000">&nbsp;&nbsp;</font></span><font color="#cc0000">&lt;input type=”file” id=”filename” name=”filename” /&gt;</font><br><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>&lt;input type=”button” value=”Import” onclick=”dataimport()” /&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;<br>&nbsp;—-end html———</p>
+</font><p><font size="2" color="#783f04" face="courier new,monospace"></font></p></div>
+<div><font face="courier new,monospace">&nbsp;<font color="#0c343d">—–<span class="skimlinks-unlinked">import.js</span>——-<br>var AdOpenForwardOnly = 0;<br>var adLockReadOnly = 1 ;<br>var adOpenDynamic = 2;<br>var adLockOptimistic = 3;</font></font></div>
+<div><font color="#0c343d" face="courier new,monospace">var sqlstr = “…”<br>var sqlstr2 = “…”<br>var sqlstr3 = “…”<br>var rs = new ActiveXObject(“ADODB.Recordset”)<br>var conn = new ActiveXObject(“ADODB.Connection”)<br>var rs22 = new ActiveXObject(“ADODB.Recordset”)<br>var conn2 = new ActiveXObject(“ADODB.Connection”)<br>var datasourcepath = “”<br>var now = new Date<br>var password = “…”</font></div>
+<div><font color="#0c343d" face="courier new,monospace">&nbsp;&nbsp;&nbsp; window.onerror=function(msg, url, linenumber){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert(‘Error message: ‘+msg+’nURL: ‘+url+’nLine Number: ‘+linenumber)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return true<br>&nbsp;&nbsp;&nbsp; }//end onError</font></div>
+<div><font color="#0c343d" face="courier new,monospace">function dataimport()<br>{</font></div>
+<div><font color="#0c343d" face="courier new,monospace">&nbsp;&nbsp;&nbsp; //</font></div>
+<div><font color="#0c343d" face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; datasourcepath = document.getElementById(‘filename’).value<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; datasourcepath = datasourcepath + “”</font></div>
+<div><font color="#0c343d" face="courier new,monospace">&nbsp;&nbsp;&nbsp; if(confirm(‘Import Worklist data? Click ‘Cancel’ to exit.’))<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ password = prompt(‘enter the password for the import 
+process.’,’applesause123123′);</font></div>
+<div><font color="#0c343d" face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var conn_str2 = “PROVIDER=SQLOLEDB;Server=my-sql-server;” +<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “Database=db_mydatabase;User ID=myID;Password=” + password + “;”</font></div>
+<div><font color="#0c343d" face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sqlstr3 = “Delete FROM [tblMain]”</font></div>
+<div><font color="#0c343d" face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //alert(datasourcepath)</font></div>
+<div><font color="#0c343d" face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(datasourcepath == “”){</font></div>
+<div><font color="#0c343d" face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert(‘please select a file to import’)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //exit function<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }//end if datasourcepath=””</font></div>
+<div><font color="#0c343d" face="courier new,monospace">&nbsp;&nbsp;&nbsp; var conn_str = “Provider=<span class="skimlinks-unlinked">Microsoft.Jet.OLEDB.4.0</span>; ” +<br>&nbsp;&nbsp;&nbsp; “Data Source=” + datasourcepath + “;” +<br>&nbsp;&nbsp;&nbsp; “Extended Properties=”Excel 8.0;HDR=Yes;IMEX=1″;”<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sqlstr = “SELECT * FROM [Data$]” //sheetname&nbsp;is Data 0_0*<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="skimlinks-unlinked">conn.open(conn_str</span>, “”,&nbsp;&nbsp; “”)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; conn2.open(conn_str2, “”,&nbsp;&nbsp; “”)</font></div>
+<div>&nbsp;</div>
+<div><font color="#0c343d" face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="skimlinks-unlinked">rs.open</span>(“” + sqlstr3, conn2, adOpenDynamic, adLockOptimistic)<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="skimlinks-unlinked">rs.open</span>(“” + sqlstr, conn, AdOpenForwardOnly, adLockReadOnly)</font></div>
+<div><font color="#0c343d" face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; while(!<span class="skimlinks-unlinked">rs.eof</span>){<br>&nbsp;&nbsp;<br><font color="#3d85c6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><b><font color="#3d85c6">insert(rs(0),rs(1),rs(2),rs(3),rs(4),<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ rs(5),rs(6),rs(7),rs(8),rs(9),conn2);</font></b></font></div>
+<div><font color="#0c343d" face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //<span class="skimlinks-unlinked">document.write(‘we</span> are about to movenext rs &lt;br&gt;’)</font></div>
+<div><font color="#0c343d" face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rs.movenext();</font></div>
+<div><font color="#0c343d" face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</font></div>
+<div><font color="#0c343d" face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="skimlinks-unlinked">rs.close</span>();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="skimlinks-unlinked">conn.close</span>();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; conn2.close();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="skimlinks-unlinked">document.write(“&lt;b&gt;Finished</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert(‘Finished’)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //alert(‘conn2’);</font></div>
+<div>&nbsp;</div>
+<div><font color="#0c343d"><font face="courier new,monospace">&nbsp;&nbsp;&nbsp; } //end if confirm<br>&nbsp;&nbsp;&nbsp; <br>}<br>//end function&nbsp;<br></font>&nbsp;<br><font face="courier new,monospace">&nbsp;<br><font color="#3d85c6">function insert(rs0,rs1,rs2,rs3,rs4,rs5,rs6,rs7,rs8,rs9,conn2){</font><br>/*<br>&nbsp;**/</font></font></div>
+<div><font color="#0c343d" face="courier new,monospace">&nbsp;var mydate&nbsp; = new Date(rs5)<br>&nbsp;var mydaters5 = “…”<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var mydaters6 = “…”<br>&nbsp;mydaters5 = mydate.getMonth() + 1 +<br>&nbsp;&nbsp;”/” + mydate.getDate() +<br>&nbsp;&nbsp;”/” + mydate.getFullYear()</font></div>
+<div><font color="#0c343d" face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //alert(mydaters5)</font></div>
+<div><font color="#0c343d" face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mydate&nbsp; = new Date(rs6)<br>&nbsp;mydaters6 = mydate.getMonth() + 1 +<br>&nbsp;&nbsp;”/” + mydate.getDate() +<br>&nbsp;&nbsp;”/” + mydate.getFullYear()</font></div>
+<div><font color="#0c343d" face="courier new,monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rs1 = String(rs1).replace(/’/g,”””)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rs2 = String(rs2).replace(/’/g,”””)</font></div>
+<div><font color="#0c343d" face="courier new,monospace">&nbsp;&nbsp;&nbsp; var conn_str2 = “PROVIDER=SQLOLEDB;Server=my-sql-server;” +<br>&nbsp;&nbsp;&nbsp; “Database=db_mydatabase;User ID=myID;Password=” + password + “;”</font></div>
+<div><font color="#0c343d" face="courier new,monospace">&nbsp;&nbsp;&nbsp; sqlstr2 = “” +<br>&nbsp;&nbsp;&nbsp; “insert into tblMain ” +<br>&nbsp;&nbsp;&nbsp; “(BusCat,Company,CompanyID,Invoice,Terms,InvoiceDate,” +<br>&nbsp;&nbsp;&nbsp; “ReportDate,AmtDue,InvoiceAge,AgeGroup) ” +<br>&nbsp;&nbsp;&nbsp; “values (‘” +<br>&nbsp;&nbsp;&nbsp; rs0 + “‘,'” + rs1 + “‘,'” + rs2 + “‘,'” + rs3 + “‘,'” + rs4 + “‘,'” + mydaters5 +<br>&nbsp;&nbsp;&nbsp; “‘,'” + mydaters6 + “‘,'” + rs7 + “‘,'” + rs8 + “‘,'” + rs9 + “‘);”</font></div>
+<div><font color="#0c343d" face="courier new,monospace">&nbsp;&nbsp;&nbsp; <span class="skimlinks-unlinked">document.write(“&lt;input</span>pe=’hidden’ value='”) //debug<br>&nbsp;&nbsp;&nbsp; <span class="skimlinks-unlinked">document.write(sqlstr2</span>)<br>&nbsp;&nbsp;&nbsp; <span class="skimlinks-unlinked">document.write</span>(“‘ /&gt;rn”)</font></div>
+<div>&nbsp;</div>
+<div><font color="#0c343d" face="courier new,monospace">&nbsp;&nbsp;&nbsp; rs22.open(“” + sqlstr2, conn2, adOpenDynamic, adLockOptimistic);</font></div>
+<div><font color="#0c343d" face="courier new,monospace">&nbsp;&nbsp;&nbsp;<br>}//endfunction </font></div>
+<div><font color="#0c343d" face="courier new,monospace">—-end <span class="skimlinks-unlinked">import.js</span>——</font></div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>Misc<br>&nbsp;</div>
+<table style="border-collapse:collapse;border-color:rgb(136,136,136);border-width:1px;" border="1" width="450" cellspacing="0">
+<tbody>
+<tr>
+<td style="width:60px;">&nbsp;Use this code to deselect an item (“apple”) from a ListBox (id=”fruit”).</td>
+</tr>
+<tr>
+<td style="width:60px;">Call it with this:&nbsp; deselectListOptionByValue(“fruit”,”apple”) </td>
+</tr>
+<tr>
+<td style="width:60px;">&nbsp;function deselectListOptionByValue(myId, myvalue){ <br>&nbsp;&nbsp;&nbsp; var myobj = document.getElementById(myId) <br>&nbsp;<br>&nbsp;&nbsp;&nbsp; for(var i = 0; i &lt; myobj.length; i++ ){ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(myobj.options[i].value == myvalue) <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; myobj.options[i].selected = false; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } //end if <br>&nbsp;&nbsp;&nbsp; }//end for <br>}//end function</td>
+</tr>
+</tbody>
+</table>
+<table style="border-collapse:collapse;border-color:rgb(136,136,136);border-width:1px;" border="1" width="450" cellspacing="0">
+<tbody>
+<tr>
+<td style="width:60px;">&nbsp;Use this code to select an item (“apple”) from a ListBox (id=”fruit”).</td>
+</tr>
+<tr>
+<td style="width:60px;">Call it with this:&nbsp; selectListOptionByValue(“fruit”,”apple”) </td>
+</tr>
+<tr>
+<td style="width:60px;">function selectListOptionByValue(myId, myvalue){ <br>&nbsp;&nbsp;&nbsp; var myobj = document.getElementById(myId) <br>&nbsp;<br>&nbsp;&nbsp;&nbsp; for(var i = 0; i &lt; myobj.length; i++ ){ <br>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; if(myobj.options[i].value == myvalue) <br>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; { <br>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; myobj.options[i].selected = true; <br>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; } //end if <br>&nbsp;&nbsp;&nbsp; }//end for <br>}//end function</td>
+</tr>
+</tbody>
+</table>
+<table style="border-collapse:collapse;border-color:rgb(136,136,136);border-width:1px;" border="1" width="450" cellspacing="0">
+<tbody>
+<tr>
+<td style="width:60px;">&nbsp;Use this code to select an item (“apple”) from a ListBox (id=”fruit”).</td>
+</tr>
+<tr>
+<td style="width:60px;">Call it with this:&nbsp; selectListOptionByValue(“fruit”,”apple”) </td>
+</tr>
+<tr>
+<td style="width:60px;">function selectListOptionByValue(myId, myvalue){ <br>&nbsp;&nbsp;&nbsp; var myobj = document.getElementById(myId) <br>&nbsp;<br>&nbsp;&nbsp;&nbsp; for(var i = 0; i &lt; myobj.length; i++ ){ <br>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; if(myobj.options[i].value == myvalue) <br>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; { <br>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; myobj.options[i].selected = true; <br>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; } //end if <br>&nbsp;&nbsp;&nbsp; }//end for <br>}//end function</td>
+</tr>
+</tbody>
+</table>
+<table style="border-collapse:collapse;border-color:rgb(136,136,136);border-width:1px;" border="1" width="450" cellspacing="0">
+<tbody>
+<tr>
+<td style="width:60px;">&nbsp;To check and uncheck a CheckBox by the Checkbox id.</td>
+</tr>
+<tr>
+<td style="width:60px;">document.getElementById(“byacctnum”).checked = true<br>document.getElementById(“byacctnum”).checked = false </td>
+</tr>
+</tbody>
+</table>
+<table style="border-collapse:collapse;border-color:rgb(136,136,136);border-width:1px;" border="1" width="450" cellspacing="0">
+<tbody>
+<tr>
+<td style="width:60px;">&nbsp;<font face="courier new,monospace">To reset a dollar value to 0.00 if the value is not a number: </font></td>
+</tr>
+<tr>
+<td style="width:60px;"><font face="courier new,monospace">&nbsp;This works well on the textbox onchange event </font></td>
+</tr>
+<tr>
+<td style="width:60px;"><font face="courier new,monospace">function txtdollaronchange(){ <br>&nbsp;&nbsp;&nbsp; if(isNaN(document.getElementById(‘txtdollar’).value)) <br>&nbsp;&nbsp;&nbsp; { <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert(“Please enter a valid Dollar Amount.”) <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById(‘txtdollar’).value = “0.00” <br>&nbsp;&nbsp;&nbsp; } <br>}//end function</font> </td>
+</tr>
+</tbody>
+</table>
+<h2>Example of server-side JavaScript:</h2>
+<p>&lt;html&gt;<br>&lt;%@ language=”javascript” %&gt;<br>&lt;%<br>var adOpenForwardOnly = 0<br>var AdOpenKeySet = 1 //for recordCounting<br>var adOpenDynamic = 2<br>var adLockOptimistic = 3<br>var rs = new ActiveXObject(“ADODB.Recordset”)<br>var conn = new ActiveXObject(“ADODB.Connection”)<br>var conn_str = “. . .”<br>var selectClause = “SELECT TOP 2000 ACCT_NAME, Disch, FACILITY, FINCLASS, PT, Fbil, “<br>&nbsp;&nbsp;&nbsp; + “INS_BAL, PAT_BAL, ACCT_TOT, AGING, ACCT#, LASTPYMT, BILLDIFF, [Group] FROM View_tblATB_formattedbetter “</p>
+<p>var wherestring = “”</p>
+<p>wherestring = new String(Request.querystring(‘where’))&nbsp;&nbsp; <br><span class="skimlinks-unlinked">Response.write(“&lt;SPAN</span>yle”FONT-SIZE: 9pt; FONT-FAMILY:Arial”&gt;”) </p>
+<p>// open conn<br>conn_str = “PROVIDER=SQLOLEDB;Server=my-server-01;Database=db_database;User ID=userid;Password=mypassword”</p>
+<p><span class="skimlinks-unlinked">conn.open(conn_str</span>, “”,&nbsp;&nbsp; “”)<br>&nbsp;&nbsp;&nbsp; <br><span class="skimlinks-unlinked">rs.open(selectClause</span> + wherestring, conn, adOpenForwardOnly, adLockOptimistic)</p>
+<p>if(<span class="skimlinks-unlinked">rs.eof</span>)<br>{<br>&nbsp;&nbsp;&nbsp; <span class="skimlinks-unlinked">Response.write(“No</span> records found. Please check your search criteria”)<br>}</p>
+<p><span class="skimlinks-unlinked">Response.write(“&lt;table</span>rder=’1′&gt;”<br>&nbsp;&nbsp;&nbsp;
+ + 
+“&lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Discharge&lt;/th&gt;&lt;th&gt;Fac&lt;/th&gt;&lt;th&gt;FC&lt;/th&gt;&lt;th&gt;PT&lt;/th&gt;&lt;th&gt;FBil&lt;/th&gt;&lt;th&gt;INS_BAL&lt;/th&gt;”<br>&nbsp;&nbsp;&nbsp;
+ + 
+“&lt;th&gt;PAT_BAL&lt;/th&gt;&lt;th&gt;ACCT_TOT&lt;/th&gt;&lt;th&gt;AGING&lt;/th&gt;&lt;th&gt;ACCT#&lt;/th&gt;&lt;th&gt;LASTPYMT&lt;/th&gt;&lt;th&gt;BILLDIFF&lt;/th&gt;&lt;th&gt;Group&lt;/th&gt;&lt;/tr&gt;”)</p>
+<p>// loop through records<br>while(!<span class="skimlinks-unlinked">rs.eof</span>) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp; <span class="skimlinks-unlinked">Response.write(“&lt;tr</span></p>
+<p>&nbsp;&nbsp;&nbsp; //writing line<br>&nbsp;&nbsp;&nbsp; for(i = 0; i &lt;= <span class="skimlinks-unlinked">rs.fields.count</span> – 1; i++){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="skimlinks-unlinked">Response.write(“&lt;td</span>+ rs(i) + “&lt;/td&gt;”) // write field<br>&nbsp;&nbsp;&nbsp; }</p>
+<p>&nbsp;&nbsp;&nbsp; <span class="skimlinks-unlinked">Response.write(“&lt;/tr</span> // end record line</p>
+<p>&nbsp;&nbsp;&nbsp; rs.MoveNext()<br>}<br><span class="skimlinks-unlinked">Response.write(“&lt;/table</span><br><span class="skimlinks-unlinked">rs.close</span>()<br>%&gt;<br>&lt;/html&gt;
+</p><div><span style="background-color:rgb(255,255,239);"><br></span></div>
+<h3></h3>
+<h3>This is another JS powered ASP file that looks up &nbsp;SQL query 
+parameter from another table based on the User’s login ID as read my the
+ webserver. there is column sorting, hover row hilighting, and table 
+striping from these opensource resources:</h3>
+<div></div>
+<h3>sortable:&nbsp;<span>&nbsp;&nbsp; &nbsp;<span>&nbsp;</span></span><a href="http://www.kryogenix.org/code/browser/sorttable/">http://www.kryogenix.org/code/browser/sorttable/</a></h3>
+<h3>hilighting: <span>&nbsp;&nbsp; &nbsp;</span><a href="http://www.permadi.com/tutorial/cssHighlightTableRow/index.html">http://www.permadi.com/tutorial/cssHighlightTableRow/index.html</a></h3>
+<h3>striping&nbsp;<span>&nbsp;&nbsp; </span>&nbsp;<a href="http://www.alistapart.com/articles/zebratables/">http://www.alistapart.com/articles/zebratables/</a></h3>
+<div></div>
+<div>&nbsp;—————————————-</div>
+<div><span style="border-collapse:collapse;font-family:arial,sans-serif;line-height:normal;"><font face="Arial">
+<pre style="color:black;font-family:Courier New,Courier,monospace;">&lt;HEAD&gt;<br>&lt;%@ language=<font color="#008080">"javascript"</font> %&gt;<br>&lt;TITLE&gt;awesomeness&lt;/TITLE&gt;<br>&lt;style <font color="#0000a0">type</font>=<font color="#008080">"text/css"</font>&gt;<br>a:link {color:Blue;}&nbsp;&nbsp;&nbsp; /* unvisited link */<br>a:visited {color:Gray;} /* visited link */<br>a:hover {color:Black;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; background-color:white;}&nbsp;&nbsp; /* mouse over link */<br>a:active {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; color:White;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; background-color:DimGray}&nbsp; /* selected link */<br>body &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>{background-image:url<font color="#c00000">(</font><font color="#008000">'images/appbackground2.jpg');</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;background-attachment: fixed; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;cursor:wait } table&nbsp;&nbsp;&nbsp;&nbsp; {border-collapse:collapse; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; font-family:<font color="#008080">"Trebuchet MS"</font>, Arial, Helvetica, sans-serif;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; font-size : 80%;<br>}<br>table,th, td&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>{border: 1px solid gray;<br>padding-<font color="#0000a0">right</font>:2px;<br>padding-<font color="#0000a0">left</font>:2px;<br>padding-top:1px;<br>padding-bottom:1px<br>}<br>.col4,.col5{text-align: right}<br>TD {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PADDING-<font color="#0000a0">LEFT</font>: 0.1em; PADDING-BOTTOM: 0.1em; PADDING-TOP: 0.1em}<br>.odd TD {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BACKGROUND: White}<br>.even TD {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BACKGROUND: #eeeeee}<br>&lt;/STYLE&gt;<br>&lt;SCRIPT src=<font color="#008000">'Worklist1.js'&gt;&lt;/SCRIPT&gt;</font> &lt;SCRIPT src=<font color="#008000">'<span class="skimlinks-unlinked">sorttable.js'&gt;&lt;/SCRIPT</span></font> &lt;SCRIPT src=<font color="#008080">"<span class="skimlinks-unlinked">tableH.js</span>"</font>&gt;&lt;/SCRIPT&gt;<br>&lt;SCRIPT <font color="#0000a0">type</font>=text/javascript&gt;<br>window.onload = init;<br><font color="#0000a0">function</font> init<font color="#c00000">()</font> {<br>&nbsp;&nbsp; &nbsp;stripeAllTables<font color="#c00000">()</font>;<br>&nbsp;&nbsp; &nbsp;<span class="skimlinks-unlinked">document.body.style.cursor</span> = <font color="#008080">"default";</font> } &lt;/SCRIPT&gt; &lt;/HEAD&gt; &lt;BODY&lt;center&gt;&lt;table border=<font color="#008000">'1'</font> onMouseOver=<font color="#008080">"javascript:trackTableHighlight(event, 'Cornsilk');"</font> onMouseOut=<font color="#008080">"javascript:highlightTableRow(0);"</font> table bgcolor=<font color="#008000">'white' class=sortable&gt;</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;colgroup&gt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;col class=<font color="#008080">"col1"</font> /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;col class=<font color="#008080">"col2"</font> /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;col class=<font color="#008080">"col3"</font> /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;col class=<font color="#008080">"col4"</font> /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;col class=<font color="#008080">"col5"</font> /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;col class=<font color="#008080">"col6"</font> /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;col class=<font color="#008080">"col7"</font> /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;col class=<font color="#008080">"col8"</font> /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;col class=<font color="#008080">"col9"</font> /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;col class=<font color="#008080">"col10"</font> /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/colgroup&gt;<br>&lt;thead&gt;<br>&lt;tr <br>onClick=<font color="#008080">"<span class="skimlinks-unlinked">window.open('wait.asp','test','width=420,height=275,top=0,left=0</span></font>&gt;<br>&lt;th&gt;&lt;a href=<font color="#008000">'#'&gt;ACCT#&lt;/a&gt;&lt;/th&gt;</font> &lt;th&gt;&lt;a href=<font color="#008000">'#'&gt;FIRST&lt;/a&gt;&lt;/th&gt;</font> &lt;th&gt;&lt;a href=<font color="#008000">'#'&gt;LAST&lt;/a&gt;&lt;/th&gt;</font> &lt;th class="sorttable_numeric"&gt;&lt;a href=<font color="#008000">'#'&gt;ACCT BAL&lt;/a&gt;&lt;/th&gt;</font> &lt;th class="sorttable_numeric"&gt;&lt;a href=<font color="#008000">'#'&gt;AGE&lt;/a&gt;&lt;/th&gt;</font> &lt;th&gt;&lt;a href=<font color="#008000">'#'&gt;FC&lt;/a&gt;&lt;/th&gt;</font> &lt;th&gt;&lt;a href=<font color="#008000">'#'&gt;Done?&lt;/a&gt;&lt;/th&gt;</font> &lt;th&gt;&lt;a href=<font color="#008000">'#'&gt;Completed By&lt;/a&gt;&lt;/th&gt;</font> &lt;th&gt;&lt;a href=<font color="#008000">'#'&gt;DEBT ACT1&lt;/a&gt;&lt;/th&gt;</font> &lt;th&gt;&lt;a href=<font color="#008000">'#' &gt;DEBT ACT2&lt;/a&gt;&lt;/th&gt;</font> &lt;/tr&gt;&lt;/thead&gt;&lt;TBODY&gt; &nbsp; &lt;% &nbsp; Response.Flush &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var myname = <font color="#008080">""</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var sqlstr = <font color="#008080">"Select * . . . "</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var AdOpenForwardOnly = 0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var adLockReadOnly = 1&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var adOpenDynamic = 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var adLockOptimistic = 3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var rs = <font color="#0000a0">new</font> ActiveXObject<font color="#c00000">(</font><font color="#008080">"ADODB.Recordset"</font><font color="#c00000">)</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var conn = <font color="#0000a0">new</font> ActiveXObject<font color="#c00000">(</font><font color="#008080">"ADODB.Connection"</font><font color="#c00000">)</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var conn_str = <font color="#008080">". . ."</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; conn_str = <font color="#008080">"PROVIDER=SQLOLEDB;" + <br><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span>"Server=my-server-name;Database=db_mydatabase;" + <br><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span>"User ID=myuserID;Password=sdfsdfdsf!sdf"</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; myname = <font color="#0000a0">new String</font><font color="#c00000">(</font>Request.ServerVariables<font color="#c00000">(</font><font color="#008080">"LOGON_USER"</font><font color="#c00000">))</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sqlstr = <font color="#008080">""</font> +<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#008080">"if (select Count(UserID) from tblUser " + <br><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span>"where UserID = '"</font> + myname + <font color="#008080">"') = 1 "</font> +<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#008080">"BEGIN "</font> +<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#008080">"DECLARE @myfac varchar(40) "</font> +<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#008080">"DECLARE @myalpha varchar(40) "</font> +<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#008080">"DECLARE @ageFilter nchar(10) "</font> +<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#008080">"DECLARE @BalanceFilter nchar(10) "</font> +<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#008080">"DECLARE @StatusFilter nchar(20) "</font> +<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#008080">"SET @myfac = (select fac from tblUser " + <br><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span>"where UserID = '"</font> + myname + <font color="#008080">"') "</font> +<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#008080">"SET @myalpha = (select alpha from tblUser "+<br><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span>"where UserID = '"</font> + myname + <font color="#008080">"') "</font> +<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#008080">"SET @ageFilter = (select ageFilter from tblUser "+ <span>&nbsp;&nbsp; &nbsp;</span><br><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span>"where UserID = '"</font> + myname + <font color="#008080">"') "</font> +<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#008080">"SET @BalanceFilter = (select BalanceFilter from tblUser " + <br><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span>"where UserID = '"</font> + myname + <font color="#008080">"') "</font> +<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#008080">"SET @StatusFilter = (select StatusFilter from tblUser " + <br><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span>"where UserID = '"</font> + myname + <font color="#008080">"') "</font> +<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#008080">"IF @StatusFilter = 'ALL ' BEGIN " +<br><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span>"Set @StatusFilter = '''no'',''yes'',''hold''' END "</font> +<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#008080">""</font> +<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#008080">"Exec('Select ACCT#, FIRST, LAST, ACCT_BAL, [AGE(DAYS)], " + <br><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span>"[FIN CLASS], Complete, CompletedBy, DEBT_ACT1, ACT1_BAL," +<br><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span>" DEBT_ACT2, ACT2_BAL, UID from View_Worklist where "</font> +<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#008080">"FAC IN (' + @myfac + ') "</font> +<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#008080">"and Alpha IN (' + @myalpha + ') "</font> +<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#008080">"and Complete IN (' + @StatusFilter + ') "</font> +<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#008080">"and [AGE(DAYS)]' + @ageFilter + ' "</font> +<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#008080">"and ACCT_BALnumeric' + @BalanceFilter + ' "</font> +<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#008080">" order by [AGE(DAYS)] desc, [ACCT_BALnumeric] "</font> +<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#008080">"') "</font> +<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#008080">"END"</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //<span class="skimlinks-unlinked">Response.Write</span><font color="#c00000">(</font>sqlstr<font color="#c00000">)</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="skimlinks-unlinked">conn.open</span><font color="#c00000">(</font>conn_str, <font color="#008080">""</font>,&nbsp;&nbsp; <font color="#008080">""</font><font color="#c00000">)</font> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<span class="skimlinks-unlinked">rs.open</span><font color="#c00000">(</font><font color="#008080">""</font> + sqlstr, conn, AdOpenForwardOnly, adLockOptimistic<font color="#c00000">)</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000a0">if</font><font color="#c00000">(</font><span class="skimlinks-unlinked">rs.eof</span> &amp;&amp; <span class="skimlinks-unlinked">rs.bof</span> <font color="#c00000">)</font>{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<span class="skimlinks-unlinked">Response.Write</span><font color="#c00000">(</font><font color="#008080">"&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;b&gt;&lt;center&gt;0 Records returned&lt;/b&gt;"</font><font color="#c00000">)</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<span class="skimlinks-unlinked">Response.End</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;} &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; while<font color="#c00000">(</font>!<span class="skimlinks-unlinked">rs.eof</span><font color="#c00000">)</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</pre>
+<pre style="color:black;font-family:Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="skimlinks-unlinked">Response.write</span><font color="#c00000">(</font><font color="#008000">'&lt;tr&gt;&lt;td&gt;&lt;a href="<span class="skimlinks-unlinked">detail.asp?q</span>=' +<br>                rs(12) + '" target="_blank"&gt;' +<br><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span>rs(0) +</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#008000">'&lt;/a&gt;&lt;/td&gt;&lt;td&gt;' + <br><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span>rs(1) +<span style="color:rgb(0,0,0);">&nbsp;<font color="#008000">'&lt;/td&gt;&lt;td&gt;' + rs(2) +<span style="color:rgb(0,0,0);"> <font color="#008000">'&lt;/td&gt;&lt;td ALIGN=RIGHT&gt;' + <br><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span>rs(3) +</font></span></font></span></font><br><font color="#008000">                '&lt;/td&gt;&lt;td&gt;' + rs(4) +</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <font color="#008000">'&lt;/td&gt;&lt;td&gt;' + rs(5) +</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#008000">'&lt;/td&gt;&lt;td&gt;' + rs(6) +</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#008000">'&lt;/td&gt;&lt;td&gt;' + rs(7) +</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#008000">'&lt;/td&gt;&lt;td&gt;' + rs(8</font></pre>
+</font><pre style="color:black;font-family:Courier New,Courier,monospace;"><font face="Arial"><font color="#008000"><span style="color:rgb(0,0,0);font-family:Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;white-space:normal;"><pre style="color:black;font-family:Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rs.MoveNext<font color="#c00000">()</font> &nbsp;}// <font color="#0000a0">end while</font> !<span class="skimlinks-unlinked">rs.eof</span><br><br>%&gt;<br>&lt;/TBODY&gt;&lt;/TABLE&gt;&lt;/BODY&gt;&lt;/HTML&gt;</pre>
+<pre style="color:black;font-family:Courier New,Courier,monospace;">//---------------------------------<br><br><br></pre>
+</span></font></font><p><font face="Arial"><font color="#008000"></font></font><br>
+</p><h3>Example of re-sorting an array with an external JS file and writing it to a DIV. (separate html and JS files)</h3>
+<p> <br>
+</p><table style="border-collapse:collapse;border-color:rgb(136,136,136);border-width:1px;" border="1" cellspacing="0">
+<tbody>
+<tr>
+<td style="width:60px;">&nbsp;
+<div>——————————————start_html_file——————————————————
+<pre>&lt;html&gt;<br>&lt;head&gt;<br>&lt;title&gt;<font color="#0000a0">array</font> dot html&lt;/title&gt;<br>&lt;script src=<font color="#008080">"<span class="skimlinks-unlinked">sortarray.js</span>"</font>&gt;&lt;/script&gt;<br>&lt;script&gt;<br><br>var myarray = <font color="#0000a0">new Array</font><font color="#c00000">(</font><br><font color="#c00000">[</font>5,8,1,<font color="#008000">'BASA',5,9,5,9,8,'A'],</font><br><font color="#c00000">[</font>4,11,2,<font color="#008000">'DESA',1,5,5,9,5,'B'],</font><br><font color="#c00000">[</font>5,40,1,<font color="#008000">'GOLA',8,3,5,1,5,'C'],</font><br><font color="#c00000">[</font>8,212,2,<font color="#008000">'NUYA',4,7,5,9,4,'D'],</font><br><font color="#c00000">[</font>5,72,2,<font color="#008000">'VICA',2,2,5,9,5,'E'],</font><br><font color="#c00000">[</font>4,17,8,<font color="#008000">'ABLA',4,1,5,7,5,'F'],</font><br><font color="#c00000">[</font>500,9,1,<font color="#008000">'KHFA',8,3,5,9,5,3],</font><br><font color="#c00000">[</font>8,21,0,<font color="#008000">'MOYT',8,1,5,9,5,90],</font><br><font color="#c00000">[</font>5,120,3,<font color="#008000">'AVGR',7,2,5,3,5,90],</font><br><font color="#c00000">[</font>4,8,1,<font color="#008000">'BASA',5,9,5,9,8,'A'],</font><br><font color="#c00000">[</font>5,11,2,<font color="#008000">'DESA',1,5,5,9,5,'B'],</font><br><font color="#c00000">[</font>521,40,1,<font color="#008000">'GOLA',8,3,5,1,5,'C'],</font><br><font color="#c00000">[</font>8,22,2,<font color="#008000">'NUYA',4,7,5,9,4,'D'],</font><br><font color="#c00000">[</font>4,72,2,<font color="#008000">'VICA',2,2,5,9,5,'E'],</font><br><font color="#c00000">[</font>5,17,8,<font color="#008000">'ABLA',4,1,5,7,5,'F'],</font><br><font color="#c00000">[</font>500,9,1,<font color="#008000">'KHFA',8,3,5,9,5,3],</font><br><font color="#c00000">[</font>8,221,0,<font color="#008000">'MOYT',8,1,5,9,5,90],</font><br><font color="#c00000">[</font>512,10,3,<font color="#008000">'AVGR',7,2,5,3,5,90],</font><br><font color="#c00000">[</font>1,18,2,<font color="#008000">'MU89',7,5,5,9,5,90]</font><br><font color="#c00000">)</font>;<br><br><br><font color="#0000a0">function</font> doclick<font color="#c00000">()</font>{<br>alert<font color="#c00000">(</font><font color="#008000">'let's go!')</font><br>var tabletext = <font color="#008080">""</font><br> <font color="#0000a0">for</font><font color="#c00000">(</font>var i=0; i&lt;myarray.length-1; i++<font color="#c00000">)</font>{<br>  tabletext = tabletext + <font color="#008000">'&lt;tr&gt;&lt;td&gt;' +</font><br>  myarray<font color="#c00000">[</font>i<font color="#c00000">]</font>.join<font color="#c00000">(</font><font color="#008080">"&lt;/td&gt;&lt;td&gt;"</font><font color="#c00000">)</font> + <font color="#008000">'&lt;/td&gt;&lt;/tr&gt;'</font><br> }// <font color="#0000a0">end for</font><br> document.getElementById<font color="#c00000">(</font><font color="#008000">'mydiv').innerHTML =</font><br> <font color="#008000">'raw table&lt;br&gt;&lt;br&gt;&lt;table border=1&gt;' +</font><br> tabletext + <font color="#008000">'&lt;/table&gt;';</font><br> <br> document.getElementById<font color="#c00000">(</font><font color="#008000">'mydiv').innerHTML =</font><br> document.getElementById<font color="#c00000">(</font><font color="#008000">'mydiv').innerHTML +</font><br> <font color="#008000">'&lt;br&gt;&lt;br&gt;next: sort col 0 then col 1. &lt;br&gt;&lt;br&gt;'</font><br> <br> //copy <font color="#0000a0">array</font><br> //alert<font color="#c00000">(</font><font color="#008000">'ok?');</font><br> <br> var arraycopy = <font color="#0000a0">new Array</font><font color="#c00000">()</font>;<br> <br> arraycopy = myarray;<br> <br> arraycopy = sortmyarray<font color="#c00000">(</font>arraycopy,1,0,1,1<font color="#c00000">)</font>;<br> <br> //alert<font color="#c00000">(</font><font color="#008000">'arraycopy is sorted now:' + arraycopy);</font><br> <br> //<font color="#0000a0">clear</font> text<br> tabletext = <font color="#008000">''</font><br> <br> <font color="#0000a0">for</font><font color="#c00000">(</font>var i=0; i&lt;arraycopy.length-1; i++<font color="#c00000">)</font>{<br>  //alert<font color="#c00000">(</font>tabletext<font color="#c00000">)</font>;<br>  tabletext = tabletext + <font color="#008000">'&lt;tr&gt;&lt;td&gt;' +</font><br>  arraycopy<font color="#c00000">[</font>i<font color="#c00000">]</font>.join<font color="#c00000">(</font><font color="#008080">"&lt;/td&gt;&lt;td&gt;"</font><font color="#c00000">)</font> +<br>  <font color="#008000">'&lt;/td&gt;&lt;/tr&gt;';</font><br> }// <font color="#0000a0">end for</font><br> document.getElementById<font color="#c00000">(</font><font color="#008000">'mydiv').innerHTML =</font><br> document.getElementById<font color="#c00000">(</font><font color="#008000">'mydiv').innerHTML +</font><br> <font color="#008000">'&lt;br&gt;&lt;table border=1&gt;' + tabletext + '&lt;/table&gt;';</font><br> <br> <br> //this adds a divider<br> document.getElementById<font color="#c00000">(</font><font color="#008000">'mydiv').innerHTML =</font><br> document.getElementById<font color="#c00000">(</font><font color="#008000">'mydiv').innerHTML +</font><br> <font color="#008000">'&lt;br&gt;&lt;br&gt;' +</font><br> <font color="#008000">'sort col3, then col2, then col1 &amp; lastly col0.' +</font><br> <font color="#008000">'&lt;br&gt;&lt;br&gt;'</font><br> <br> arraycopy = sortmyarray<font color="#c00000">(</font>arraycopy,1,3,1,2,1,1,1,0<font color="#c00000">)</font>;<br> <br> //alert<font color="#c00000">(</font><font color="#008000">'arraycopy is  sorted now: ' + arraycopy);</font><br> <br> //<font color="#0000a0">clear</font> text<br> tabletext = <font color="#008000">''</font><br> <font color="#0000a0">for</font><font color="#c00000">(</font>var i=0; i&lt;arraycopy.length-1; i++<font color="#c00000">)</font>{<br>  //alert<font color="#c00000">(</font>tabletext<font color="#c00000">)</font>;<br>  tabletext = tabletext + <font color="#008000">'&lt;tr&gt;&lt;td&gt;' +</font><br>  arraycopy<font color="#c00000">[</font>i<font color="#c00000">]</font>.join<font color="#c00000">(</font><font color="#008080">"&lt;/td&gt;&lt;td&gt;"</font><font color="#c00000">)</font> + <font color="#008000">'&lt;/td&gt;&lt;/tr&gt;'</font><br> }// <font color="#0000a0">end for</font><br> document.getElementById<font color="#c00000">(</font><font color="#008000">'mydiv').innerHTML =</font><br> document.getElementById<font color="#c00000">(</font><font color="#008000">'mydiv').innerHTML +</font><br> <font color="#008000">'&lt;br&gt;&lt;table border=1&gt;' + tabletext + '&lt;/table&gt;';</font><br> <br>}// <font color="#0000a0">end</font> doclick <font color="#0000a0">function</font><br><br>&lt;/script&gt;<br>&lt;/head&gt;&lt;body&gt;<br>&lt;<font color="#0000a0">input type</font>=button id=<font color="#008000">'mybutton'</font><br>value=<font color="#008000">'click me' onclick=doclick() &gt;</font><br>&lt;div id=<font color="#008000">'mydiv'&gt;</font><br>data output here<br>&lt;/div&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;<br></pre>
+<p>—————————————————end_html_file—————————————————</p></div>
+</td>
+</tr>
+<tr>
+<td style="width:60px;">&nbsp;<br> 
+<div>—————————————————start_JS_file—————————————————
+<pre>// large chunks from keith joubert's js tips page:<br>//<span class="skimlinks-unlinked">http://javascript.keithjoubert.com</span>/<br><br><font color="#0000a0">function</font> jstest<font color="#c00000">(</font>mystring<font color="#c00000">)</font>{alert<font color="#c00000">(</font>mystring<font color="#c00000">)</font>;}<br><br><font color="#0000a0">function</font> sortmyarray<font color="#c00000">(</font>TheArr,us,u,vs,v,ws,w,xs,x,ys,y,zs,z<font color="#c00000">)</font>{<br><br>/*<br> alert<font color="#c00000">(</font>TheArr<font color="#c00000">[</font>0<font color="#c00000">]</font>.join<font color="#c00000">(</font><font color="#008080">"  ;  "</font><font color="#c00000">)</font> + <font color="#008000">'n' +</font><br>      TheArr<font color="#c00000">[</font>1<font color="#c00000">]</font>.join<font color="#c00000">(</font><font color="#008080">"  ;  "</font><font color="#c00000">)</font> + <font color="#008000">'n' +</font><br>      TheArr<font color="#c00000">[</font>2<font color="#c00000">]</font>.join<font color="#c00000">(</font><font color="#008080">"  ;  "</font><font color="#c00000">)</font> + <font color="#008000">'n' +</font><br>      TheArr<font color="#c00000">[</font>3<font color="#c00000">]</font>.join<font color="#c00000">(</font><font color="#008080">"  ;  "</font><font color="#c00000">)</font> + <font color="#008000">'n' +</font><br>      TheArr<font color="#c00000">[</font>4<font color="#c00000">]</font>.join<font color="#c00000">(</font><font color="#008080">"  ;  "</font><font color="#c00000">)</font> + <font color="#008000">'n' +</font><br>      TheArr<font color="#c00000">[</font>5<font color="#c00000">]</font>.join<font color="#c00000">(</font><font color="#008080">"  ;  "</font><font color="#c00000">)</font> + <font color="#008000">'n' +</font><br>      TheArr<font color="#c00000">[</font>6<font color="#c00000">]</font>.join<font color="#c00000">(</font><font color="#008080">"  ;  "</font><font color="#c00000">)</font> + <font color="#008000">'n' +</font><br>      TheArr<font color="#c00000">[</font>7<font color="#c00000">]</font>.join<font color="#c00000">(</font><font color="#008080">"  ;  "</font><font color="#c00000">)</font> + <font color="#008000">'n' +</font><br>      TheArr<font color="#c00000">[</font>8<font color="#c00000">]</font>.join<font color="#c00000">(</font><font color="#008080">"  ;  "</font><font color="#c00000">)</font> + <font color="#008000">'n' +</font><br>      TheArr<font color="#c00000">[</font>9<font color="#c00000">]</font>.join<font color="#c00000">(</font><font color="#008080">"  ;  "</font><font color="#c00000">)</font> + <font color="#008000">'n' );</font><br>*/<br><br> SortIt<font color="#c00000">(</font>TheArr,us,u,vs,v,ws,w,xs,x,ys,y,zs,z<font color="#c00000">)</font><br><br>/*<br> alert<font color="#c00000">(</font>TheArr<font color="#c00000">[</font>0<font color="#c00000">]</font>.join<font color="#c00000">(</font><font color="#008080">"  ;  "</font><font color="#c00000">)</font> + <font color="#008000">'n' +</font><br>      TheArr<font color="#c00000">[</font>1<font color="#c00000">]</font>.join<font color="#c00000">(</font><font color="#008080">"  ;  "</font><font color="#c00000">)</font> + <font color="#008000">'n' +</font><br>      TheArr<font color="#c00000">[</font>2<font color="#c00000">]</font>.join<font color="#c00000">(</font><font color="#008080">"  ;  "</font><font color="#c00000">)</font> + <font color="#008000">'n' +</font><br>      TheArr<font color="#c00000">[</font>3<font color="#c00000">]</font>.join<font color="#c00000">(</font><font color="#008080">"  ;  "</font><font color="#c00000">)</font> + <font color="#008000">'n' +</font><br>      TheArr<font color="#c00000">[</font>4<font color="#c00000">]</font>.join<font color="#c00000">(</font><font color="#008080">"  ;  "</font><font color="#c00000">)</font> + <font color="#008000">'n' +</font><br>      TheArr<font color="#c00000">[</font>5<font color="#c00000">]</font>.join<font color="#c00000">(</font><font color="#008080">"  ;  "</font><font color="#c00000">)</font> + <font color="#008000">'n' +</font><br>      TheArr<font color="#c00000">[</font>6<font color="#c00000">]</font>.join<font color="#c00000">(</font><font color="#008080">"  ;  "</font><font color="#c00000">)</font> + <font color="#008000">'n' +</font><br>      TheArr<font color="#c00000">[</font>7<font color="#c00000">]</font>.join<font color="#c00000">(</font><font color="#008080">"  ;  "</font><font color="#c00000">)</font> + <font color="#008000">'n' +</font><br>      TheArr<font color="#c00000">[</font>8<font color="#c00000">]</font>.join<font color="#c00000">(</font><font color="#008080">"  ;  "</font><font color="#c00000">)</font> + <font color="#008000">'n' +</font><br>      TheArr<font color="#c00000">[</font>9<font color="#c00000">]</font>.join<font color="#c00000">(</font><font color="#008080">"  ;  "</font><font color="#c00000">)</font> + <font color="#008000">'n' );</font><br>*/<br> <font color="#0000a0">return</font> TheArr<br><br>}//<font color="#0000a0">end function</font><br><br><br><font color="#0000a0">function</font> SortIt<font color="#c00000">(</font>TheArr,us,u,vs,v,ws,w,xs,x,ys,y,zs,z<font color="#c00000">)</font>{<br>// us-zs: 1=<font color="#0000a0">asc</font>, -1=desc.  u-z: column-numbers.  See example<br>  <font color="#0000a0">if</font><font color="#c00000">(</font>u==undefined<font color="#c00000">)</font>{<span class="skimlinks-unlinked">TheArr.sort</span><font color="#c00000">(</font>Sortsingle<font color="#c00000">)</font>;}<br>// <font color="#0000a0">if</font> this <font color="#0000a0">is</font> a simple <font color="#0000a0">array</font>, <font color="#0000a0">not</font> multi-dim. ie, SortIt<font color="#c00000">(</font>TheArr,1<font color="#c00000">)</font>: ascending.<br>  else{<span class="skimlinks-unlinked">TheArr.sort</span><font color="#c00000">(</font>Sortmulti<font color="#c00000">)</font>;}<br><br>  <font color="#0000a0">function</font> Sortsingle<font color="#c00000">(</font>a,b<font color="#c00000">)</font>{<br>    var swap=0;<br>    <font color="#0000a0">if</font><font color="#c00000">(</font>isNaN<font color="#c00000">(</font>a-b<font color="#c00000">))</font>{<br>      <font color="#0000a0">if</font><font color="#c00000">((</font>isNaN<font color="#c00000">(</font>a<font color="#c00000">))</font>&amp;&amp;<font color="#c00000">(</font>isNaN<font color="#c00000">(</font>b<font color="#c00000">)))</font>{swap=<font color="#c00000">(</font>b&lt;a<font color="#c00000">)</font>-<font color="#c00000">(</font>a&lt;b<font color="#c00000">)</font>;}<br>      <font color="#0000a0">else</font> {swap=<font color="#c00000">(</font>isNaN<font color="#c00000">(</font>a<font color="#c00000">)</font>?1:-1<font color="#c00000">)</font>;}<br>    }<br>    <font color="#0000a0">else</font> {swap=<font color="#c00000">(</font>a-b<font color="#c00000">)</font>;}<br>    <font color="#0000a0">return</font> swap*us;<br>  }<br><br>  <font color="#0000a0">function</font> Sortmulti<font color="#c00000">(</font>a,b<font color="#c00000">)</font>{<br>  var swap=0;<br>    <font color="#0000a0">if</font><font color="#c00000">(</font>isNaN<font color="#c00000">(</font>a<font color="#c00000">[</font>u<font color="#c00000">]</font>-b<font color="#c00000">[</font>u<font color="#c00000">]))</font>{<br>      <font color="#0000a0">if</font><font color="#c00000">((</font>isNaN<font color="#c00000">(</font>a<font color="#c00000">[</font>u<font color="#c00000">]))</font>&amp;&amp;<font color="#c00000">(</font>isNaN<font color="#c00000">(</font>b<font color="#c00000">[</font>u<font color="#c00000">])))</font>{swap=<font color="#c00000">(</font>b<font color="#c00000">[</font>u<font color="#c00000">]</font>&lt;a<font color="#c00000">[</font>u<font color="#c00000">])</font>-<font color="#c00000">(</font>a<font color="#c00000">[</font>u<font color="#c00000">]</font>&lt;b<font color="#c00000">[</font>u<font color="#c00000">])</font>;}<br>      else{swap=<font color="#c00000">(</font>isNaN<font color="#c00000">(</font>a<font color="#c00000">[</font>u<font color="#c00000">])</font>?1:-1<font color="#c00000">)</font>;}<br>    }<br>    else{swap=<font color="#c00000">(</font>a<font color="#c00000">[</font>u<font color="#c00000">]</font>-b<font color="#c00000">[</font>u<font color="#c00000">])</font>;}<br>    <font color="#0000a0">if</font><font color="#c00000">((</font>v==undefined<font color="#c00000">)</font>||<font color="#c00000">(</font>swap!=0<font color="#c00000">))</font>{return swap*us;}<br>    else{<br>      <font color="#0000a0">if</font><font color="#c00000">(</font>isNaN<font color="#c00000">(</font>a<font color="#c00000">[</font>v<font color="#c00000">]</font>-b<font color="#c00000">[</font>v<font color="#c00000">]))</font>{<br>        <font color="#0000a0">if</font><font color="#c00000">((</font>isNaN<font color="#c00000">(</font>a<font color="#c00000">[</font>v<font color="#c00000">]))</font>&amp;&amp;<font color="#c00000">(</font>isNaN<font color="#c00000">(</font>b<font color="#c00000">[</font>v<font color="#c00000">])))</font>{swap=<font color="#c00000">(</font>b<font color="#c00000">[</font>v<font color="#c00000">]</font>&lt;a<font color="#c00000">[</font>v<font color="#c00000">])</font>-<font color="#c00000">(</font>a<font color="#c00000">[</font>v<font color="#c00000">]</font>&lt;b<font color="#c00000">[</font>v<font color="#c00000">])</font>;}<br>        else{swap=<font color="#c00000">(</font>isNaN<font color="#c00000">(</font>a<font color="#c00000">[</font>v<font color="#c00000">])</font>?1:-1<font color="#c00000">)</font>;}<br>      }<br>      else{swap=<font color="#c00000">(</font>a<font color="#c00000">[</font>v<font color="#c00000">]</font>-b<font color="#c00000">[</font>v<font color="#c00000">])</font>;}<br>      <font color="#0000a0">if</font><font color="#c00000">((</font>w==undefined<font color="#c00000">)</font>||<font color="#c00000">(</font>swap!=0<font color="#c00000">))</font>{return swap*vs;}<br>      else{<br>        <font color="#0000a0">if</font><font color="#c00000">(</font>isNaN<font color="#c00000">(</font>a<font color="#c00000">[</font>w<font color="#c00000">]</font>-b<font color="#c00000">[</font>w<font color="#c00000">]))</font>{<br>          <font color="#0000a0">if</font><font color="#c00000">((</font>isNaN<font color="#c00000">(</font>a<font color="#c00000">[</font>w<font color="#c00000">]))</font>&amp;&amp;<font color="#c00000">(</font>isNaN<font color="#c00000">(</font>b<font color="#c00000">[</font>w<font color="#c00000">])))</font>{swap=<font color="#c00000">(</font>b<font color="#c00000">[</font>w<font color="#c00000">]</font>&lt;a<font color="#c00000">[</font>w<font color="#c00000">])</font>-<font color="#c00000">(</font>a<font color="#c00000">[</font>w<font color="#c00000">]</font>&lt;b<font color="#c00000">[</font>w<font color="#c00000">])</font>;}<br>          else{swap=<font color="#c00000">(</font>isNaN<font color="#c00000">(</font>a<font color="#c00000">[</font>w<font color="#c00000">])</font>?1:-1<font color="#c00000">)</font>;}<br>        }<br>        else{swap=<font color="#c00000">(</font>a<font color="#c00000">[</font>w<font color="#c00000">]</font>-b<font color="#c00000">[</font>w<font color="#c00000">])</font>;}<br>        <font color="#0000a0">if</font><font color="#c00000">((</font>x==undefined<font color="#c00000">)</font>||<font color="#c00000">(</font>swap!=0<font color="#c00000">))</font>{return swap*ws;}<br>        else{<br>          <font color="#0000a0">if</font><font color="#c00000">(</font>isNaN<font color="#c00000">(</font>a<font color="#c00000">[</font>x<font color="#c00000">]</font>-b<font color="#c00000">[</font>x<font color="#c00000">]))</font>{<br>            <font color="#0000a0">if</font><font color="#c00000">((</font>isNaN<font color="#c00000">(</font>a<font color="#c00000">[</font>x<font color="#c00000">]))</font>&amp;&amp;<font color="#c00000">(</font>isNaN<font color="#c00000">(</font>b<font color="#c00000">[</font>x<font color="#c00000">])))</font>{swap=<font color="#c00000">(</font>b<font color="#c00000">[</font>x<font color="#c00000">]</font>&lt;a<font color="#c00000">[</font>x<font color="#c00000">])</font>-<font color="#c00000">(</font>a<font color="#c00000">[</font>x<font color="#c00000">]</font>&lt;b<font color="#c00000">[</font>x<font color="#c00000">])</font>;}<br>            else{swap=<font color="#c00000">(</font>isNaN<font color="#c00000">(</font>a<font color="#c00000">[</font>x<font color="#c00000">])</font>?1:-1<font color="#c00000">)</font>;}<br>          }<br>          else{swap=<font color="#c00000">(</font>a<font color="#c00000">[</font>x<font color="#c00000">]</font>-b<font color="#c00000">[</font>x<font color="#c00000">])</font>;}<br>          <font color="#0000a0">if</font><font color="#c00000">((</font>y==undefined<font color="#c00000">)</font>||<font color="#c00000">(</font>swap!=0<font color="#c00000">))</font>{return swap*xs;}<br>          else{<br>            <font color="#0000a0">if</font><font color="#c00000">(</font>isNaN<font color="#c00000">(</font>a<font color="#c00000">[</font>y<font color="#c00000">]</font>-b<font color="#c00000">[</font>y<font color="#c00000">]))</font>{<br>              <font color="#0000a0">if</font><font color="#c00000">((</font>isNaN<font color="#c00000">(</font>a<font color="#c00000">[</font>y<font color="#c00000">]))</font>&amp;&amp;<font color="#c00000">(</font>isNaN<font color="#c00000">(</font>b<font color="#c00000">[</font>y<font color="#c00000">])))</font>{swap=<font color="#c00000">(</font>b<font color="#c00000">[</font>y<font color="#c00000">]</font>&lt;a<font color="#c00000">[</font>y<font color="#c00000">])</font>-<font color="#c00000">(</font>a<font color="#c00000">[</font>y<font color="#c00000">]</font>&lt;b<font color="#c00000">[</font>y<font color="#c00000">])</font>;}<br>              else{swap=<font color="#c00000">(</font>isNaN<font color="#c00000">(</font>a<font color="#c00000">[</font>y<font color="#c00000">])</font>?1:-1<font color="#c00000">)</font>;}<br>            }<br>            else{swap=<font color="#c00000">(</font>a<font color="#c00000">[</font>y<font color="#c00000">]</font>-b<font color="#c00000">[</font>y<font color="#c00000">])</font>;}<br>            <font color="#0000a0">if</font><font color="#c00000">((</font>z=undefined<font color="#c00000">)</font>||<font color="#c00000">(</font>swap!=0<font color="#c00000">))</font>{return swap*ys;}<br>            else{<br>              <font color="#0000a0">if</font><font color="#c00000">(</font>isNaN<font color="#c00000">(</font>a<font color="#c00000">[</font>z<font color="#c00000">]</font>-b<font color="#c00000">[</font>z<font color="#c00000">]))</font>{<br>                <font color="#0000a0">if</font><font color="#c00000">((</font>isNaN<font color="#c00000">(</font>a<font color="#c00000">[</font>z<font color="#c00000">]))</font>&amp;&amp;<font color="#c00000">(</font>isNaN<font color="#c00000">(</font>b<font color="#c00000">[</font>z<font color="#c00000">])))</font>{swap=<font color="#c00000">(</font>b<font color="#c00000">[</font>z<font color="#c00000">]</font>&lt;a<font color="#c00000">[</font>z<font color="#c00000">])</font>-<font color="#c00000">(</font>a<font color="#c00000">[</font>z<font color="#c00000">]</font>&lt;b<font color="#c00000">[</font>z<font color="#c00000">])</font>;}<br>                else{swap=<font color="#c00000">(</font>isNaN<font color="#c00000">(</font>a<font color="#c00000">[</font>z<font color="#c00000">])</font>?1:-1<font color="#c00000">)</font>;}<br>              }<br>              else{swap=<font color="#c00000">(</font>a<font color="#c00000">[</font>z<font color="#c00000">]</font>-b<font color="#c00000">[</font>z<font color="#c00000">])</font>;}<br>              <font color="#0000a0">return</font> swap*zs;<br>     }//<font color="#0000a0">else if</font> isNaN a<font color="#c00000">[</font>z<font color="#c00000">]</font><br>   }//<font color="#0000a0">else if</font> isNaN a<font color="#c00000">[</font>y<font color="#c00000">]</font><br> }//<font color="#0000a0">else if</font> isNaN a<font color="#c00000">[</font>x<font color="#c00000">]</font><br>      }//<font color="#0000a0">else if</font> isNaN a<font color="#c00000">[</font>w<font color="#c00000">]</font><br>    }//<font color="#0000a0">else if</font> isNaN a<font color="#c00000">[</font>v<font color="#c00000">]</font><br>  }//<font color="#0000a0">end function</font> multisort<br>}//<font color="#0000a0">end function</font><br></pre>
+<p>—————————————————end_JS_file——————————————————-</p></div>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span style="border-collapse:collapse;font-family:arial,sans-serif;line-height:normal;"><font face="Arial">
+</font></span></p><pre style="color:black;font-family:Courier New,Courier,monospace;"><font face="Arial"><font color="#008000"><span style="color:rgb(0,0,0);font-family:Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;white-space:normal;"><pre style="color:black;font-family:Courier New,Courier,monospace;"><br><br><br></pre>
+<pre><font size="2" face="'Courier New', Courier, monospace"><span>*colorized by <a href="http://vb.mvps.org/tools/vbmarkup">http://vb.mvps.org/tools/vbmarkup</a></span></font></pre>
+</span></font></font><p><font face="Arial"><font color="#008000"></font></font>
+</p><p style="margin:0;"><font face="Arial"><font size="2"><span><br></span></font></font></p>
+<p style="margin:0;"><font face="Arial"><font size="2"><span><br></span></font></font></p>
+</pre></pre></span></div>
+</div>
+</div>
+											</div><!--/.content-->
+	</div><!--/.main-->
+	<footer class="footer">
+			</footer><!-- .footer -->
+</article> 
+</div><!-- #main-content -->
+<div id="main-sidebar" class="clearfix">
+	</div><!-- #main-sidebar -->
+		</div><!-- .in -->
+	</div><!-- #main -->
+	<footer id="footer" class="act clearfix">
+		<div class="in">
+			<ul class="nav"><li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://www.annotum.org/">About Annotum</a></li></ul>			
+			 <a href="https://wordpress.com/?ref=footer_blog">Blog at WordPress.com.</a>
+		</div>
+	</footer>
+<!--  -->
+<script type="text/javascript" src="JavascriptServerSideJSandSQL_files/gprofiles.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="JavascriptServerSideJSandSQL_files/wpgroho.js"></script>
+
+	<script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+
+			if (typeof Gravatar === "undefined"){
+				return;
+			}
+
+			if ( typeof Gravatar.init !== "function" ) {
+				return;
+			}			
+
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script>
+
+		<div style="display:none">
+	</div>
+<script type="text/javascript" src="JavascriptServerSideJSandSQL_files/a"></script>
+<script type="text/javascript" src="JavascriptServerSideJSandSQL_files/widgets.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var actionbardata = {"siteID":"33391726","siteName":"bgryderclock","siteURL":"http:\/\/bgryderclock.wordpress.com","icon":"<img alt='' src='https:\/\/s1.wp.com\/i\/logo\/wpcom-gray-white.png' class='avatar avatar-50' height='50' width='50' \/>","canManageOptions":"","canCustomizeSite":"","isFollowing":"","themeSlug":"vip\/partner-annotum-base","signupURL":"https:\/\/wordpress.com\/start\/","loginURL":"https:\/\/bgryderclock.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fbgryderclock.wordpress.com%2Farticle%2Fjavascript-server-side-js-and-sql-c5281w3qfiqf-2%2F","themeURL":"","xhrURL":"https:\/\/bgryderclock.wordpress.com\/wp-admin\/admin-ajax.php","nonce":"ca2aea102a","isSingular":"1","isFolded":"","isLoggedIn":"","isMobile":"","subscribeNonce":"<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"d5ef66436e\" \/>","referer":"https:\/\/bgryderclock.wordpress.com\/article\/javascript-server-side-js-and-sql-c5281w3qfiqf-2\/","canFollow":"1","statusMessage":"","customizeLink":"https:\/\/bgryderclock.wordpress.com\/wp-admin\/customize.php?url=https%3A%2F%2Fbgryderclock.wordpress.com%2Farticle%2Fjavascript-server-side-js-and-sql-c5281w3qfiqf-2%2F","postID":"4","shortlink":"http:\/\/wp.me\/p2g6Ie-4","canEditPost":"","editLink":"https:\/\/bgryderclock.wordpress.com\/wp-admin\/post.php?post=4&action=edit","statsLink":"https:\/\/wordpress.com\/stats\/post\/4\/bgryderclock.wordpress.com","i18n":{"view":"View site","follow":"Follow","following":"Following","edit":"Edit","login":"Log in","signup":"Sign up","customize":"Customize","report":"Report this content","themeInfo":"Get theme: Annotum Base","shortlink":"Copy shortlink","copied":"Copied","followedText":"New posts from this site will now appear in your <a href=\"https:\/\/wordpress.com\/\">Reader<\/a>","foldBar":"Collapse this bar","unfoldBar":"Expand this bar","editSubs":"Manage subscriptions","viewReader":"View site in the Reader","subscribe":"Sign me up","enterEmail":"Enter your email address","followers":"","alreadyUser":"Already have a WordPress.com account? <a href=\"https:\/\/bgryderclock.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fbgryderclock.wordpress.com%2Farticle%2Fjavascript-server-side-js-and-sql-c5281w3qfiqf-2%2F\">Log in now.<\/a>","stats":"Stats"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="JavascriptServerSideJSandSQL_files/a_002"></script><div id="actionbar" class="actnbr-vip-partner-annotum-base actnbr-has-follow"><ul><li class="actnbr-btn actnbr-hidden"> 			    	<a class="actnbr-action actnbr-actn-follow" href=""><svg class="gridicon gridicon__follow" height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M23 16v2h-3v3h-2v-3h-3v-2h3v-3h2v3h3zM20 2v9h-4v3h-3v4H4c-1.1 0-2-.9-2-2V2h18zM8 13v-1H4v1h4zm3-3H4v1h7v-1zm0-2H4v1h7V8zm7-4H4v2h14V4z"></path></g></svg><span>Follow</span></a> 			    	<div class="actnbr-popover tip tip-top-left actnbr-notice"> 			    		<div class="tip-arrow"></div> 			    		<div class="tip-inner actnbr-follow-bubble"></div> 			    	</div> 			    </li><li class="actnbr-ellipsis actnbr-hidden"> 			  <svg class="gridicon gridicon__ellipsis" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><circle cx="5" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle><circle cx="12" cy="12" r="2"></circle></g></svg> 			  <div class="actnbr-popover tip tip-top-left actnbr-more"> 			  	<div class="tip-arrow"></div> 			  	<div class="tip-inner"> 				  <ul> 				    <li class="actnbr-sitename actnbr-hidden"><a href="http://bgryderclock.wordpress.com/"><img alt="" src="JavascriptServerSideJSandSQL_files/wpcom-gray-white.png" class="avatar avatar-50" width="50" height="50"> bgryderclock</a></li> 				   	<li class="actnbr-folded-customize actnbr-hidden"><a href="https://bgryderclock.wordpress.com/wp-admin/customize.php?url=https%3A%2F%2Fbgryderclock.wordpress.com%2Farticle%2Fjavascript-server-side-js-and-sql-c5281w3qfiqf-2%2F"><svg class="gridicon gridicon__customize" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M2 6c0-1.505.78-3.08 2-4 0 .845.69 2 2 2 1.657 0 3 1.343 3 3 0 .386-.08.752-.212 1.09.74.594 1.476 1.19 2.19 1.81L8.9 11.98c-.62-.716-1.214-1.454-1.807-2.192C6.753 9.92 6.387 10 6 10c-2.21 0-4-1.79-4-4zm12.152 6.848l1.34-1.34c.607.304 1.283.492 2.008.492 2.485 0 4.5-2.015 4.5-4.5 0-.725-.188-1.4-.493-2.007L18 9l-2-2 3.507-3.507C18.9 3.188 18.225 3 17.5 3 15.015 3 13 5.015 13 7.5c0 .725.188 1.4.493 2.007L3 20l2 2 6.848-6.848c1.885 1.928 3.874 3.753 5.977 5.45l1.425 1.148 1.5-1.5-1.15-1.425c-1.695-2.103-3.52-4.092-5.448-5.977z" data-reactid=".2.1.1:0.1b.0"></path></g></svg><span>Customize<span></span></span></a></li> 				    <li class="actnbr-folded-follow actnbr-hidden"><a class="actnbr-action actnbr-actn-follow" href=""><svg class="gridicon gridicon__follow" height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M23 16v2h-3v3h-2v-3h-3v-2h3v-3h2v3h3zM20 2v9h-4v3h-3v4H4c-1.1 0-2-.9-2-2V2h18zM8 13v-1H4v1h4zm3-3H4v1h7v-1zm0-2H4v1h7V8zm7-4H4v2h14V4z"></path></g></svg><span>Follow</span></a></li> 						<li class="actnbr-signup actnbr-hidden"><a href="https://wordpress.com/start/">Sign up</a></li> 				    <li class="actnbr-login actnbr-hidden"><a href="https://bgryderclock.wordpress.com/wp-login.php?redirect_to=https%3A%2F%2Fbgryderclock.wordpress.com%2Farticle%2Fjavascript-server-side-js-and-sql-c5281w3qfiqf-2%2F">Log in</a></li> 				     				    <li class="actnbr-shortlink actnbr-hidden"><a href="http://wp.me/p2g6Ie-4">Copy shortlink</a></li> 				    <li class="flb-report actnbr-hidden"><a href="http://en.wordpress.com/abuse/">Report this content</a></li> 				     				     				    <li class="actnbr-subs actnbr-hidden"><a href="https://subscribe.wordpress.com/">Manage subscriptions</a></li> 				    <li class="actnbr-fold actnbr-hidden"><a href="">Collapse this bar</a></li> 			      </ul> 			    </div> 		      </div> 		    </li> 	      </ul></div>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script>	<script type="text/javascript">
+	var skimlinks_pub_id = "725X584219"
+	var skimlinks_sitename = "bgryderclock.wordpress.com";
+	</script>
+	<script type="text/javascript" defer="defer" src="JavascriptServerSideJSandSQL_files/725X1342.js"></script>		<script>
+			var _comscore = _comscore || [];
+			_comscore.push({
+				c1: "2",
+				c2: "7518284"
+			});
+			(function() {
+				var s = document.createElement("script"),
+					el = document.getElementsByTagName("script")[0];
+				s.defer = true;
+				s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+				el.parentNode.insertBefore(s, el);
+			})();
+		</script>
+		<noscript>
+			<p class="robots-nocontent"><img src="https://sb.scorecardresearch.com/p?c1=2&c2=7518284&c3=&c4=&c5=&c6=&c15=&cv=2.0&cj=1" alt="" style="display:none;" width="1" height="1" /></p>
+		</noscript><script src="JavascriptServerSideJSandSQL_files/w.js" type="text/javascript" async="" defer="defer"></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'33391726','blog_tz':'0','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'33391726','v':'wpcom','tz':'0','user_id':'0','post':'4','subd':'bgryderclock'}]);
+_stq.push(['extra', {'crypt':'UE5XaGUuOTlwaD85flAmcm1mcmZsaDhkV11YdTdvUG14Q2VDQTR4LlUsLi82dU1mai9BMkM9QjRQOXBLb118enZ5UGUzS1M9b01BRV8/dkIuRixxSjkvclV3MlZwWnQvcUt4NllRMDhaR292U19pL182eVNBOWR8cGRhOURZPTg9PXZfLkU1OVhsMWNBL21BX29BUXhReGUuRmFdPS41SjUuQmdbMkd2UWRyLSZhOUxjel9fbnZ4UUdaJTVjUEE1YzAvMTItSTNQTXwrb2NRV0NmfjNXaiVnLUFqV3FLbmdqclgraFJyQV0lUXUrTi12R3o9W09fbWpEVm5iVS9+NDcrVmRWMnZ8Z2dpSUNTTA=='}]);
+_stq.push([ 'clickTrackerInit', '33391726', '4' ]);
+	</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+<img src="JavascriptServerSideJSandSQL_files/g.gif" alt=":)" id="wpstats"></body></html>

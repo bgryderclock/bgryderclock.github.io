@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase no-indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+
+	<title>VBA code – bgryderclock</title>
+
+	<link rel="dns-prefetch" href="https://s2.wp.com/">
+<link rel="dns-prefetch" href="https://platform.twitter.com/">
+<link rel="dns-prefetch" href="https://s0.wp.com/">
+<link rel="dns-prefetch" href="https://s1.wp.com/">
+<link rel="alternate" type="application/rss+xml" title="bgryderclock » Feed" href="https://bgryderclock.wordpress.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="bgryderclock » Comments Feed" href="https://bgryderclock.wordpress.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="bgryderclock » VBA code Comments Feed" href="https://bgryderclock.wordpress.com/article/vba-code-3hhu1b5imyz72-2/feed/">
+	<script defer="defer" src="VBAcode_files/beacon.js"></script><script type="text/javascript" src="VBAcode_files/showad.js" async=""></script><script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+			<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s1.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1473172720h&ver=4.6.1-RC1-38499"}};
+			!function(a,b,c){function d(a){var c,d,e,f,g,h=b.createElement("canvas"),i=h.getContext&&h.getContext("2d"),j=String.fromCharCode;if(!i||!i.fillText)return!1;switch(i.textBaseline="top",i.font="600 32px Arial",a){case"flag":return i.fillText(j(55356,56806,55356,56826),0,0),!(h.toDataURL().length<3e3)&&(i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,65039,8205,55356,57096),0,0),c=h.toDataURL(),i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,55356,57096),0,0),d=h.toDataURL(),c!==d);case"diversity":return i.fillText(j(55356,57221),0,0),e=i.getImageData(16,16,1,1).data,f=e[0]+","+e[1]+","+e[2]+","+e[3],i.fillText(j(55356,57221,55356,57343),0,0),e=i.getImageData(16,16,1,1).data,g=e[0]+","+e[1]+","+e[2]+","+e[3],f!==g;case"simple":return i.fillText(j(55357,56835),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode8":return i.fillText(j(55356,57135),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode9":return i.fillText(j(55358,56631),0,0),0!==i.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity","unicode9"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="VBAcode_files/wp-emoji-release.js" type="text/javascript"></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="all-css-0-1" href="VBAcode_files/a_002.css" type="text/css" media="all">
+<link rel="stylesheet" id="screenprint-css-1-1" href="VBAcode_files/main.css" type="text/css" media="screen, print">
+<link rel="stylesheet" id="all-css-2-1" href="VBAcode_files/a.css" type="text/css" media="all">
+	<!--[if lte IE 8]>
+	<style type="text/css" media="screen">
+		.featured-posts .control-panel .previous,
+		.featured-posts .control-panel .next,
+		.widget-recent-posts .nav .ui-tabs-selected,
+		.widget-recent-posts .panel {
+			behavior: url(https://s0.wp.com/wp-content/themes/vip/partner-annotum-base/assets/main/js/libs/css3pie/PIE.php);
+		}
+	</style>
+	<![endif]-->
+<script type="text/javascript">
+/* <![CDATA[ */
+var ANNO_DICTIONARY = {"previous":"Previous","next":"Next","xofy":"%1$s of %2$s"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="VBAcode_files/a_003"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://bgryderclock.wordpress.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s1.wp.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="On-Screen Keyboard and Mouse&nbsp;APIs" href="https://bgryderclock.wordpress.com/article/on-screen-keyboard-and-mouse-apis-3hhu1b5imyz72-5/">
+<link rel="next" title="Javascript, Server-Side JS, and&nbsp;SQL" href="https://bgryderclock.wordpress.com/article/javascript-server-side-js-and-sql-c5281w3qfiqf-2/">
+<meta name="generator" content="WordPress.com">
+<link rel="canonical" href="https://bgryderclock.wordpress.com/article/vba-code-3hhu1b5imyz72-2/">
+<link rel="shortlink" href="http://wp.me/p2g6Ie-9">
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/1.0/?format=json&amp;url=https%3A%2F%2Fbgryderclock.wordpress.com%2Farticle%2Fvba-code-3hhu1b5imyz72-2%2F&amp;for=wpcom-auto-discovery"><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/1.0/?format=xml&amp;url=https%3A%2F%2Fbgryderclock.wordpress.com%2Farticle%2Fvba-code-3hhu1b5imyz72-2%2F&amp;for=wpcom-auto-discovery">
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="VBA code">
+<meta property="og:url" content="https://bgryderclock.wordpress.com/article/vba-code-3hhu1b5imyz72-2/">
+<meta property="og:description" content="VBA tools are available to most office employees.  You don’t need fancy expensive development programs to create great automation tools.  These are frequently used pieces of  Access and Excel…">
+<meta property="article:published_time" content="2011-03-28T06:24:05+00:00">
+<meta property="article:modified_time" content="2011-03-28T06:24:05+00:00">
+<meta property="og:site_name" content="bgryderclock">
+<meta property="og:image" content="https://s0.wp.com/i/blank.jpg">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:site" content="@wordpressdotcom">
+<meta name="twitter:card" content="summary">
+<meta property="fb:app_id" content="249643311490">
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom">
+<link rel="shortcut icon" type="image/x-icon" href="https://s2.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48">
+<link rel="icon" type="image/x-icon" href="https://s2.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48">
+<link rel="apple-touch-icon-precomposed" href="https://s0.wp.com/i/webclip.png">
+<link rel="openid.server" href="https://bgryderclock.wordpress.com/?openidserver=1">
+<link rel="openid.delegate" href="https://bgryderclock.wordpress.com/">
+<link rel="search" type="application/opensearchdescription+xml" href="https://bgryderclock.wordpress.com/osd.xml" title="bgryderclock">
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com">
+<link rel="pingback" href="https://bgryderclock.wordpress.com/xmlrpc.php">
+	<link rel="archives" title="March 2012" href="https://bgryderclock.wordpress.com/2012/03/">
+<meta name="application-name" content="bgryderclock"><meta name="msapplication-window" content="width=device-width;height=device-height"><meta name="msapplication-tooltip" content="Just another WordPress.com site"><meta name="msapplication-task" content="name=Subscribe;action-uri=https://bgryderclock.wordpress.com/feed/;icon-uri=https://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=https://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=https://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=https://s2.wp.com/i/favicon.ico"><meta name="title" content="VBA code | bgryderclock on WordPress.com">
+<meta name="description" content="VBA tools are available to most office employees. You don't need fancy expensive development programs to create great automation tools. These are frequently used pieces of Access and Excel VBA code that I have collected over the last few years. No one knows everything about programming, especially me. If you see anything that could be…">
+		<script type="text/javascript" src="VBAcode_files/amzn_ads.js"></script>
+		<script type="text/javascript">
+		try { amznads.getAds("3033"); } catch(e) { /* ignore */ }
+		</script><script type="text/javascript" src="VBAcode_files/bid"></script>
+		<script type="text/javascript">
+		try {
+			var a9_p = amznads.getKeys(),
+			_ipw_custom = {
+				wordAds: '0',
+				adSafe: '0',
+				domain: 'bgryderclock.wordpress.com',
+				pageURL: 'https://bgryderclock.wordpress.com/article/vba-code-3hhu1b5imyz72-2/'
+			};
+			if("undefined"!=typeof a9_p&&""!=a9_p&&null!==a9_p&&"[object Array]"===Object.prototype.toString.call(a9_p)){var a="",b=0,c=a9_p.length;a9_p.sort();for(var d=0;d<c;d++){a9_p[d-b]=a9_p[d-b].replace(/a1x6p/,"a160x600p");var e=a9_p[d-b].split("p");e[0]==a&&(a9_p.splice(d-b,1),b++);a=e[0]}_ipw_custom.amznPay=a9_p};document.close();
+		} catch(e) {}
+		</script>
+		<script type="text/javascript" src="VBAcode_files/publishertag.js"></script>
+ 		<script type="text/javascript" src="VBAcode_files/head.js"></script><script type="text/javascript" src="VBAcode_files/yieldbot.js"></script><script type="text/javascript">    try {        __ATA.registerAdapterResult("YB", yieldbot.getPageCriteria());    } catch (err) {}</script>
+<script type="text/javascript" src="VBAcode_files/amzn_ads.js"></script><script type="text/javascript">try { amznads.getAds("3033"); } catch (err) {}</script><script type="text/javascript" src="VBAcode_files/bid_002"></script><script type="text/javascript">    try {        __ATA.registerAdapterResult("A9", amznads.getKeys());    } catch (err) {}</script><style type="text/css" id="syntaxhighlighteranchor"></style>
+<script type="text/javascript">
+	window.google_analytics_uacct = "UA-52447-2";
+</script>
+
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-52447-2']);
+	_gaq.push(['_setDomainName', 'wordpress.com']);
+	_gaq.push(['_initData']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+	})();
+</script><script type="text/javascript" async="" src="VBAcode_files/ga.js"></script>
+	<style type="text/css" media="screen">
+
+ 
+	/* Color 1 */
+	
+		/* Background Color */
+		#header .header-body,
+		#header .navigation,
+		#masthead,
+		.featured-posts .control-panel a,
+		.widget .tab-active,
+		#reply button,
+		.tools-nav nav li a,
+		.widget-recent-posts .nav .ui-tabs-selected {
+			background-color: #006b94;
+		}
+
+		/* Border Color */
+		#site-nav li,
+		.callout-item,
+		.widget-recent-posts .nav li { 
+			border-color: #006b94;
+		}
+	
+		/* Text Color */
+		.featured-posts .control-panel,
+		.article-excerpt .header .meta a:hover,
+		.article-full .header .meta a:hover {
+			color: #006b94;
+		}
+
+
+	/* Color 2 */
+	
+		/* Background Color */
+		#site-nav,
+		#site-nav li,
+		#site-nav li ul,
+		.featured-posts .carousel-item,
+		#masthead .teaser {
+			background-color: #66a6bf;
+		}
+
+	/* Link Color */
+	a {
+		color: #0867ab;
+	}
+</style>
+<script type="text/javascript" async="" src="VBAcode_files/a_002.js"></script><link rel="stylesheet" type="text/css" id="gravatar-card-css" href="VBAcode_files/hovercard.css"><link rel="stylesheet" type="text/css" id="gravatar-card-services-css" href="VBAcode_files/services.css"><script type="text/javascript" async="" src="VBAcode_files/a.js"></script></head>
+
+<body class="single single-article postid-9 mp6 customizer-styles-applied highlander-enabled highlander-light">
+	<header id="header" class="act">
+		<div class="header-body">
+			<div class="in">
+									<h1 id="site-name"><a href="https://bgryderclock.wordpress.com/" title="Home" rel="home">bgryderclock</a></h1>
+								<nav id="secondary-nav" class="clearfix">
+				<ul class="nav"><li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://bgryderclock.wordpress.com/wp-login.php">Log in</a></li></ul>				</nav>
+			</div>
+		</div>
+		<div class="navigation">
+			<div class="in">
+				<nav id="site-nav" class="clearfix">
+				<ul class="nav"><li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://bgryderclock.wordpress.com/">Home</a></li></ul>
+<form class="search" method="get" action="https://bgryderclock.wordpress.com">
+	<input name="s" placeholder="Search" class="type-text" type="text">
+	<button class="type-submit imr" type="submit">Search</button>
+</form>				</nav>
+			</div>
+		</div>
+			</header>
+<div id="main" class="act">
+	<div class="in"><div id="main-body" class="clearfix">
+	
+<article class="article-full post-9 article type-article status-publish hentry">
+	<header class="header">
+		<div class="entry-title">
+			<h1 class="title"><a rel="bookmark" href="https://bgryderclock.wordpress.com/article/vba-code-3hhu1b5imyz72-2/">VBA code</a></h1>
+							<p class="subtitle">For Access /Excel</p>
+					</div>
+		<div class="meta">
+			<time class="published" pubdate="" datetime="2011-03-28T06:24:05+00:00">March 28, 2011</time>
+					</div>
+		<div class="tools-bar supplement clearfix">
+	<div class="cell print">
+		<a href="#" onclick="window.print(); return false;">Print Article</a>
+	</div>
+	<div class="cell citation">
+		<a>Citation</a>
+		<div class="citation-container">
+			<textarea class="entry-summary" readonly="readonly">Gryder Brian, 
+Gryder Brian. VBA code: For Access /Excel [Internet]. Version 1. 
+bgryderclock. 2011 Mar 28. Available from: 
+https://bgryderclock.wordpress.com/article/vba-code-3hhu1b5imyz72-2/.</textarea>
+		</div><!--/.citation-container -->
+	</div>
+	<div class="cell download">
+		, <a href="https://bgryderclock.wordpress.com/article/vba-code-3hhu1b5imyz72-2/xml/">XML</a> 
+	</div>
+	<div class="cell share clearfix">
+		<div class="social-nav">
+			<ul class="nav">
+				<li><a href="mailto:?subject=VBA%20code&amp;body=VBA%20tools%20are%20available%20to%20most%20office%20employees.%20%20You%E2%80%A6%0A%0A%20https%3A%2F%2Fbgryderclock.wordpress.com%2Farticle%2Fvba-code-3hhu1b5imyz72-2%2F" class="email imr">Email</a></li>
+				<li><a href="http://twitter.com/share?url=https%3A%2F%2Fbgryderclock.wordpress.com%2Farticle%2Fvba-code-3hhu1b5imyz72-2%2F&amp;text=VBA%20code" class="twitter-share-button" data-count="none">Tweet</a></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+</div><!-- .action-bar -->
+		<div class="sec sec-authors">
+			<span class="title"><span>Authors</span></span>
+			<ul class="authors nav">
+				
+	<li>
+		<div class="author vcard">
+			<span class="name"><span class="given-name">Gryder</span> <span class="family-name">Brian</span></span>
+		</div>
+	</li>
+	<li>
+		<div class="author vcard">
+			<span class="name"><span class="given-name">Gryder</span> <span class="family-name">Brian</span></span>
+		</div>
+	</li>			</ul>
+		</div>
+	</header>
+	<div class="main">
+		<div class="content entry-content">
+							<section class="sec">
+					<h1><span>Abstract</span></h1>
+					<p>VBA tools are available to most office employees.  You don’t 
+need fancy expensive development programs to create great automation 
+tools.  These are frequently used pieces of  Access and Excel VBA code 
+that I have collected over the last few years. </p>
+<p>No one knows everything about programming, especially me.  If you see
+ anything that could be written “more elegantly”,  post a comment below.</p>
+				</section>
+									<div>
+<div dir="ltr">
+<div><font size="4"><u><b><font color="#0000a0">Get</font><span style="color:rgb(0,0,0);"> the user’s windows network ID and Computer Name</span></b></u><p></p>
+</font><p><font size="4"></font><font size="4" color="#0000a0">Msgbox</font><font size="4"> VBA.Interaction.Environ</font><font size="4" color="#c00000">(</font><font size="4" color="#008080">“USERNAME”</font><font size="4" color="#c00000">)</font><font size="4"> &amp;</font><font size="4" color="#008080">” “</font><font size="4"> &amp; _<br><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span>&nbsp;VBA.Interaction.Environ</font><font size="4" color="#c00000">(</font><font size="4" color="#008080">“ComputerName”</font><font size="4" color="#c00000">)</font><font size="4"><br></font></p></div>
+<div><font size="4"><b><u>Get<span style="color:rgb(0,0,0);"> a single row of data from an access table (with just one line of code)</span></u></b></font></div>
+<p><font size="1">
+</font></p><div><font size="1"><font size="2">myvariable =&nbsp; _</font></font></div><font size="1">
+<div><font size="2"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;</span></span></span>CurrentDb.OpenRecordset<font color="#741b47">(“select NetworkID from tblEmpwhere LastName = ‘” &amp; _</font></font></div>
+<div></div>
+</font><p><font size="1"></font><font size="2"><font color="#741b47">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lastname &amp; “‘ and FirstName = ‘” &amp; firstname &amp; “‘</font>“).<b>Fields(0)</b></font></p></div>
+<div>&nbsp;</div>
+<div><font size="4">&nbsp;</font></div>
+<div><u><b><font color="#0000a0">Open</font><span style="color:rgb(0,0,0);"> a CVS file </span><font color="#0000a0">as</font><span style="color:rgb(0,0,0);"> an ADO recordset</span></b></u><p></p>
+</div>
+<div>Function FileOpenDialogCSV() As String</div>
+<div>Dim strInputFileName As String<br>Dim sfile As String<br>Dim fDialog As Office.FileDialog<br>Dim varFile As Variant</div>
+<div>Set fDialog = Application.FileDialog(msoFileDialogFilePicker)</div>
+<div>&nbsp;&nbsp; With fDialog<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ‘ Allow user to make multiple selections in dialog box<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .AllowMultiSelect = False<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ‘ Set the title of the dialog box.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .TITLE = “Please select the File “</div>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ‘ Clear out the current filters, and add our own.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .<span class="skimlinks-unlinked">Filters.Clear</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .<span class="skimlinks-unlinked">Filters.Add</span> “Text files”, “*.csv”<br>&nbsp;&nbsp;&nbsp;&nbsp; ‘ .<span class="skimlinks-unlinked">Filters.Add</span> “All Files”, “*.*”</div>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ‘ Show the dialog box. If the .Show 
+method returns True, the user picked at least one file. If the .Show 
+method returns False, the user clicked Cancel.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If .Show = True Then</div>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ‘Loop through each file selected and add it to our list box.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For Each varFile In .SelectedItems<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ‘MsgBox varFile<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FileOpenDialogCSV = varFile<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Else<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ‘MsgBox “You clicked Cancel in the file dialog box.”<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FileOpenDialogCSV = “”<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DoCmd.Hourglass (False)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If<br>&nbsp;&nbsp; End With</div>
+<div>&nbsp;&nbsp; </div>
+<div>End Function</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div><font size="4" color="#0000a0">Dim</font><font size="4"> sfullfile</font><font size="4" color="#0000a0">As String</font><font size="4"><br></font><font size="4" color="#0000a0">Dim</font><font size="4"> spath</font><font size="4" color="#0000a0">As String</font><font size="4"> </font><font size="4" color="#008000">‘ path to file</font><font size="4"><br></font><font size="4" color="#0000a0">Dim</font><font size="4"> sfile</font><font size="4" color="#0000a0">As String</font><font size="4"> </font><font size="4" color="#008000">‘ file name</font><font size="4"><br></font><font size="4" color="#0000a0">Dim</font><font size="4"> ImportedCounter</font><font size="4" color="#0000a0">As Integer</font><font size="4"><p></p>
+</font><p><font size="4"></font><font size="4" color="#008000">‘get file name with path</font><font size="4"><br>sfullfile = FileOpenDialogCSV</font></p><font size="4">
+</font><p><font size="4">spath =</font><font size="4" color="#0000a0">Left</font><font size="4" color="#c00000">(</font><font size="4">sfullfile,</font><font size="4" color="#0000a0">Len</font><font size="4" color="#c00000">(</font><font size="4">sfullfile</font><font size="4" color="#c00000">)</font><font size="4"> – 24</font><font size="4" color="#c00000">)</font><font size="4"> </font><font size="4" color="#008000">‘split it</font><font size="4"><br>sfile =</font><font size="4" color="#0000a0">Right</font><font size="4" color="#c00000">(</font><font size="4">sfullfile, 24</font><font size="4" color="#c00000">)</font><font size="4"></font></p><font size="4">
+</font><p><font size="4"></font><font size="4" color="#0000a0">Dim</font><font size="4"> cn</font><font size="4" color="#0000a0">As Object</font><font size="4"><br></font><font size="4" color="#0000a0">Set</font><font size="4"> cn =</font><font size="4" color="#0000a0">New</font><font size="4"> adodb.Connection<br></font><font size="4" color="#0000a0">Dim</font><font size="4"> rs</font><font size="4" color="#0000a0">As Object</font><font size="4"><br></font><font size="4" color="#0000a0">Set</font><font size="4"> rs =</font><font size="4" color="#0000a0">New</font><font size="4"> adodb.Recordset<br></font><font size="4" color="#0000a0">Dim</font><font size="4"> sqlstr</font><font size="4" color="#0000a0">As String</font><font size="4"><br>cn.ConnectionString =</font><font size="4" color="#008080">“Provider=<span class="skimlinks-unlinked">Microsoft.Jet.OLEDB.4.0</span>;”</font><font size="4"> &amp; _<br></font><font size="4" color="#008080">“Data Source=”</font><font size="4"> &amp; spath &amp; _<br><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span> </font><font size="4" color="#008080">“;Extended Properties=””text;HDR=Yes;FMT=Delimited(,)””;”</font><font size="4"> &amp; _<br></font><font size="4" color="#008080">“Persist Security Info=False”</font><font size="4"><br>cn.ConnectionTimeout = 60<br><span class="skimlinks-unlinked">cn.Open</span><br></font><font size="4" color="#008000">‘RS = New ADODB.Recordset</font><font size="4"><br>sqlstr =</font><font size="4" color="#008080">“Select * From “</font><font size="4"> &amp; sfile<br>rs.ActiveConnection = cn<br>rs.Source = sqlstr</font></p><font size="4">
+<p><span class="skimlinks-unlinked">rs.Open</span></p>
+</font><p><font size="4"></font><font size="4" color="#0000a0">If Not</font><font size="4"> <span class="skimlinks-unlinked">rs.BOF</span></font><font size="4" color="#0000a0">Then</font><font size="4"> rs.MoveFirst<br></font><font size="4" color="#0000a0">Do While Not</font><font size="4"> <span class="skimlinks-unlinked">rs.EOF</span><br></font><font size="4" color="#0000a0">Debug</font><font size="4">.Print RS</font><font size="4" color="#c00000">(</font><font size="4">0</font><font size="4" color="#c00000">)</font><font size="4"> &amp; RS</font><font size="4" color="#c00000">(</font><font size="4">1</font><font size="4" color="#c00000">)</font><font size="4"><br>rs.MoveNext<br></font><font size="4" color="#0000a0">Loop</font><font size="4"><br></font><font size="4" color="#0000a0">If</font><font size="4"> <span class="skimlinks-unlinked">rs.State</span> &lt;&gt; adStateClosed</font><font size="4" color="#0000a0">Then</font><font size="4"> <span class="skimlinks-unlinked">rs.Close</span><br></font><font size="4" color="#0000a0">If Not</font><font size="4"> rs</font><font size="4" color="#0000a0">Is Nothing Then Set</font><font size="4"> rs =</font><font size="4" color="#0000a0">Nothing</font><font size="4"><br></font><font size="4" color="#0000a0">If Not</font><font size="4"> cn</font><font size="4" color="#0000a0">Is Nothing Then Set</font><font size="4"> cn =</font><font size="4" color="#0000a0">Nothing</font><font size="4"></font></p><font size="4">
+<p><u><b><br>Output a ADO Recordset to Excel</b></u></p>
+</font><p><font size="4"></font><font size="4" color="#0000a0">Dim</font><font size="4"> Wkb</font><font size="4" color="#0000a0">As Object</font><font size="4"><br></font><font size="4" color="#0000a0">Dim</font><font size="4"> appexcel</font><font size="4" color="#0000a0">As Object</font><font size="4"><br></font><font size="4" color="#0000a0">Set</font><font size="4"> appexcel =</font><font size="4" color="#0000a0">CreateObject</font><font size="4" color="#c00000">(</font><font size="4" color="#008080">“Excel.Application”</font><font size="4" color="#c00000">)</font><font size="4"><br><span class="skimlinks-unlinked">appexcel.Application.Workbooks.Add</span><br></font><font size="4" color="#0000a0">Set</font><font size="4"> Wkb = appexcel.Application.ActiveWorkbook<br></font><font size="4" color="#0000a0">Dim</font><font size="4"> i</font><font size="4" color="#0000a0">As Integer</font><font size="4"> </font><font size="4" color="#008000">‘row counter</font><font size="4"><br>appexcel.Visible =</font><font size="4" color="#0000a0">True</font><font size="4"></font></p><font size="4">
+</font><p><font size="4"></font><font size="4" color="#0000a0">Dim</font><font size="4"> fldcount</font><font size="4" color="#0000a0">As Long</font><font size="4"><br></font><font size="4" color="#0000a0">Dim</font><font size="4"> icol</font><font size="4" color="#0000a0">As Integer</font><font size="4"></font></p><font size="4">
+<p>fldcount = <span class="skimlinks-unlinked">rs.Fields.Count</span></p>
+</font><p><font size="4"></font><font size="4" color="#0000a0">For</font><font size="4"> icol = 1 To fldcount<br>Wkb.Worksheets</font><font size="4" color="#c00000">(</font><font size="4">1</font><font size="4" color="#c00000">)</font><font size="4">.Cells</font><font size="4" color="#c00000">(</font><font size="4">1, icol</font><font size="4" color="#c00000">)</font><font size="4">.Value = rs.Fields</font><font size="4" color="#c00000">(</font><font size="4">icol – 1</font><font size="4" color="#c00000">)</font><font size="4">.Name<br></font><font size="4" color="#0000a0">Next</font><font size="4"></font></p><font size="4">
+</font><p><font size="4"></font><font size="4" color="#0000a0">If</font><font size="4"> <span class="skimlinks-unlinked">rs.BOF</span> =</font><font size="4" color="#0000a0">False Then</font><font size="4"> rs.MoveFirst</font></p><font size="4">
+</font><p><font size="4">Wkb.Worksheets</font><font size="4" color="#c00000">(</font><font size="4">1</font><font size="4" color="#c00000">)</font><font size="4">.Cells</font><font size="4" color="#c00000">(</font><font size="4">2, 1</font><font size="4" color="#c00000">)</font><font size="4">.CopyFromRecordset rs</font></p><font size="4">
+</font><p><font size="4"><span class="skimlinks-unlinked">rs.Close</span><br></font><font size="4" color="#0000a0">Set</font><font size="4"> rs =</font><font size="4" color="#0000a0">Nothing</font><font size="4"></font></p><font size="4">
+</font><p><font size="4"></font><font size="4"></font></p><font size="4">
+<p><u><b>Misc excel sheet formating</b></u></p>
+</font><p><font size="4"></font><font color="#008000">‘Then lets loop though the file top to bottom</font><br><font color="#0000a0">For</font> i = 2 To <span class="skimlinks-unlinked">appexcel.ActiveSheet.UsedRange.Rows.Count</span></p>
+<p><font size="4">next i</font><br><font size="4"></font></p><font size="4">
+</font><p><font size="4"></font><font size="4" color="#0000a0">Dim</font><font size="4"> Wkb</font><font size="4" color="#0000a0">As Object</font><font size="4"><br></font><font size="4" color="#0000a0">Dim</font><font size="4"> appexcel</font><font size="4" color="#0000a0">As Object</font><font size="4"><br></font><font size="4" color="#0000a0">Set</font><font size="4"> appexcel =</font><font size="4" color="#0000a0">CreateObject</font><font size="4" color="#c00000">(</font><font size="4" color="#008080">“Excel.Application”</font><font size="4" color="#c00000">)</font><font size="4"><br><span class="skimlinks-unlinked">appexcel.Application.Workbooks.Add</span><br></font><font size="4" color="#0000a0">Set</font><font size="4"> Wkb = appexcel.Application.ActiveWorkbook<br>appexcel.Visible =</font><font size="4" color="#0000a0">True</font><font size="4"></font></p><font size="4">
+</font><p><font size="4"></font><font size="4" color="#0000a0">With</font><font size="4"> Wkb.Worksheets</font><font size="4" color="#c00000">(</font><font size="4">1</font><font size="4" color="#c00000">)</font><font size="4">.Range</font><font size="4" color="#c00000">(</font><font size="4" color="#008080">“A”</font><font size="4"> &amp; i – 3 &amp;</font><font size="4" color="#008080">“:”</font><font size="4"> &amp;</font><font size="4" color="#008080">“G”</font><font size="4"> &amp; i – 3</font><font size="4" color="#c00000">)</font><font size="4"><br></font><font size="4" color="#008000">‘.<span class="skimlinks-unlinked">Font.Bold</span> = True</font><font size="4"><br></font><font size="4" color="#008000">‘.Columns.AutoFit</font><font size="4"><br>.HorizontalAlignment = xlHAlignLeft<br>.Borders.Weight = xlMedium<br>.Borders</font><font size="4" color="#c00000">(</font><font size="4">xlEdgeTop</font><font size="4" color="#c00000">)</font><font size="4">.LineStyle = xlNone<br>.Borders</font><font size="4" color="#c00000">(</font><font size="4">xlInsideVertical</font><font size="4" color="#c00000">)</font><font size="4">.LineStyle = xlNone<br>.Borders</font><font size="4" color="#c00000">(</font><font size="4">xlEdgeLeft</font><font size="4" color="#c00000">)</font><font size="4">.LineStyle = xlNone<br>.Borders</font><font size="4" color="#c00000">(</font><font size="4">xlEdgeRight</font><font size="4" color="#c00000">)</font><font size="4">.LineStyle = xlNone<br>.Borders</font><font size="4" color="#c00000">(</font><font size="4">xlEdgeTop</font><font size="4" color="#c00000">)</font><font size="4">.LineStyle = xlNone<br></font><font size="4" color="#0000a0">End With</font><font size="4"></font></p><font size="4">
+</font><p><font size="4">Wkb.Worksheets</font><font size="4" color="#c00000">(</font><font size="4">1</font><font size="4" color="#c00000">)</font><font size="4">.Cells</font><font size="4" color="#c00000">(</font><font size="4">i – 1, 1</font><font size="4" color="#c00000">)</font><font size="4"> =</font><font size="4" color="#008080">“SEQ”</font><font size="4"><br>Wkb.Worksheets</font><font size="4" color="#c00000">(</font><font size="4">1</font><font size="4" color="#c00000">)</font><font size="4">.Cells</font><font size="4" color="#c00000">(</font><font size="4">i, 1</font><font size="4" color="#c00000">)</font><font size="4"> = <span class="skimlinks-unlinked">rs.Fields.Item</span></font><font size="4" color="#c00000">(</font><font size="4" color="#008080">“SEQ”</font><font size="4" color="#c00000">)</font><font size="4">.Value</font></p><font size="4">
+</font><p><font size="4">Wkb.Worksheets</font><font size="4" color="#c00000">(</font><font size="4">1</font><font size="4" color="#c00000">)</font><font size="4">.Cells</font><font size="4" color="#c00000">(</font><font size="4">i – 1, 2</font><font size="4" color="#c00000">)</font><font size="4"> =</font><font size="4" color="#008080">“COB”</font><font size="4"><br>Wkb.Worksheets</font><font size="4" color="#c00000">(</font><font size="4">1</font><font size="4" color="#c00000">)</font><font size="4">.Cells</font><font size="4" color="#c00000">(</font><font size="4">i, 2</font><font size="4" color="#c00000">)</font><font size="4"> = <span class="skimlinks-unlinked">rs.Fields.Item</span></font><font size="4" color="#c00000">(</font><font size="4" color="#008080">“COB”</font><font size="4" color="#c00000">)</font><font size="4">.Value</font></p><font size="4">
+</font><p><font size="4">Wkb.Worksheets</font><font size="4" color="#c00000">(</font><font size="4">1</font><font size="4" color="#c00000">)</font><font size="4">.Cells</font><font size="4" color="#c00000">(</font><font size="4">i – 1, 3</font><font size="4" color="#c00000">)</font><font size="4"> =</font><font size="4" color="#008080">“Plan”</font><font size="4"><br>Wkb.Worksheets</font><font size="4" color="#c00000">(</font><font size="4">1</font><font size="4" color="#c00000">)</font><font size="4">.Cells</font><font size="4" color="#c00000">(</font><font size="4">i, 3</font><font size="4" color="#c00000">)</font><font size="4"> = <span class="skimlinks-unlinked">rs.Fields.Item</span></font><font size="4" color="#c00000">(</font><font size="4" color="#008080">“PlanNumber”</font><font size="4" color="#c00000">)</font><font size="4">.Value</font></p><font size="4">
+</font><p><font size="4">Wkb.Worksheets</font><font size="4" color="#c00000">(</font><font size="4">1</font><font size="4" color="#c00000">)</font><font size="4">.Columns</font><font size="4" color="#c00000">(</font><font size="4" color="#008080">“J:J”</font><font size="4" color="#c00000">)</font><font size="4">.NumberFormat =</font><font size="4" color="#008080">“[$-409]m/d/yy h:mm AM/PM;@”</font><font size="4"><br>Wkb.Worksheets</font><font size="4" color="#c00000">(</font><font size="4">1</font><font size="4" color="#c00000">)</font><font size="4">.Columns</font><font size="4" color="#c00000">(</font><font size="4" color="#008080">“M:M”</font><font size="4" color="#c00000">)</font><font size="4">.NumberFormat =</font><font size="4" color="#008080">“[$-409]m/d/yy h:mm AM/PM;@”</font><font size="4"><br>Wkb.Worksheets</font><font size="4" color="#c00000">(</font><font size="4">1</font><font size="4" color="#c00000">)</font><font size="4">.Cells.AutoFilter<br>Wkb.Worksheets</font><font size="4" color="#c00000">(</font><font size="4">1</font><font size="4" color="#c00000">)</font><font size="4">.Columns.Columns.AutoFit</font></p><font size="4">
+</font><p><font size="4">Wkb.Worksheets</font><font size="4" color="#c00000">(</font><font size="4">1</font><font size="4" color="#c00000">)</font><font size="4">.PageSetup.Orientation = 2<br>Wkb.Worksheets</font><font size="4" color="#c00000">(</font><font size="4">1</font><font size="4" color="#c00000">)</font><font size="4">.PageSetup.TopMargin = 0.3<br>Wkb.Worksheets</font><font size="4" color="#c00000">(</font><font size="4">1</font><font size="4" color="#c00000">)</font><font size="4">.PageSetup.BottomMargin = 0.5<br>Wkb.Worksheets</font><font size="4" color="#c00000">(</font><font size="4">1</font><font size="4" color="#c00000">)</font><font size="4">.PageSetup.LeftMargin = 0.3<br>Wkb.Worksheets</font><font size="4" color="#c00000">(</font><font size="4">1</font><font size="4" color="#c00000">)</font><font size="4">.PageSetup.RightMargin = 0.3</font></p><font size="4">
+</font><p><font size="4">Wkb.Worksheets</font><font size="4" color="#c00000">(</font><font size="4">1</font><font size="4" color="#c00000">)</font><font size="4">.Cells.columns</font><font size="4" color="#c00000">(</font><font size="4" color="#008080">“A:A”</font><font size="4" color="#c00000">)</font><font size="4">.ColumnWidth = 15<br>Wkb.Worksheets</font><font size="4" color="#c00000">(</font><font size="4">1</font><font size="4" color="#c00000">)</font><font size="4">.Cells.columns</font><font size="4" color="#c00000">(</font><font size="4" color="#008080">“B:B”</font><font size="4" color="#c00000">)</font><font size="4">.ColumnWidth = 21<br>Wkb.Worksheets</font><font size="4" color="#c00000">(</font><font size="4">1</font><font size="4" color="#c00000">)</font><font size="4">.Cells.columns</font><font size="4" color="#c00000">(</font><font size="4" color="#008080">“C:C”</font><font size="4" color="#c00000">)</font><font size="4">.ColumnWidth = 14</font></p><font size="4">
+</font><p><font size="4">Wkb.Worksheets</font><font size="4" color="#c00000">(</font><font size="4">1</font><font size="4" color="#c00000">)</font><font size="4">.Cells.columns</font><font size="4" color="#c00000">(</font><font size="4" color="#008080">“F:F”</font><font size="4" color="#c00000">)</font><font size="4">.<span class="skimlinks-unlinked">Font.Bold</span> =</font><font size="4" color="#0000a0">True</font><font size="4"><br>Wkb.Worksheets</font><font size="4" color="#c00000">(</font><font size="4">1</font><font size="4" color="#c00000">)</font><font size="4">.Cells.columns</font><font size="4" color="#c00000">(</font><font size="4" color="#008080">“E:E”</font><font size="4" color="#c00000">)</font><font size="4">.style =</font><font size="4" color="#008080">“Currency”</font><font size="4"></font></p><font size="4">
+</font><p><font size="4"></font><font size="4" color="#0000a0">With</font><font size="4"> Wkb.Worksheets</font><font size="4" color="#c00000">(</font><font size="4">1</font><font size="4" color="#c00000">)</font><font size="4">.Range</font><font size="4" color="#c00000">(</font><font size="4" color="#008080">“B”</font><font size="4"> &amp; i &amp;</font><font size="4" color="#008080">“:”</font><font size="4"> &amp;</font><font size="4" color="#008080">“F”</font><font size="4"> &amp; i</font><font size="4" color="#c00000">)</font><font size="4"><br>.<span class="skimlinks-unlinked">Font.Bold</span> =</font><font size="4" color="#0000a0">True</font><font size="4"><br></font><font size="4" color="#008000">‘.Columns.AutoFit</font><font size="4"><br>.HorizontalAlignment = xlHAlignLeft<br>.Borders.Weight = xlMedium<br>.Borders</font><font size="4" color="#c00000">(</font><font size="4">xlEdgeTop</font><font size="4" color="#c00000">)</font><font size="4">.LineStyle = xlNone<br>.Borders</font><font size="4" color="#c00000">(</font><font size="4">xlInsideVertical</font><font size="4" color="#c00000">)</font><font size="4">.LineStyle = xlNone<br>.Borders</font><font size="4" color="#c00000">(</font><font size="4">xlEdgeLeft</font><font size="4" color="#c00000">)</font><font size="4">.LineStyle = xlNone<br>.Borders</font><font size="4" color="#c00000">(</font><font size="4">xlEdgeRight</font><font size="4" color="#c00000">)</font><font size="4">.LineStyle = xlNone<br>.Borders</font><font size="4" color="#c00000">(</font><font size="4">xlEdgeTop</font><font size="4" color="#c00000">)</font><font size="4">.LineStyle = xlNone<br></font><font size="4" color="#0000a0">End With</font><font size="4"></font></p><font size="4">
+<p><u><b>check a local table to manage what items are visible to the db user</b></u></p>
+</font><p><font size="4"></font><font size="4" color="#0000a0">Set</font><font size="4"> rs = CurrentDb.OpenRecordset</font><font size="4" color="#c00000">(</font><font size="4" color="#008080">“tblUserID”</font><font size="4" color="#c00000">)</font><font size="4"></font></p><font size="4">
+</font><p><font size="4"></font><font size="4" color="#0000a0">If Not</font><font size="4"> <span class="skimlinks-unlinked">rs.BOF</span></font><font size="4" color="#0000a0">Then</font><font size="4"> rs.MoveFirst<br></font><font size="4" color="#0000a0">Do While Not</font><font size="4"> <span class="skimlinks-unlinked">rs.EOF</span><br></font><font size="4" color="#0000a0">If</font><font size="4"> VBA.Interaction.Environ</font><font size="4" color="#c00000">(</font><font size="4" color="#008080">“USERNAME”</font><font size="4" color="#c00000">)</font><font size="4"> = rs.Fields</font><font size="4" color="#c00000">(</font><font size="4" color="#008080">“userID”</font><font size="4" color="#c00000">)</font><font size="4"> </font><font size="4" color="#0000a0">Then</font><font size="4"></font></p><font size="4">
+</font><p><font size="4"></font><font size="4" color="#0000a0">If</font><font size="4"> rs.Fields</font><font size="4" color="#c00000">(</font><font size="4" color="#008080">“isManager”</font><font size="4" color="#c00000">)</font><font size="4"> =</font><font size="4" color="#0000a0">True Then</font><font size="4"><br>Me.cmbOpenFrmAdmin.Visible =</font><font size="4" color="#0000a0">True</font><font size="4"><br></font><font size="4" color="#0000a0">Else</font><font size="4"><br>Me.cmbOpenFrmAdmin.Visible =</font><font size="4" color="#0000a0">False</font><font size="4"><br></font><font size="4" color="#0000a0">End If</font><font size="4"></font></p><font size="4">
+</font><p><font size="4"><span class="skimlinks-unlinked">rs.Edit</span><br>rs!</font><font size="4" color="#c00000">[</font><font size="4">IsLoggedOn</font><font size="4" color="#c00000">]</font><font size="4"> =</font><font size="4" color="#0000a0">True</font><font size="4"><br>rs!</font><font size="4" color="#c00000">[</font><font size="4">DateLoggedOn</font><font size="4" color="#c00000">]</font><font size="4"> =</font><font size="4" color="#0000a0">Now</font><font size="4" color="#c00000">()</font><font size="4"><br>rs.Update<br><span class="skimlinks-unlinked">rs.Close</span><br></font><font size="4" color="#0000a0">Set</font><font size="4"> rs =</font><font size="4" color="#0000a0">Nothing</font><font size="4"><br></font><font size="4" color="#0000a0">Exit Sub</font><font size="4"><br></font><font size="4" color="#0000a0">End If</font><font size="4"><br>rs.MoveNext<br></font><font size="4" color="#0000a0">Loop</font><font size="4"></font></p><font size="4">
+<p><u><b>Output the top # records a local table query to a access report <font color="#0000a0">and print</font><span style="color:rgb(0,0,0);"> it</span></b></u></p>
+</font><p><font size="4">this requires code in the Button click</font><font size="4" color="#0000a0">and</font><font size="4"> in the Report</font><font size="4" color="#0000a0">open</font><font size="4"></font></p><font size="4">
+</font><p><font size="4"></font><font size="4" color="#0000a0">Private Sub</font><font size="4"> cmdPrintWorklist_Click</font><font size="4" color="#c00000">()</font><font size="4"><br></font><font size="4" color="#0000a0">Dim</font><font size="4"> sqlstr</font><font size="4" color="#0000a0">As String</font><font size="4"><br>sqlstr = Me.lboMain.RowSource<br></font><font size="4" color="#008000">‘SELECT DISTINCT TOP #</font><font size="4"><br></font><font size="4" color="#0000a0">If</font><font size="4"> Me.cmbRowsToPrint &lt;&gt;</font><font size="4" color="#008080">“ALL”</font><font size="4"> </font><font size="4" color="#0000a0">Then</font><font size="4"><br>sqlstr =</font><font size="4" color="#0000a0">Replace</font><font size="4" color="#c00000">(</font><font size="4">Me.lboMain.RowSource,</font><font size="4" color="#008080">“Select”</font><font size="4">,</font><font size="4" color="#008080">“Select Top “</font><font size="4"> &amp; _<br><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;</span> Me.cmbRowsToPrint</font><font size="4" color="#c00000">)</font><font size="4"><br></font><font size="4" color="#0000a0">End If</font><font size="4"><br>DoCmd.OpenReport</font><font size="4" color="#008080">“WorkList”</font><font size="4">, acViewNormal, , , , sqlstr<br></font><font size="4" color="#0000a0">End Sub</font><font size="4"></font></p><font size="4">
+</font><p><font size="4"></font><font size="4" color="#0000a0">Private Sub</font><font size="4"> Report_Open</font><font size="4" color="#c00000">(</font><font size="4">Cancel</font><font size="4" color="#0000a0">As Integer</font><font size="4" color="#c00000">)</font><font size="4"><br></font><font size="4" color="#0000a0">On Error GoTo</font><font size="4"> errOpen<br>Me.RecordSource = Me.OpenArgs<br></font><font size="4" color="#0000a0">Exit Sub</font><font size="4"><br>errOpen:<br></font><font size="4" color="#0000a0">If Err</font><font size="4">.Number = 94</font><font size="4" color="#0000a0">Then</font><font size="4"><br>Me.RecordSource =</font><font size="4" color="#008080">“qryPrint”</font><font size="4"><br></font><font size="4" color="#0000a0">Else</font><font size="4"><br></font><font size="4" color="#0000a0">MsgBox Err</font><font size="4">.Number &amp;</font><font size="4" color="#008080">” “</font><font size="4"> &amp;</font><font size="4" color="#0000a0">Err</font><font size="4">.Description<br></font><font size="4" color="#0000a0">End If</font><font size="4"><br></font><font size="4" color="#0000a0">End Sub</font><font size="4"></font></p><font size="4">
+<p><u><b>Compact and Close DB</b></u></p>
+</font><p><font size="4">CommandBars</font><font size="4" color="#c00000">(</font><font size="4" color="#008080">“Menu Bar”</font><font size="4" color="#c00000">)</font><font size="4">.Controls</font><font size="4" color="#c00000">(</font><font size="4" color="#008080">“Tools”</font><font size="4" color="#c00000">)</font><font size="4">.Controls</font><font size="4" color="#c00000">(</font><font size="4" color="#008080">“Database utilities”</font><font size="4" color="#c00000">)</font><font size="4">.Controls</font><font size="4" color="#c00000">(</font><font size="4" color="#008080">“Compact and repair database…”</font><font size="4" color="#c00000">)</font><font size="4">.accDoDefaultAction</font></p><font size="4">
+<p><u><b>control a Listbox with a Checkbox</b></u></p>
+</font><p><font size="4"></font><font size="4" color="#0000a0">Private Sub</font><font size="4"> chkFacililty1_AfterUpdate</font><font size="4" color="#c00000">()</font><font size="4"></font></p><font size="4">
+</font><p><font size="4"></font><font size="4" color="#0000a0">If</font><font size="4"> chkFacililty1.Value =</font><font size="4" color="#0000a0">True Then</font><font size="4"><br>lboFacility.Selected</font><font size="4" color="#c00000">(</font><font size="4">0</font><font size="4" color="#c00000">)</font><font size="4"> =</font><font size="4" color="#0000a0">True</font><font size="4"><br></font><font size="4" color="#008000">‘lboFacility.Selected(1) = True</font><font size="4"><br>lboFacility.Selected</font><font size="4" color="#c00000">(</font><font size="4">2</font><font size="4" color="#c00000">)</font><font size="4"> =</font><font size="4" color="#0000a0">True</font><font size="4"><br></font><font size="4" color="#0000a0">Else</font><font size="4"><br>lboFacility.Selected</font><font size="4" color="#c00000">(</font><font size="4">0</font><font size="4" color="#c00000">)</font><font size="4"> =</font><font size="4" color="#0000a0">False</font><font size="4"><br></font><font size="4" color="#008000">‘lboFacility.Selected(1) = False</font><font size="4"><br>lboFacility.Selected</font><font size="4" color="#c00000">(</font><font size="4">2</font><font size="4" color="#c00000">)</font><font size="4"> =</font><font size="4" color="#0000a0">False</font><font size="4"><br></font><font size="4" color="#0000a0">End If</font><font size="4"></font></p><font size="4">
+</font><p><font size="4"></font><font size="4" color="#0000a0">End Sub</font><font size="4"></font></p><font size="4">
+<p><u><b>build a string from a Listbox</b></u></p>
+</font><p><font size="4"></font><font size="4" color="#0000a0">Dim</font><font size="4"> intSelItem</font><font size="4" color="#0000a0">As Variant</font><font size="4"></font></p><font size="4">
+</font><p><font size="4"></font><font size="4" color="#0000a0">For Each</font><font size="4"> intSelItem In frm.lboFacility.ItemsSelected<br>strBuildString = strBuildString &amp;</font><font size="4" color="#008080">“,”</font><font size="4"> &amp;</font><font size="4" color="#008080">“”””</font><font size="4"> &amp; _<br><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span>&nbsp;frm.lboFacility.ItemData</font><font size="4" color="#c00000">(</font><font size="4">intSelItem</font><font size="4" color="#c00000">)</font><font size="4"> &amp;</font><font size="4" color="#008080">“”””</font><font size="4"><br></font><font size="4" color="#0000a0">Next</font><font size="4"> intSelItem</font></p><font size="4">
+</font><p><font size="4"><u><b>Change a picture on a form in sync with a record change <br>(slowly so the form doesn’t crash)…<br></b></u><br>*Use Form current event to</font><font size="4" color="#0000a0">set</font><font size="4"> the path to the image</font><font size="4" color="#0000a0">and</font><font size="4"><br><span>&nbsp;&nbsp; &nbsp;</span><span>*</span>the form</font><font size="4" color="#0000a0">timer</font><font size="4"> event to</font><font size="4" color="#0000a0">do</font><font size="4"><span style="color:rgb(0,0,0);"> the actual image change</span></font></p><font size="4">
+</font><p><font size="4"></font><font size="4" color="#0000a0">Public</font><font size="4"> bOKtoShowPic</font><font size="4" color="#0000a0">As Boolean</font><font size="4"><br></font><font size="4" color="#0000a0">Public</font><font size="4"> strPhotoLoc</font><font size="4" color="#0000a0">As String</font><font size="4"><br></font><font size="4" color="#0000a0">Public</font><font size="4"> strNoPhoto</font><font size="4" color="#0000a0">As String</font><font size="4"><br></font><font size="4" color="#0000a0">Public</font><font size="4"> strPhotoLocOLD</font><font size="4" color="#0000a0">As String</font><font size="4"></font></p><font size="4">
+</font><p><font size="4"></font><font size="4" color="#0000a0">Private Sub</font><font size="4"> Form_Current</font><font size="4" color="#c00000">()</font><font size="4"><br></font><font size="4" color="#0000a0">Dim</font><font size="4"> strEmployee</font><font size="4" color="#0000a0">As String</font><font size="4"><br></font><font size="4" color="#008000">‘before the new record is inserted in the string <br><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span>‘set the previous record to the old picture string</font><font size="4"><br>strPhotoLocOLD = strPhotoLoc<br>strEmployee =</font><font size="4" color="#c00000">[</font><font size="4">EmployeeID</font><font size="4" color="#c00000">]</font><font size="4"> &amp;</font><font size="4" color="#008080">“.jpg”</font><font size="4"> </font><font size="4" color="#008000">‘”[ ] is record on the form”</font><font size="4"><br>strPhotoLoc =</font><font size="4" color="#008080">“C:Photos”</font><font size="4"> &amp; strEmployee<br>strNoPhoto =</font><font size="4" color="#008080">“C:<span class="skimlinks-unlinked">Photosnophoto.jpg</span>”</font><font size="4"><br>Me.lblLoadingPleaseWait.Visible =</font><font size="4" color="#0000a0">True</font><font size="4"> </font><font size="4" color="#008000">‘show please waiting label</font><font size="4"><br></font><font size="4" color="#0000a0">End Sub</font><font size="4"></font></p><font size="4">
+</font><p><font size="4"></font><font size="4" color="#0000a0">Private Sub</font><font size="4"> Form_Timer</font><font size="4" color="#c00000">()</font><font size="4"><br></font><font size="4" color="#0000a0">If</font><font size="4"> strPhotoLoc = strPhotoLocOLD</font><font size="4" color="#0000a0">Then</font><font size="4"><br></font><font size="4" color="#008000">‘do nothing</font><font size="4"><br></font><font size="4" color="#0000a0">Else</font><font size="4"><br></font><font size="4" color="#0000a0">If</font><font size="4"> </font><font size="4" color="#c00000">(</font><font size="4" color="#0000a0">Dir</font><font size="4" color="#c00000">(</font><font size="4">strPhotoLoc</font><font size="4" color="#c00000">)</font><font size="4"> &lt;&gt;</font><font size="4" color="#008080">“”</font><font size="4" color="#c00000">)</font><font size="4"> </font><font size="4" color="#0000a0">Then</font><font size="4"><br>imgEmployee.Picture = strPhotoLoc<br></font><font size="4" color="#0000a0">Else</font><font size="4"><br>imgEmployee.Picture = strNoPhoto<br></font><font size="4" color="#0000a0">End If</font><font size="4"><br>strPhotoLocOLD = strPhotoLoc<br></font><font size="4" color="#0000a0">End If</font><font size="4"><br>Me.lblLoadingPleaseWait.Visible =</font><font size="4" color="#0000a0">False</font><font size="4"> </font><font size="4" color="#008000">‘hide please waiting label</font><font size="4"><br></font><font size="4" color="#0000a0">End Sub</font><font size="4"></font></p><font size="4">
+</font><p><font size="4"><u><b>Populate a ComboBox from a SQL queried ADO recordset<br></b></u><br></font><font size="4" color="#0000a0">Function</font><font size="4"> LoadcmbErrorCodeResult</font><font size="4" color="#c00000">()</font><font size="4"><br></font><font size="4" color="#0000a0">Dim</font><font size="4"> ADOrs</font><font size="4" color="#0000a0">As New</font><font size="4"> ADODB.Recordset<br></font><font size="4" color="#0000a0">Dim</font><font size="4"> ADOConn</font><font size="4" color="#0000a0">As New</font><font size="4"> ADODB.Connection<br></font><font size="4" color="#0000a0">Dim</font><font size="4"> ADOCmd</font><font size="4" color="#0000a0">As New</font><font size="4"> ADODB.Command<br></font><font size="4" color="#0000a0">Dim</font><font size="4"> sqlStr</font><font size="4" color="#0000a0">As String</font><font size="4"></font></p><font size="4">
+</font><p><font size="4"><span class="skimlinks-unlinked">ADOConn.Open</span></font><font size="4" color="#008080">“PROVIDER=SQLOLEDB;Server=server-name01;Database=db_name;User ID=user01;Password=secretword;”</font><font size="4"><br>sqlStr =</font><font size="4" color="#008080">” select * from View_tblErrorTypes_ErrorCodeLikeEandActive Order by ErrorCode”</font><font size="4"><br><span class="skimlinks-unlinked">ADOrs.Open</span> sqlStr, ADOConn, adOpenKeyset, adLockOptimistic</font></p><font size="4">
+</font><p><font size="4"></font><font size="4" color="#008000">‘MsgBox ADOrs.RecordCount</font><font size="4"></font></p><font size="4">
+</font><p><font size="4">Form_frmErrors.cmbErrorCodeResult.RowSource = _<br>ADOrs.GetString</font><font size="4" color="#c00000">(</font><font size="4">adClipString, ,</font><font size="4" color="#008080">“;”</font><font size="4">,</font><font size="4" color="#008080">“;”</font><font size="4">,</font><font size="4" color="#008080">“Null”</font><font size="4" color="#c00000">)</font><font size="4"><br></font><font size="4" color="#0000a0">End Function</font><font size="4"></font></p><font size="4">
+</font><p><font size="4"><u><b>Bound access form to a editable, updateable (to the SQL server) ADO recordset<br></b></u><br></font><font size="4" color="#0000a0">Function</font><font size="4"> DoIt</font><font size="4" color="#c00000">()</font><font size="4"><br></font><font size="4" color="#0000a0">Dim</font><font size="4"> ADOrs</font><font size="4" color="#0000a0">As New</font><font size="4"> ADODB.Recordset<br></font><font size="4" color="#0000a0">Dim</font><font size="4"> ADOConn</font><font size="4" color="#0000a0">As New</font><font size="4"> ADODB.Connection<br></font><font size="4" color="#0000a0">Dim</font><font size="4"> ADOCmd</font><font size="4" color="#0000a0">As New</font><font size="4"> ADODB.Command<br></font><font size="4" color="#0000a0">Dim</font><font size="4"> sqlStr</font><font size="4" color="#0000a0">As String</font><font size="4"></font></p><font size="4">
+</font><p><font size="4"><span class="skimlinks-unlinked">ADOConn.Open</span></font><font size="4" color="#008080">“PROVIDER=SQLOLEDB;Server=serv-er-ms-01;Database=db_name;User ID=user0123;Password=secretword;”</font><font size="4"><br>sqlStr =</font><font size="4" color="#008080">“select * from View_tblErrors Where AccountNumber = ‘”</font><font size="4"> &amp; Form_frmQAtab.txtAccountNumberResults &amp;</font><font size="4" color="#008080">“‘”</font><font size="4"><br>ADOrs.CursorLocation = adUseClient</font><font size="4" color="#008000">‘ ADOrs.CursorLocation=adUseClient means editable forms!</font><font size="4"><br><span class="skimlinks-unlinked">ADOrs.Open</span> sqlStr, ADOConn, adOpenKeyset, adLockOptimistic</font></p><font size="4">
+</font><p><font size="4"></font><font size="4" color="#0000a0">If</font><font size="4"> ADOrs.RecordCount &lt;&gt; 0</font><font size="4" color="#0000a0">Then</font><font size="4"><br></font><font size="4" color="#0000a0">Set</font><font size="4"> Form_frmErrors.Recordset = ADOrs<br></font><font size="4" color="#0000a0">Else</font><font size="4"><br></font><font size="4" color="#0000a0">Set</font><font size="4"> Form_frmErrors.Recordset =</font><font size="4" color="#0000a0">Nothing</font><font size="4"><br>Form_frmErrors.Visible =</font><font size="4" color="#0000a0">False</font><font size="4"><br></font><font size="4" color="#0000a0">End If</font><font size="4"><br><span class="skimlinks-unlinked">ADOrs.Close</span><br><span class="skimlinks-unlinked">ADOConn.Close</span><br></font><font size="4" color="#0000a0">Exit Function</font><font size="4"></font></p><font size="4">
+<p><u><b>Send an email with outlook</b></u></p>
+</font><p><font size="4"></font><font size="4" color="#0000a0">Dim</font><font size="4"> objOutlook</font><font size="4" color="#0000a0">As</font><font size="4"> Outlook.Application<br></font><font size="4" color="#0000a0">Dim</font><font size="4"> objOutlookMsg</font><font size="4" color="#0000a0">As</font><font size="4"> Outlook.MailItem<br></font><font size="4" color="#0000a0">Dim</font><font size="4"> objOutlookRecip</font><font size="4" color="#0000a0">As</font><font size="4"> Outlook.Recipient<br></font><font size="4" color="#0000a0">Dim</font><font size="4"> objOutlookAttach</font><font size="4" color="#0000a0">As</font><font size="4"> Outlook.Attachment<br></font><font size="4" color="#0000a0">Dim</font><font size="4"> i</font><font size="4" color="#0000a0">As Integer</font><font size="4"><br></font><font size="4" color="#0000a0">Dim</font><font size="4"> sUserName</font><font size="4" color="#0000a0">As String</font><font size="4"></font></p><font size="4">
+</font><p><font size="4"></font><font size="4" color="#0000a0">Set</font><font size="4"> objOutlook =</font><font size="4" color="#0000a0">CreateObject</font><font size="4" color="#c00000">(</font><font size="4" color="#008080">“Outlook.Application”</font><font size="4" color="#c00000">)</font><font size="4"><br></font><font size="4" color="#0000a0">Set</font><font size="4"> objOutlookMsg = objOutlook.CreateItem</font><font size="4" color="#c00000">(</font><font size="4">olMailItem</font><font size="4" color="#c00000">)</font><font size="4"></font></p><font size="4">
+</font><p><font size="4"></font><font size="4" color="#0000a0">With</font><font size="4"> objOutlookMsg<br></font><font size="4" color="#0000a0">Set</font><font size="4"> objOutlookRecip = .<span class="skimlinks-unlinked">Recipients.Add</span></font><font size="4" color="#c00000">(</font><font size="4">Me.Assignedto</font><font size="4" color="#c00000">)</font><font size="4"><br>.BodyFormat = olFormatHTML<br>.Subject =</font><font size="4" color="#008080">“This is the subject”</font><font size="4"><br>.body = vbCrLf &amp;</font><font size="4" color="#008080">“this is”</font><font size="4"> &amp; vbCrLf &amp;</font><font size="4" color="#008080">” the body”</font><font size="4"></font></p><font size="4">
+</font><p><font size="4"></font><font size="4" color="#008000">‘ Resolve each Recipient’s name.</font><font size="4"><br></font><font size="4" color="#0000a0">Dim</font><font size="4"> sWait</font><font size="4" color="#0000a0">As String</font><font size="4"><br>sWait =</font><font size="4" color="#0000a0">Now</font><font size="4" color="#c00000">()</font><font size="4"> + 0.00003</font></p><font size="4">
+</font><p><font size="4"></font><font size="4" color="#0000a0">For Each</font><font size="4"> objOutlookRecip In .Recipients<br></font><font size="4" color="#0000a0">Do While Now</font><font size="4" color="#c00000">()</font><font size="4"> &lt; sWait<br>objOutlookRecip.Resolve<br></font><font size="4" color="#0000a0">Loop</font><font size="4"></font></p><font size="4">
+</font><p><font size="4"></font><font size="4" color="#0000a0">If Not</font><font size="4"> objOutlookRecip.Resolve</font><font size="4" color="#0000a0">Then</font><font size="4"><br>objOutlookMsg.Display<br></font><font size="4" color="#0000a0">End If</font><font size="4"><br></font><font size="4" color="#0000a0">Next</font><font size="4"></font></p><font size="4">
+</font><p><font size="4">i =</font><font size="4" color="#0000a0">MsgBox</font><font size="4" color="#c00000">(</font><font size="4" color="#008080">“Send Email Now? ” &amp; _<br><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span> <span>&nbsp;&nbsp; &nbsp;</span>” Click No to edit the message or Recipients”</font><font size="4">, 4,</font><font size="4" color="#008080">“Attention!”</font><font size="4" color="#c00000">)</font><font size="4"></font></p><font size="4">
+</font><p><font size="4"></font><font size="4" color="#0000a0">If</font><font size="4"> i = 7</font><font size="4" color="#0000a0">Then</font><font size="4"><br></font><font size="4" color="#008000">‘7 = means no don’t continue</font><font size="4"><br>.Display<br></font><font size="4" color="#0000a0">Else</font><font size="4"><br>.Send<br></font><font size="4" color="#0000a0">End If</font><font size="4"></font></p><font size="4">
+</font><p><font size="4"></font><font size="4" color="#0000a0">End With</font><font size="4"><br></font><font size="4" color="#0000a0">Set</font><font size="4"> objOutlookMsg =</font><font size="4" color="#0000a0">Nothing</font><font size="4"><br></font><font size="4" color="#0000a0">Set</font><font size="4"> objOutlook =</font><font size="4" color="#0000a0">Nothing</font><font size="4"></font></p><font size="4">
+<p><u><b>Access clipboard loading</b></u></p>
+</font><p><font size="4"></font><font size="4" color="#008000">‘get the password from invisible text box and copy it to the clipboard</font><font size="4"><br>Me.txtPassword.SetFocus<br>Me.txtPassword.SelStart = 0<br>Me.txtPassword.SelLength =</font><font size="4" color="#0000a0">Len</font><font size="4" color="#c00000">(</font><font size="4"><span class="skimlinks-unlinked">Me.txtWebPassword.Value</span></font><font size="4" color="#c00000">)</font><font size="4"><br>RunCommand acCmdCopy</font></p><font size="4">
+<p><u><b>Run a Word Mail merge from Access</b></u></p>
+<p>*the word template has to be listed to a random dummy table in your access</p>
+</font><p><font size="4"></font><font size="4" color="#008000">‘ go run mail merge for just ‘your’ records</font><font size="4"><br></font><font size="4" color="#0000a0">Dim</font><font size="4"> objWord</font><font size="4" color="#0000a0">As</font><font size="4"> Word.Document<br></font><font size="4" color="#0000a0">Set</font><font size="4"> objWord =</font><font size="4" color="#0000a0">GetObject</font><font size="4" color="#c00000">(</font><font size="4" color="#008080">“C:Letter <span class="skimlinks-unlinked">templet.dot</span>”</font><font size="4">,</font><font size="4" color="#008080">“Word.Document”</font><font size="4" color="#c00000">)</font><font size="4"><br></font><font size="4" color="#008000">‘ Make Word visible.</font><font size="4"><br>objWord.Application.Visible =</font><font size="4" color="#0000a0">False</font><font size="4"><br>objWord.MailMerge.OpenDataSource _<br></font><font size="4" color="#0000a0">Name</font><font size="4">:=</font><font size="4" color="#008080">“C:Letter <span class="skimlinks-unlinked">Database.mdb</span>”</font><font size="4">, _<br>SQLStatement:=</font><font size="4" color="#008080"> _ <br><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span>“SELECT * FROM tblUsers where Marked_For_Printing_User = UserName”</font><font size="4"><br></font><font size="4" color="#008000">‘ Execute the mail merge.</font><font size="4"><br>objWord.MailMerge.Execute<br>objWord.Application.Visible =</font><font size="4" color="#0000a0">True</font><font size="4"></font></p><font size="4">
+</font><p><font size="4"></font><font size="4" color="#008000">‘ ask if it is successful</font><font size="4"></font></p><font size="4">
+</font><p><font size="4"></font><font size="4" color="#0000a0">Dim</font><font size="4"> i</font><font size="4" color="#0000a0">As Integer</font><font size="4"><br>i =</font><font size="4" color="#0000a0">MsgBox</font><font size="4" color="#c00000">(</font><font size="4" color="#008080">“Was the Mail merge successfully printed?”</font><font size="4">, 4,</font><font size="4" color="#008080">“Attention!”</font><font size="4" color="#c00000">)</font><font size="4"></font></p><font size="4">
+</font><p><font size="4"></font><font size="4" color="#0000a0">If</font><font size="4"> i = 7</font><font size="4" color="#0000a0">Then</font><font size="4"><br></font><font size="4" color="#008000">‘7 = means no,</font><font size="4"></font></p><font size="4">
+</font><p><font size="4"></font><font size="4" color="#008000">‘ask to cancel merge</font><font size="4"><br>i =</font><font size="4" color="#0000a0">MsgBox</font><font size="4" color="#c00000">(</font><font size="4" color="#008080">“Would you like to cancel this mail merge ” &amp; _<br><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span>&nbsp;”and select different records?”</font><font size="4">, 4,</font><font size="4" color="#008080">“Attention!”</font><font size="4" color="#c00000">)</font><font size="4"><br></font><font size="4" color="#0000a0">If</font><font size="4"> i &lt;&gt; 7</font><font size="4" color="#0000a0">Then</font><font size="4"></font></p><font size="4">
+</font><p><font size="4"></font><font size="4" color="#008000">‘quit merge</font><font size="4"><br></font><font size="4" color="#0000a0">Exit Sub</font><font size="4"><br></font><font size="4" color="#0000a0">End If</font><font size="4"></font></p><font size="4">
+</font><p><font size="4"></font><font size="4" color="#008000">‘call merge again</font><font size="4"><br></font><font size="4" color="#0000a0">Set</font><font size="4"> objWord =</font><font size="4" color="#0000a0">Nothing</font><font size="4"><br></font><font size="4" color="#0000a0">Call</font><font size="4"> cmdMailMerge_Click<br>DoCmd.SetWarnings</font><font size="4" color="#c00000">(</font><font size="4" color="#0000a0">False</font><font size="4" color="#c00000">)</font><font size="4"><br></font><font size="4" color="#0000a0">Exit Sub</font><font size="4"></font></p><font size="4">
+</font><p><font size="4"></font><font size="4" color="#0000a0">Else</font><font size="4"><br></font><font size="4" color="#008000">‘ printing successful! go on</font><font size="4"></font></p><font size="4">
+</font><p><font size="4"></font><font size="4" color="#008000">‘load an extra word doc, <br><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span>‘so it will not crash if the user closed mail merge early</font><font size="4"><br></font><font size="4" color="#0000a0">Set</font><font size="4"> objWord =</font><font size="4" color="#0000a0">New</font><font size="4"> Word.Document<br>objWord.Application.Visible =</font><font size="4" color="#0000a0">False</font><font size="4"><br><span class="skimlinks-unlinked">objWord.Application.Quit</span> wdDoNotSaveChanges<br></font><font size="4" color="#0000a0">End If</font><font size="4"></font></p><font size="4">
+</font><p><font size="4"></font><b><span style="color:rgb(0,0,0);">*Catch </span><font color="#0000a0">and</font><span style="color:rgb(0,0,0);"> Cancel Control+P </span><font color="#0000a0">Print</font><span style="color:rgb(0,0,0);"> keys</span></b></p>
+<p><i><font color="#0000a0">Set</font><span style="color:rgb(0,0,0);"> Key Preview = Yes</span></i></p>
+<p><font color="#0000a0">Private Sub</font> Form_KeyDown<font color="#c00000">(</font>KeyCode <font color="#0000a0">As Integer</font>, Shift <font color="#0000a0">As Integer</font><font color="#c00000">)</font></p>
+<p><font color="#0000a0">If</font> <font color="#c00000">(</font>Shift <font color="#0000a0">And</font> acCtrlMask<font color="#c00000">)</font> &gt; 0 <font color="#0000a0">And</font> KeyCode = 80 <font color="#0000a0">Then</font><br>KeyCode = 0<br><font color="#0000a0">MsgBox</font> <font color="#008080">“Control+P has been disabled.”</font> &amp; vbCrLf &amp; <font color="#008080">“Please use the Print Button.”</font><br><font color="#0000a0">End If</font></p>
+<p><font color="#0000a0">End Sub</font></p>
+<p><b><br>*Hide The Print Buttons in menu</b></p>
+<p><font color="#0000a0">Dim</font> CBarMenu <font color="#0000a0">As</font> CommandBar, CBarTool <font color="#0000a0">As</font> CommandBar<br><font color="#0000a0">Dim</font> CBarCtl <font color="#0000a0">As</font> CommandBarPopup<br><font color="#008000">‘ Set the CommandBar objects to the menu bar and toolbar that</font><br><font color="#008000">‘ display when you open a form in Form view.</font><br><font color="#0000a0">Set</font> CBarMenu = CommandBars<font color="#c00000">(</font><font color="#008080">“Menu Bar”</font><font color="#c00000">)</font><br><font color="#0000a0">Set</font> CBarTool = CommandBars<font color="#c00000">(</font><font color="#008080">“Form View”</font><font color="#c00000">)</font><br><font color="#008000">‘ Because the File menu is a Popup control, assign it to an object</font><br><font color="#008000">‘ variable so you can manipulate its CommandBar object.</font></p>
+<p><font color="#0000a0">Set</font> CBarCtl = CBarMenu.Controls<font color="#c00000">(</font><font color="#008080">“File”</font><font color="#c00000">)</font></p>
+<p><font color="#008000">‘hide THE PRINT BUTTONS</font><br><font color="#0000a0">Dim</font> menucounter <font color="#0000a0">As Integer</font><br><font color="#0000a0">For</font> menucounter = 1 To 20<br><font color="#0000a0">If InStr</font><font color="#c00000">(</font><span class="skimlinks-unlinked">CBarCtl.CommandBar.Controls.Item</span><font color="#c00000">(</font>menucounter<font color="#c00000">)</font>.Caption, <font color="#008080">“Print”</font><font color="#c00000">)</font> &gt; 0 <font color="#0000a0">Then</font><br><span class="skimlinks-unlinked">CBarCtl.CommandBar.Controls.Item</span><font color="#c00000">(</font>menucounter<font color="#c00000">)</font>.Visible = <font color="#0000a0">False</font><br><font color="#0000a0">End If</font><br><font color="#0000a0">Next</font></p>
+<p><b>Resume on Error with Form_Error event</b></p>
+<p><font color="#0000a0">Private Sub</font> Form_Error<font color="#c00000">(</font>DataErr <font color="#0000a0">As Integer</font>, Response <font color="#0000a0">As Integer</font><font color="#c00000">)</font><br><font color="#0000a0">Msgbox</font> <font color="#008080">“An unexpected error has occurred in the form. The error description is “</font> &amp; <font color="#0000a0">err</font>.description<br>Response = acDataErrContinue<br><font color="#0000a0">End Sub</font></p>
+<p><b><span style="color:rgb(0,0,0);">*Find record </span><font color="#0000a0">on</font><span style="color:rgb(0,0,0);"> a form.</span></b></p>
+<p>Me.txtComponentNum.SetFocus<br>DoCmd.FindRecord strFind, acAnywhere, , acSearchAll, , acAll</p>
+<p><font color="#0000a0">On Error Resume Next</font></p>
+<p><font size="4"></font></p><font size="4">
+<p><u><b>misc scraps</b></u></p>
+<p><b><br>Shortcut to a very powerful active directory search tool</b></p>
+<p>%SystemRoot%SYSTEM32rundll32.exe dsquery,OpenQueryWindow</p>
+</font><p><font size="4">*Hint*<br>research terminal DDE </font><font size="4" color="#0000a0">and</font><font size="4"> window handles. It will change your life! <img draggable="false" class="emoji" alt="😀" src="VBAcode_files/1f600.svg"><br>DDETerminateAll<br></font><font size="4" color="#0000a0">msgbox</font><font size="4"> = DDERequest</font><font size="4" color="#c00000">(</font><font size="4">DDEInitiate</font><font size="4" color="#c00000">(</font><font size="4" color="#008080">“HBOWEM”</font><font size="4">,</font><font size="4" color="#008080">“PCInfo”</font><font size="4" color="#c00000">)</font><font size="4">,</font><font size="4" color="#008080">“CurrentScreen</font><font size="4"></font></p><font size="4">
+</font><p><font size="4">Text Color by Karl E. Peterson: <a href="http://vb.mvps.org/tools/vbMarkUp/results.asp">http://vb.mvps.org/tools/vbMarkUp/</a><br></font></p></div>
+</div>
+											</div><!--/.content-->
+	</div><!--/.main-->
+	<footer class="footer">
+			</footer><!-- .footer -->
+</article> 
+</div><!-- #main-content -->
+<div id="main-sidebar" class="clearfix">
+	</div><!-- #main-sidebar -->
+		</div><!-- .in -->
+	</div><!-- #main -->
+	<footer id="footer" class="act clearfix">
+		<div class="in">
+			<ul class="nav"><li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://www.annotum.org/">About Annotum</a></li></ul>			
+			 <a href="https://wordpress.com/?ref=footer_website">Create a free website or blog at WordPress.com.</a>
+		</div>
+	</footer>
+<!--  -->
+<script type="text/javascript" src="VBAcode_files/gprofiles.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="VBAcode_files/wpgroho.js"></script>
+
+	<script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+
+			if (typeof Gravatar === "undefined"){
+				return;
+			}
+
+			if ( typeof Gravatar.init !== "function" ) {
+				return;
+			}			
+
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script>
+
+		<div style="display:none">
+	</div>
+<script type="text/javascript" src="VBAcode_files/a"></script>
+<script type="text/javascript" src="VBAcode_files/widgets.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var actionbardata = {"siteID":"33391726","siteName":"bgryderclock","siteURL":"http:\/\/bgryderclock.wordpress.com","icon":"<img alt='' src='https:\/\/s1.wp.com\/i\/logo\/wpcom-gray-white.png' class='avatar avatar-50' height='50' width='50' \/>","canManageOptions":"","canCustomizeSite":"","isFollowing":"","themeSlug":"vip\/partner-annotum-base","signupURL":"https:\/\/wordpress.com\/start\/","loginURL":"https:\/\/bgryderclock.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fbgryderclock.wordpress.com%2Farticle%2Fvba-code-3hhu1b5imyz72-2%2F","themeURL":"","xhrURL":"https:\/\/bgryderclock.wordpress.com\/wp-admin\/admin-ajax.php","nonce":"ca2aea102a","isSingular":"1","isFolded":"","isLoggedIn":"","isMobile":"","subscribeNonce":"<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"d5ef66436e\" \/>","referer":"https:\/\/bgryderclock.wordpress.com\/article\/vba-code-3hhu1b5imyz72-2\/","canFollow":"1","statusMessage":"","customizeLink":"https:\/\/bgryderclock.wordpress.com\/wp-admin\/customize.php?url=https%3A%2F%2Fbgryderclock.wordpress.com%2Farticle%2Fvba-code-3hhu1b5imyz72-2%2F","postID":"9","shortlink":"http:\/\/wp.me\/p2g6Ie-9","canEditPost":"","editLink":"https:\/\/bgryderclock.wordpress.com\/wp-admin\/post.php?post=9&action=edit","statsLink":"https:\/\/wordpress.com\/stats\/post\/9\/bgryderclock.wordpress.com","i18n":{"view":"View site","follow":"Follow","following":"Following","edit":"Edit","login":"Log in","signup":"Sign up","customize":"Customize","report":"Report this content","themeInfo":"Get theme: Annotum Base","shortlink":"Copy shortlink","copied":"Copied","followedText":"New posts from this site will now appear in your <a href=\"https:\/\/wordpress.com\/\">Reader<\/a>","foldBar":"Collapse this bar","unfoldBar":"Expand this bar","editSubs":"Manage subscriptions","viewReader":"View site in the Reader","subscribe":"Sign me up","enterEmail":"Enter your email address","followers":"","alreadyUser":"Already have a WordPress.com account? <a href=\"https:\/\/bgryderclock.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fbgryderclock.wordpress.com%2Farticle%2Fvba-code-3hhu1b5imyz72-2%2F\">Log in now.<\/a>","stats":"Stats"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="VBAcode_files/a_002"></script><div id="actionbar" class="actnbr-vip-partner-annotum-base actnbr-has-follow"><ul><li class="actnbr-btn actnbr-hidden"> 			    	<a class="actnbr-action actnbr-actn-follow" href=""><svg class="gridicon gridicon__follow" height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M23 16v2h-3v3h-2v-3h-3v-2h3v-3h2v3h3zM20 2v9h-4v3h-3v4H4c-1.1 0-2-.9-2-2V2h18zM8 13v-1H4v1h4zm3-3H4v1h7v-1zm0-2H4v1h7V8zm7-4H4v2h14V4z"></path></g></svg><span>Follow</span></a> 			    	<div class="actnbr-popover tip tip-top-left actnbr-notice"> 			    		<div class="tip-arrow"></div> 			    		<div class="tip-inner actnbr-follow-bubble"></div> 			    	</div> 			    </li><li class="actnbr-ellipsis actnbr-hidden"> 			  <svg class="gridicon gridicon__ellipsis" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><circle cx="5" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle><circle cx="12" cy="12" r="2"></circle></g></svg> 			  <div class="actnbr-popover tip tip-top-left actnbr-more"> 			  	<div class="tip-arrow"></div> 			  	<div class="tip-inner"> 				  <ul> 				    <li class="actnbr-sitename"><a href="http://bgryderclock.wordpress.com/"><img alt="" src="VBAcode_files/wpcom-gray-white.png" class="avatar avatar-50" width="50" height="50"> bgryderclock</a></li> 				   	<li class="actnbr-folded-customize"><a href="https://bgryderclock.wordpress.com/wp-admin/customize.php?url=https%3A%2F%2Fbgryderclock.wordpress.com%2Farticle%2Fvba-code-3hhu1b5imyz72-2%2F"><svg class="gridicon gridicon__customize" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M2 6c0-1.505.78-3.08 2-4 0 .845.69 2 2 2 1.657 0 3 1.343 3 3 0 .386-.08.752-.212 1.09.74.594 1.476 1.19 2.19 1.81L8.9 11.98c-.62-.716-1.214-1.454-1.807-2.192C6.753 9.92 6.387 10 6 10c-2.21 0-4-1.79-4-4zm12.152 6.848l1.34-1.34c.607.304 1.283.492 2.008.492 2.485 0 4.5-2.015 4.5-4.5 0-.725-.188-1.4-.493-2.007L18 9l-2-2 3.507-3.507C18.9 3.188 18.225 3 17.5 3 15.015 3 13 5.015 13 7.5c0 .725.188 1.4.493 2.007L3 20l2 2 6.848-6.848c1.885 1.928 3.874 3.753 5.977 5.45l1.425 1.148 1.5-1.5-1.15-1.425c-1.695-2.103-3.52-4.092-5.448-5.977z" data-reactid=".2.1.1:0.1b.0"></path></g></svg><span>Customize<span></span></span></a></li> 				    <li class="actnbr-folded-follow"><a class="actnbr-action actnbr-actn-follow" href=""><svg class="gridicon gridicon__follow" height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M23 16v2h-3v3h-2v-3h-3v-2h3v-3h2v3h3zM20 2v9h-4v3h-3v4H4c-1.1 0-2-.9-2-2V2h18zM8 13v-1H4v1h4zm3-3H4v1h7v-1zm0-2H4v1h7V8zm7-4H4v2h14V4z"></path></g></svg><span>Follow</span></a></li> 						<li class="actnbr-signup"><a href="https://wordpress.com/start/">Sign up</a></li> 				    <li class="actnbr-login"><a href="https://bgryderclock.wordpress.com/wp-login.php?redirect_to=https%3A%2F%2Fbgryderclock.wordpress.com%2Farticle%2Fvba-code-3hhu1b5imyz72-2%2F">Log in</a></li> 				     				    <li class="actnbr-shortlink"><a href="http://wp.me/p2g6Ie-9">Copy shortlink</a></li> 				    <li class="flb-report"><a href="http://en.wordpress.com/abuse/">Report this content</a></li> 				     				     				    <li class="actnbr-subs"><a href="https://subscribe.wordpress.com/">Manage subscriptions</a></li> 				    <li class="actnbr-fold"><a href="">Collapse this bar</a></li> 			      </ul> 			    </div> 		      </div> 		    </li> 	      </ul></div>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script>	<script type="text/javascript">
+	var skimlinks_pub_id = "725X584219"
+	var skimlinks_sitename = "bgryderclock.wordpress.com";
+	</script>
+	<script type="text/javascript" defer="defer" src="VBAcode_files/725X1342.js"></script>		<script>
+			var _comscore = _comscore || [];
+			_comscore.push({
+				c1: "2",
+				c2: "7518284"
+			});
+			(function() {
+				var s = document.createElement("script"),
+					el = document.getElementsByTagName("script")[0];
+				s.defer = true;
+				s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+				el.parentNode.insertBefore(s, el);
+			})();
+		</script>
+		<noscript>
+			<p class="robots-nocontent"><img src="https://sb.scorecardresearch.com/p?c1=2&c2=7518284&c3=&c4=&c5=&c6=&c15=&cv=2.0&cj=1" alt="" style="display:none;" width="1" height="1" /></p>
+		</noscript><script src="VBAcode_files/w.js" type="text/javascript" async="" defer="defer"></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'33391726','blog_tz':'0','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'33391726','v':'wpcom','tz':'0','user_id':'0','post':'9','subd':'bgryderclock'}]);
+_stq.push(['extra', {'crypt':'UE5XaGUuOTlwaD85flAmcm1mcmZsaDhkV11YdTdvUG14Q2VDQTR4LlUsLi82dU1mai9BMkM9QjRQOXBLb118enZ5UGUzS1M9b01BRV8/dkIuRixxSjkvclV3MlZwWnQvcUt4NllRMDhaR292U19pL182eVNBOWR8cGRhOURZPTg9PXZfQlt3SnVYZFA9VFo0WC8yK3J2Zm5uNW5pd1dZdW5ZK2pMJVVCQnkwU1VFXT1qS2xSWV1bK1U5QWpIZXcuNTJWcTZNYjYuU1ItLUVUSGx3aDRuYXdFVmZXYT9JZ2FwNGI5OHx3JVNMU1BNUnNCeT8sd1BHL0g5XWVxfHN3W1YtWnlNTGlFbFFtMitfcw=='}]);
+_stq.push([ 'clickTrackerInit', '33391726', '9' ]);
+	</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+<img src="VBAcode_files/g.gif" alt=":)" id="wpstats"></body></html>
